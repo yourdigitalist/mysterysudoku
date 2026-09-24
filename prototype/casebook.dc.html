@@ -1,0 +1,839 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Casebook and game</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&amp;family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#17141C;font-family:Manrope,system-ui,sans-serif;color:#EDE6DA}
+a{color:#D4A55A}a:hover{color:#E8C27E}
+button{font-family:inherit;color:inherit;cursor:pointer}
+button:focus-visible{outline:2px solid #D4A55A;outline-offset:2px}
+.f-wood{background-color:#E6C9A0;background-image:repeating-linear-gradient(0deg,rgba(120,80,40,.16) 0 1px,transparent 1px 14px)}
+.f-tile{background-color:#DCE6EE;background-image:conic-gradient(rgba(90,110,130,.16) 25%,transparent 0 50%,rgba(90,110,130,.16) 0 75%,transparent 0);background-size:35px 35px}
+.f-grass{background-color:#9BD48A;background-image:radial-gradient(rgba(40,90,40,.32) 1.3px,transparent 1.8px);background-size:12px 12px}
+.f-stone{background-color:#A9A29A;background-image:linear-gradient(rgba(60,50,45,.22) 1px,transparent 1px),linear-gradient(90deg,rgba(60,50,45,.22) 1px,transparent 1px);background-size:35px 23px}
+.f-pavement{background-color:#BDBDBD;background-image:linear-gradient(rgba(80,80,80,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(80,80,80,.14) 1px,transparent 1px);background-size:17px 17px}
+.f-water{background-color:#7EC8E3;background-image:radial-gradient(circle at 50% 100%,transparent 5px,rgba(255,255,255,.5) 5px 6.5px,transparent 7px);background-size:16px 12px}
+.f-metal{background-color:#A7B0BA;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.22) 0 2px,transparent 2px 8px),repeating-linear-gradient(-45deg,rgba(40,50,60,.12) 0 2px,transparent 2px 8px)}
+.f-carpet{background-color:#C98E8E;background-image:radial-gradient(rgba(90,30,30,.22) 1.5px,transparent 2px);background-size:10px 10px}
+.f-marble{background-color:#ECE8E1;background-image:linear-gradient(115deg,transparent 40%,rgba(120,110,100,.16) 41%,transparent 43%),linear-gradient(35deg,transparent 60%,rgba(120,110,100,.12) 61%,transparent 63%);background-size:40px 40px}
+.f-snow{background-color:#F3F6FA;background-image:radial-gradient(rgba(120,150,190,.35) 1.2px,transparent 1.7px);background-size:9px 9px}
+.f-sand{background-color:#F2DFA7;background-image:radial-gradient(rgba(150,110,40,.3) 1px,transparent 1.4px);background-size:7px 7px}
+.blk{background:repeating-linear-gradient(45deg,rgba(30,20,30,.30) 0 2px,transparent 2px 9px),rgba(30,20,30,.24)}
+.cell{appearance:none;padding:0;margin:0;box-sizing:border-box;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}
+.shake{animation:shake .38s ease}
+@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-5px)}40%{transform:translateX(5px)}60%{transform:translateX(-3px)}80%{transform:translateX(3px)}}
+.pop{animation:pop .22s ease-out}
+@keyframes pop{from{transform:scale(.5);opacity:0}to{transform:scale(1);opacity:1}}
+.pulse{animation:pulse 1.2s ease-in-out 3}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(212,165,90,0)}50%{box-shadow:0 0 0 5px rgba(212,165,90,.45)}}
+.fade{animation:fade .2s ease-out}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.stamp{animation:stamp .35s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes stamp{from{transform:translate(-50%,-50%) rotate(-12deg) scale(2.4);opacity:0}to{transform:translate(-50%,-50%) rotate(-12deg) scale(1);opacity:1}}
+.scroll::-webkit-scrollbar{display:none}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; background: #17141C">
+
+<sc-if value="{{onHome}}" hint-placeholder-val="{{true}}">
+<div style="width: 390px; height: 844px; box-sizing: border-box; padding: 20px 20px 0; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: flex-end; justify-content: space-between; padding-top: 8px">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 11px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #A59CAE">Murder mystery</div>
+<h1 style="margin: 0; font-family: Fraunces, Georgia, serif; font-size: 34px; font-weight: 700; line-height: 1">The Casebook</h1>
+</div>
+<button aria-label="How to play" onClick="{{openHelp}}" style="width: 44px; height: 44px; border: 0; border-radius: 12px; background: #221D28; display: flex; align-items: center; justify-content: center; font-family: Fraunces, Georgia, serif; font-size: 20px; font-weight: 700; color: #D4A55A">?</button>
+</div>
+
+<div style="background: #221D28; border: 1px solid #342C3B; border-radius: 14px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: baseline">
+<div style="font-size: 14px; font-weight: 700">{{solvedCount}} of {{totalCount}} cases closed</div>
+<div style="font-size: 13px; color: #A59CAE">{{progressPct}}</div>
+</div>
+<div style="height: 6px; border-radius: 3px; background: #342C3B; overflow: hidden">
+<div style="height: 6px; width: {{progressPct}}; background: #D4A55A; border-radius: 3px"></div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; align-items: center; gap: 8px">
+<div style="width: 72px; flex-shrink: 0; font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #A59CAE">Difficulty</div>
+<div style="display: flex; gap: 6px; flex-wrap: wrap">
+<sc-for list="{{diffChips}}" as="chip" hint-placeholder-count="4">
+<button aria-pressed="{{chip.on}}" onClick="{{chip.pick}}" style="height: 34px; padding: 0 12px; border-radius: 17px; border: {{chip.border}}; background: {{chip.bg}}; color: {{chip.fg}}; font-size: 13px; font-weight: 700">{{chip.label}}</button>
+</sc-for>
+</div>
+</div>
+<div style="display: flex; align-items: center; gap: 8px">
+<div style="width: 72px; flex-shrink: 0; font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #A59CAE">Status</div>
+<div style="display: flex; gap: 6px; flex-wrap: wrap">
+<sc-for list="{{statusChips}}" as="chip" hint-placeholder-count="3">
+<button aria-pressed="{{chip.on}}" onClick="{{chip.pick}}" style="height: 34px; padding: 0 12px; border-radius: 17px; border: {{chip.border}}; background: {{chip.bg}}; color: {{chip.fg}}; font-size: 13px; font-weight: 700">{{chip.label}}</button>
+</sc-for>
+</div>
+</div>
+</div>
+
+<div class="scroll" style="flex-grow: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; padding-bottom: 24px">
+<sc-for list="{{caseCards}}" as="cs" hint-placeholder-count="3">
+<button onClick="{{cs.open}}" aria-label="{{cs.aria}}" style="flex-shrink: 0; border: 1px solid #342C3B; border-radius: 16px; background: #1E1A24; padding: 12px; display: flex; gap: 14px; align-items: center; text-align: left">
+<div style="position: relative; flex-shrink: 0; width: 84px; height: 84px; border-radius: 10px; overflow: hidden; display: grid; grid-template-columns: repeat({{cs.size}}, minmax(0, 1fr)); box-shadow: 0 4px 12px rgba(0,0,0,.35)">
+<sc-for list="{{cs.thumb}}" as="t" hint-placeholder-count="25">
+<div style="background: {{t.bg}}; box-shadow: {{t.edge}}"></div>
+</sc-for>
+<sc-if value="{{cs.solved}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(-14deg); border: 3px double #A8322A; border-radius: 6px; padding: 2px 6px; background: rgba(241,232,216,.9); color: #A8322A; font-family: Fraunces, Georgia, serif; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap">Closed</div>
+</sc-if>
+</div>
+<div style="flex-grow: 1; display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="font-size: 11px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #A59CAE">Case {{cs.num}}</div>
+<div style="font-family: Fraunces, Georgia, serif; font-size: 19px; font-weight: 700; line-height: 1.15">{{cs.title}}</div>
+<div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap">
+<span style="font-size: 11px; font-weight: 800; padding: 3px 7px; border-radius: 6px; background: {{cs.diffBg}}; color: {{cs.diffFg}}">{{cs.difficulty}}</span>
+<span style="font-size: 12px; font-weight: 600; color: #A59CAE">{{cs.meta}}</span>
+</div>
+<div style="font-size: 12px; font-weight: 700; color: {{cs.statusColor}}">{{cs.status}}</div>
+</div>
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A59CAE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M9 6l6 6-6 6"></path></svg>
+</button>
+</sc-for>
+<sc-if value="{{noCases}}" hint-placeholder-val="{{false}}">
+<div style="border: 1px dashed #4A4152; border-radius: 16px; padding: 28px 20px; display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center">
+<div style="font-family: Fraunces, Georgia, serif; font-size: 19px; font-weight: 700">No cases match</div>
+<div style="font-size: 14px; color: #A59CAE; line-height: 1.45">Try another difficulty or status.</div>
+<button onClick="{{clearFilters}}" style="height: 44px; padding: 0 18px; border: 0; border-radius: 12px; background: #D4A55A; color: #1E1A22; font-size: 14px; font-weight: 800">Clear filters</button>
+</div>
+</sc-if>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{onGame}}" hint-placeholder-val="{{false}}">
+<div style="width: 390px; height: 844px; box-sizing: border-box; padding: 12px 20px; display: flex; flex-direction: column; gap: 8px">
+<header style="height: 44px; flex-shrink: 0; display: flex; align-items: center; gap: 10px">
+<button aria-label="Back to the casebook" onClick="{{goHome}}" style="width: 44px; height: 44px; border: 0; border-radius: 12px; background: #221D28; display: flex; align-items: center; justify-content: center">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+</button>
+<div style="flex-grow: 1; display: flex; flex-direction: column; gap: 1px; min-width: 0">
+<div style="font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #A59CAE">Case {{pz.num}} · {{pz.difficulty}}</div>
+<div style="font-family: Fraunces, Georgia, serif; font-size: 20px; font-weight: 700; line-height: 1.1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{pz.title}}</div>
+</div>
+<div aria-label="Time" style="font-variant-numeric: tabular-nums; font-size: 15px; font-weight: 700; color: #EDE6DA; padding: 0 10px; height: 32px; border-radius: 16px; background: #221D28; display: flex; align-items: center; gap: 6px">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4A55A" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="13" r="8"></circle><path d="M12 9v4l2.5 2M10 2h4"></path></svg>{{timeText}}</div>
+<button aria-label="How to play" onClick="{{openHelp}}" style="width: 44px; height: 44px; border: 0; border-radius: 12px; background: #221D28; display: flex; align-items: center; justify-content: center; font-family: Fraunces, Georgia, serif; font-size: 20px; font-weight: 700; color: #D4A55A">?</button>
+</header>
+
+<sc-if value="{{hasGeneral}}" hint-placeholder-val="{{false}}">
+<div style="min-height: 36px; flex-shrink: 0; box-sizing: border-box; border-radius: 10px; background: #221D28; border: 1px solid #342C3B; display: flex; align-items: center; gap: 10px; padding: 6px 12px">
+<div style="font-size: 10px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #17141C; background: #D4A55A; border-radius: 6px; padding: 3px 6px">General</div>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<sc-for list="{{generalList}}" as="gl" hint-placeholder-count="1">
+<div style="font-size: 13px; font-weight: 600; line-height: 1.3">{{gl.t}}</div>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+<div style="margin-top: 8px; flex-shrink: 0; align-self: center; width: {{boardPx}}; height: {{boardPx}}; position: relative; border-radius: 6px; box-shadow: 0 10px 30px rgba(0,0,0,.45)">
+<div style="position: absolute; inset: 0; display: grid; grid-template-columns: repeat({{pz.size}}, minmax(0, 1fr)); border-radius: 6px; overflow: hidden">
+<sc-for list="{{floors}}" as="f" hint-placeholder-count="25">
+<div class="{{f.cls}}"></div>
+</sc-for>
+</div>
+<div style="position: absolute; inset: 0; pointer-events: none">
+<sc-for list="{{shapes}}" as="s" hint-placeholder-count="10">
+<div class="{{s.cls}}" style="position: absolute; left: {{s.left}}; top: {{s.top}}; width: {{s.w}}; height: {{s.h}}; box-sizing: border-box; border-radius: {{s.radius}}; background-color: {{s.fill}}; border: {{s.border}}; display: flex; align-items: {{s.align}}; justify-content: {{s.justify}}; padding: {{s.pad}}">
+<span style="font-size: {{s.size}}; line-height: 1; opacity: {{s.opacity}}">{{s.emoji}}</span>
+</div>
+</sc-for>
+</div>
+<div style="position: absolute; inset: 0; display: grid; grid-template-columns: repeat({{pz.size}}, minmax(0, 1fr))">
+<sc-for list="{{cells}}" as="c" hint-placeholder-count="25">
+<button class="cell {{c.anim}}" aria-label="{{c.label}}" onClick="{{c.click}}" onPointerDown="{{c.down}}" onPointerUp="{{c.up}}" onPointerLeave="{{c.leave}}" onContextMenu="{{noMenu}}" style="position: relative; width: {{cellPx}}; height: {{cellPx}}; border-top: {{c.bt}}; border-left: {{c.bl}}; border-right: 0; border-bottom: 0; background: {{c.bg}}; display: flex; align-items: center; justify-content: center">
+<div style="position: absolute; top: 2px; left: 2px; right: 2px; display: flex; gap: 1px; flex-wrap: wrap">
+<sc-for list="{{c.notes}}" as="n" hint-placeholder-count="0">
+<span style="font-size: {{noteFont}}; font-weight: 800; line-height: 1; color: #fff; background: {{n.color}}; border-radius: 3px; padding: 1px 2px">{{n.l}}</span>
+</sc-for>
+</div>
+<sc-if value="{{c.hasX}}" hint-placeholder-val="{{false}}">
+<svg width="{{xSize}}" height="{{xSize}}" viewBox="0 0 24 24" fill="none" stroke="#2A2330" stroke-width="2.6" stroke-linecap="round" style="opacity: {{c.xOpacity}}"><path d="M5 5l14 14M19 5L5 19"></path></svg>
+</sc-if>
+<sc-if value="{{c.hasToken}}" hint-placeholder-val="{{false}}">
+<div class="pop" style="width: {{tokenPx}}; height: {{tokenPx}}; border-radius: 50%; background: {{c.tokenColor}}; border: {{tokenBorder}} solid #FFF8EC; box-sizing: border-box; box-shadow: 0 3px 8px rgba(0,0,0,.35); display: flex; align-items: center; justify-content: center; font-family: Fraunces, Georgia, serif; font-weight: 700; font-size: {{tokenFont}}; color: #fff">{{c.tokenL}}</div>
+</sc-if>
+</button>
+</sc-for>
+</div>
+<div style="position: absolute; inset: 0; pointer-events: none">
+<sc-for list="{{labels}}" as="lb" hint-placeholder-count="5">
+<div style="position: absolute; left: {{lb.x}}; top: {{lb.y}}; transform: translate(-50%, -50%); background: #2A2330; color: #F1E8D8; font-size: {{labelFont}}; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: {{labelPad}}; border-radius: 5px; white-space: nowrap">{{lb.name}}</div>
+</sc-for>
+</div>
+<sc-if value="{{stampClosed}}" hint-placeholder-val="{{false}}">
+<div class="stamp" role="status" style="position: absolute; left: 50%; top: 50%; pointer-events: none; border: 5px double #A8322A; border-radius: 10px; padding: 10px 22px; background: rgba(241,232,216,.88); color: #A8322A; font-family: Fraunces, Georgia, serif; font-size: 40px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; box-shadow: 0 8px 24px rgba(0,0,0,.3)">Case closed</div>
+</sc-if>
+<sc-if value="{{stampWrong}}" hint-placeholder-val="{{false}}">
+<div class="stamp" role="status" style="position: absolute; left: 50%; top: 50%; pointer-events: none; border: 5px double #2A2330; border-radius: 10px; padding: 10px 22px; background: rgba(241,232,216,.9); color: #2A2330; font-family: Fraunces, Georgia, serif; font-size: 40px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; box-shadow: 0 8px 24px rgba(0,0,0,.3)">Incorrect</div>
+</sc-if>
+</div>
+
+<div style="margin-top: 4px; flex-shrink: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px">
+<button aria-label="Place mode" aria-pressed="{{placeOn}}" onClick="{{setPlace}}" style="height: 52px; border-radius: 12px; border: {{placeBorder}}; background: {{placeBg}}; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 11px; font-weight: 700">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M5 21c0-4 3-7 7-7s7 3 7 7"></path></svg>Place</button>
+<button aria-label="Notes mode" aria-pressed="{{noteOn}}" onClick="{{setNote}}" style="height: 52px; border-radius: 12px; border: {{noteBorder}}; background: {{noteBg}}; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 11px; font-weight: 700">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16v4z"></path><path d="M13.5 6.5l4 4"></path></svg>Note</button>
+<button aria-label="Mark X mode" aria-pressed="{{xOn}}" onClick="{{setX}}" style="height: 52px; border-radius: 12px; border: {{xBorder}}; background: {{xBg}}; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 11px; font-weight: 700">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg>Mark X</button>
+<button aria-label="Eraser. Hold to clear the board" aria-pressed="{{eraseOn}}" onPointerDown="{{eraseDown}}" onPointerUp="{{eraseUp}}" onPointerLeave="{{eraseLeave}}" onContextMenu="{{noMenu}}" class="cell" style="position: relative; overflow: hidden; height: 52px; border-radius: 12px; border: {{eraseBorder}}; background: {{eraseBg}}; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 11px; font-weight: 700">
+<span style="position: absolute; left: 0; bottom: 0; height: 4px; width: {{eraseBar}}; transition: {{eraseTrans}}; background: #C8553D"></span>
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3l5 5-10 10H6l-3-3L13 5"></path><path d="M9 9l6 6M6 21h14"></path></svg>Erase</button>
+<button aria-label="Undo" onClick="{{undo}}" style="height: 52px; border-radius: 12px; border: 1px solid #342C3B; background: #221D28; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 11px; font-weight: 700; opacity: {{undoOpacity}}">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14L4 9l5-5"></path><path d="M4 9h10a6 6 0 010 12h-3"></path></svg>Undo</button>
+<button aria-label="Hint" onClick="{{hint}}" style="height: 52px; border-radius: 12px; border: 1px solid #342C3B; background: #221D28; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 11px; font-weight: 700">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4A55A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"></path><path d="M12 3a6 6 0 00-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0012 3z"></path></svg>Hint</button>
+</div>
+
+<div class="scroll" style="flex-grow: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; gap: 4px">
+<sc-for list="{{chars}}" as="ch" hint-placeholder-count="5">
+<button class="{{ch.cls}}" aria-pressed="{{ch.selected}}" onClick="{{ch.pick}}" style="flex-shrink: 0; min-height: 36px; box-sizing: border-box; border-radius: 10px; border: {{ch.border}}; background: {{ch.bg}}; display: flex; align-items: center; gap: 10px; padding: 4px 10px; text-align: left">
+<span style="flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: {{ch.color}}; border: 2px solid #FFF8EC; box-sizing: border-box; display: flex; align-items: center; justify-content: center; font-family: Fraunces, Georgia, serif; font-weight: 700; font-size: 13px; color: #fff">{{ch.l}}</span>
+<span style="flex-grow: 1; font-size: 14px; line-height: 1.3; color: #CFC6D6"><b style="color: #EDE6DA; font-weight: 800">{{ch.name}}</b> {{ch.clue}}</span>
+<sc-if value="{{ch.victim}}" hint-placeholder-val="{{false}}">
+<span style="flex-shrink: 0; font-size: 9px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #F1E8D8; background: #7A2E26; border-radius: 5px; padding: 3px 5px">Victim</span>
+</sc-if>
+<sc-if value="{{ch.placed}}" hint-placeholder-val="{{false}}">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8FCB84" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M5 12l5 5 9-10"></path></svg>
+</sc-if>
+</button>
+</sc-for>
+</div>
+
+<button onClick="{{submit}}" aria-disabled="{{notReady}}" style="margin-top: 2px; height: 48px; flex-shrink: 0; border-radius: 12px; border: 0; background: {{submitBg}}; color: {{submitFg}}; font-family: Fraunces, Georgia, serif; font-size: 17px; font-weight: 700">{{submitLabel}}</button>
+</div>
+</sc-if>
+
+<sc-if value="{{toastOn}}" hint-placeholder-val="{{false}}">
+<div class="fade" role="status" style="position: absolute; left: 16px; right: 16px; bottom: 76px; background: #F1E8D8; color: #1E1A22; border-radius: 14px; padding: 14px 16px; box-shadow: 0 14px 40px rgba(0,0,0,.5); display: flex; gap: 12px; align-items: flex-start">
+<div style="flex-grow: 1; display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #8A4B1C">{{toastTitle}}</div>
+<div style="font-size: 14px; line-height: 1.45; font-weight: 600">{{toastText}}</div>
+</div>
+<button aria-label="Dismiss" onClick="{{closeToast}}" style="flex-shrink: 0; width: 32px; height: 32px; border: 0; border-radius: 8px; background: rgba(30,26,34,.08); display: flex; align-items: center; justify-content: center; color: #1E1A22">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+</button>
+</div>
+</sc-if>
+
+<sc-if value="{{won}}" hint-placeholder-val="{{false}}">
+<div class="fade" style="position: absolute; inset: 0; background: rgba(12,10,15,.82); display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box">
+<div style="width: 100%; background: #F1E8D8; color: #1E1A22; border-radius: 20px; padding: 28px 24px 18px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center">
+<div style="font-size: 11px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #8A4B1C">Case closed</div>
+<div style="width: 72px; height: 72px; border-radius: 50%; background: {{killer.color}}; border: 4px solid #fff; box-shadow: 0 6px 16px rgba(0,0,0,.25); display: flex; align-items: center; justify-content: center; font-family: Fraunces, Georgia, serif; font-weight: 700; font-size: 32px; color: #fff">{{killer.l}}</div>
+<div style="font-family: Fraunces, Georgia, serif; font-size: 30px; font-weight: 700; line-height: 1.1">{{killer.name}} did it.</div>
+<div style="font-size: 15px; line-height: 1.5; color: #4A4250">{{pz.winText}}</div>
+<div style="display: flex; gap: 10px; width: 100%">
+<div style="flex-grow: 1; flex-basis: 0; background: #E6DAC6; border-radius: 12px; padding: 10px; display: flex; flex-direction: column; gap: 2px">
+<div style="font-size: 11px; font-weight: 700; color: #6B6072; text-transform: uppercase; letter-spacing: .1em">Time</div>
+<div style="font-size: 20px; font-weight: 800; font-variant-numeric: tabular-nums">{{timeText}}</div>
+</div>
+<div style="flex-grow: 1; flex-basis: 0; background: #E6DAC6; border-radius: 12px; padding: 10px; display: flex; flex-direction: column; gap: 2px">
+<div style="font-size: 11px; font-weight: 700; color: #6B6072; text-transform: uppercase; letter-spacing: .1em">Hints</div>
+<div style="font-size: 20px; font-weight: 800">{{hintsUsed}}</div>
+</div>
+</div>
+<button onClick="{{goHome}}" style="width: 100%; height: 48px; border: 0; border-radius: 12px; background: #1E1A22; color: #F1E8D8; font-family: Fraunces, Georgia, serif; font-size: 17px; font-weight: 700">Back to the casebook</button>
+<div style="display: flex; gap: 8px; width: 100%">
+<button onClick="{{closeWin}}" style="flex-grow: 1; flex-basis: 0; height: 44px; border: 0; border-radius: 12px; background: transparent; color: #1E1A22; font-size: 14px; font-weight: 700; text-decoration: underline">View the board</button>
+<button onClick="{{reset}}" style="flex-grow: 1; flex-basis: 0; height: 44px; border: 0; border-radius: 12px; background: transparent; color: #1E1A22; font-size: 14px; font-weight: 700; text-decoration: underline">Replay case</button>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{helpOn}}" hint-placeholder-val="{{false}}">
+<div class="fade" style="position: absolute; inset: 0; background: rgba(12,10,15,.82); display: flex; align-items: flex-end; box-sizing: border-box">
+<div style="width: 100%; max-height: 90%; overflow-y: auto; background: #F1E8D8; color: #1E1A22; border-radius: 22px 22px 0 0; padding: 22px 22px 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<div style="font-family: Fraunces, Georgia, serif; font-size: 24px; font-weight: 700">How to play</div>
+<button aria-label="Close" onClick="{{closeHelp}}" style="width: 44px; height: 44px; border: 0; border-radius: 12px; background: rgba(30,26,34,.08); display: flex; align-items: center; justify-content: center; color: #1E1A22">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+</button>
+</div>
+<div style="font-size: 14px; line-height: 1.5">Place every suspect on the floor plan. Use the clues to work out who was alone with the victim.</div>
+<div style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.45">
+<div style="font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #8A4B1C">Rules</div>
+<div>One person per row. One person per column.</div>
+<div>Hatched cells are blocked. Nobody stands there.</div>
+<div>Every clue is true and there is only one answer. No guessing needed.</div>
+<div>The victim was alone in a room with one other person. That person is the murderer.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.45">
+<div style="font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #8A4B1C">Controls</div>
+<div><b>Tap a suspect</b> to select them.</div>
+<div><b>Place</b>: tap a cell to put the selected suspect there. Tap again to pick them up.</div>
+<div><b>Note</b>: tap a cell to jot their initial. Press and hold still places.</div>
+<div><b>Mark X</b> rules a cell out for everyone.</div>
+<div><b>Erase</b> clears a cell. Hold it to clear the board.</div>
+<div><b>Hint</b> nudges you, explains, then places.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.45">
+<div style="font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #8A4B1C">Keywords</div>
+<div><b>Beside</b>: directly left, right, above or below, in the same room.</div>
+<div><b>On / in</b>: standing on that object.</div>
+<div><b>North / south of</b>: any row above or below it.</div>
+<div><b>East / west of</b>: any column to the right or left of it.</div>
+<div><b>Diagonal to</b>: on either diagonal line through them, across the whole board.</div>
+<div><b>Alone with</b>: only those two were in the room.</div>
+<div><b>Nobody</b>: includes the victim.</div>
+</div>
+</div>
+</div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"autoX":{"editor":"boolean","default":true},"$preview":{"width":390,"height":844}}'>
+var FLOOR_COLORS = { wood: "#E6C9A0", tile: "#DCE6EE", grass: "#9BD48A", stone: "#A9A29A", pavement: "#BDBDBD", water: "#7EC8E3", metal: "#A7B0BA", carpet: "#C98E8E", marble: "#ECE8E1", snow: "#F3F6FA", sand: "#F2DFA7" };
+var SHAPE_COLORS = {
+  bed: ["#9FB8E0", "#6F8BB8"], sofa: ["#C9A7D8", "#9C79AE"], bench: ["#C8A27A", "#9C7852"], car: ["#F2A7A7", "#C47878"],
+  boat: ["#F5E6C8", "#C9B48A"], bathtub: ["#BFE3F0", "#86B6C9"], carpet: ["#C7BDF2", "#968AC8"], lifeboat: ["#F2C38B", "#C4914F"]
+};
+var EMOJI = {
+  shelf: "📚", table: "🍽️", plant: "🪴", TV: "📺", tree: "🌳", piano: "🎹",
+  barrel: "🛢️", stove: "🍳", chair: "🪑", bed: "🛏️", sofa: "🛋️",
+  bench: "🪵", car: "🚗", boat: "⛵", bathtub: "🛁", carpet: "🟪",
+  panel: "🎛️", suitcase: "🧳", crate: "📦", snowman: "⛄", skirack: "🎿", fireplace: "🔥", wheel: "☸️", telescope: "🔭", slot: "🎰", anchor: "⚓",
+  sarcophagus: "⚱️", palm: "🌴", painting: "🖼️", armour: "🛡️", dinosaur: "🦕", gem: "💎", geode: "🪨", statue: "🗿", tent: "🥁", ferris: "🎡",
+  mirror: "🪞", pole: "🎠", candy: "🍭", target: "🎯", fountain: "⛲", desk: "🗄️", cart: "🛒", washer: "🧺", boiler: "♨️", lift: "🛗",
+  float: "🛟", lifeboat: "🚣", horse: "🐎", duck: "🦆", lounger: "🏖️"
+};
+var BLOCKING = { shelf: 1, table: 1, plant: 1, TV: 1, tree: 1, piano: 1, barrel: 1, stove: 1, panel: 1, suitcase: 1, crate: 1, snowman: 1, skirack: 1, fireplace: 1,
+  wheel: 1, telescope: 1, slot: 1, anchor: 1, sarcophagus: 1, palm: 1, painting: 1, armour: 1, dinosaur: 1, gem: 1, geode: 1, statue: 1, tent: 1, ferris: 1,
+  mirror: 1, pole: 1, candy: 1, target: 1, fountain: 1, desk: 1, cart: 1, washer: 1, boiler: 1, lift: 1 };
+
+var PUZZLES = [
+  {
+    id: "c1", num: "01", title: "The Harrow House", difficulty: "Easy", size: 5,
+    rooms: ["LLKKK", "LLKKB", "SSSBB", "SSGGB", "GGGGB"],
+    roomNames: { L: "Library", K: "Kitchen", B: "Bedroom", S: "Parlour", G: "Garden" },
+    floors: { L: "stone", K: "tile", B: "wood", S: "wood", G: "grass" },
+    objects: [
+      ["shelf", [[0, 0]]], ["table", [[0, 3], [0, 4]]], ["plant", [[1, 4]]], ["TV", [[2, 2]]], ["tree", [[4, 0]]],
+      ["bed", [[2, 4], [3, 4]]], ["sofa", [[3, 0], [3, 1]]], ["bench", [[4, 2], [4, 3]]], ["chair", [[1, 1]]], ["chair", [[1, 3]]]
+    ],
+    general: [],
+    chars: [
+      { id: "A", name: "Agatha", color: "#B5475A", clue: "was diagonal to Celeste." },
+      { id: "B", name: "Bruno", color: "#3D6FB0", clue: "was beside a bed." },
+      { id: "C", name: "Celeste", color: "#2F7F72", clue: "was on a bed." },
+      { id: "D", name: "Dimitri", color: "#9A5A16", clue: "was east of the tree." },
+      { id: "E", name: "Edmund", color: "#6B6478", clue: "was alone with the murderer.", victim: true }
+    ],
+    sol: { A: "0-1", B: "2-3", C: "3-4", D: "4-2", E: "1-0" },
+    murderer: "A",
+    winText: "She was alone with Edmund in the Library. Nobody else was in the room.",
+    steps: [
+      { id: "B", text: "Celeste is on the bed, so the bed's column belongs to her. Two cells sit beside the bed, and only one of them is outside that column. That one is Bruno's." },
+      { id: "C", text: "Bruno's row runs through the top half of the bed, so Celeste is on the lower half." },
+      { id: "E", text: "The far left column has one open cell, in the Library, so someone stands there. Dimitri is east of the tree, so it can't be him. The cell isn't diagonal to Celeste, so it can't be Agatha. That leaves Edmund." },
+      { id: "A", text: "Agatha is diagonal to Celeste. With Edmund's row gone, the only diagonal cell still open is in the Library, top row." },
+      { id: "D", text: "Dimitri takes the last open cell, on the garden bench. It's east of the tree." }
+    ]
+  },
+  {
+    id: "c2", num: "02", title: "The Seaside Villa", difficulty: "Easy", size: 5,
+    rooms: ["TTPPP", "TLPPB", "LLLBB", "LLGGB", "GGGGG"],
+    roomNames: { T: "Terrace", P: "Pool", B: "Bathroom", L: "Lounge", G: "Garden" },
+    floors: { T: "pavement", P: "water", B: "tile", L: "wood", G: "grass" },
+    objects: [
+      ["car", [[0, 0], [1, 0]]], ["plant", [[0, 1]]], ["boat", [[0, 3], [0, 4]]], ["shelf", [[1, 4]]], ["bathtub", [[2, 4], [3, 4]]],
+      ["TV", [[2, 2]]], ["sofa", [[3, 0], [3, 1]]], ["chair", [[1, 1]]], ["tree", [[4, 4]]], ["bench", [[4, 2], [4, 3]]]
+    ],
+    general: ["Nobody was on the Terrace."],
+    chars: [
+      { id: "A", name: "Arthur", color: "#3D6FB0", clue: "was beside a chair." },
+      { id: "B", name: "Beatrice", color: "#B5475A", clue: "was diagonal to Arthur." },
+      { id: "C", name: "Cyril", color: "#2F7F72", clue: "was beside a tree." },
+      { id: "D", name: "Daphne", color: "#9A5A16", clue: "was on the sofa." },
+      { id: "E", name: "Ernest", color: "#6B6478", clue: "was alone with the murderer.", victim: true }
+    ],
+    sol: { A: "2-1", B: "1-2", C: "4-3", D: "3-0", E: "0-4" },
+    murderer: "B",
+    winText: "She was alone with Ernest at the Pool. Nobody else was there.",
+    steps: [
+      { id: "A", text: "The chair is in the Lounge. Only one Lounge cell touches it, the one right below. That's Arthur." },
+      { id: "C", text: "The tree sits in the Garden corner. The cell above it is the Bathroom, behind a wall, so only the cell to its left counts. That's Cyril." },
+      { id: "D", text: "Daphne is on the sofa, which covers two cells. Arthur already owns one of those columns, so she takes the other." },
+      { id: "B", text: "Beatrice is diagonal to Arthur. Nobody was on the Terrace, so the only diagonal cell still open is in the Pool." },
+      { id: "E", text: "Ernest takes the last open cell, on the boat." }
+    ]
+  },
+  {
+    id: "c3", num: "03", title: "Blackwood Manor", difficulty: "Medium", size: 6,
+    rooms: ["SSSDDD", "SSCDDD", "HCCCKK", "HHCKKK", "HHGGKW", "GGGGWW"],
+    roomNames: { S: "Study", D: "Dining", C: "Hall", H: "Cellar", K: "Kitchen", G: "Garden", W: "Pond" },
+    floors: { S: "wood", D: "wood", C: "pavement", H: "stone", K: "tile", G: "grass", W: "water" },
+    objects: [
+      ["shelf", [[0, 0]]], ["piano", [[0, 1]]], ["chair", [[1, 1]]], ["chair", [[0, 3]]], ["chair", [[1, 5]]], ["table", [[1, 3], [1, 4]]],
+      ["plant", [[3, 2]]], ["carpet", [[2, 2], [2, 3]]], ["barrel", [[4, 0]]], ["stove", [[3, 4]]], ["chair", [[2, 5]]],
+      ["tree", [[5, 0]]], ["bench", [[5, 2], [5, 3]]], ["boat", [[5, 4], [5, 5]]]
+    ],
+    general: ["Nobody was in the Study."],
+    chars: [
+      { id: "A", name: "Ambrose", color: "#3D6FB0", clue: "was beside the bench." },
+      { id: "B", name: "Bianca", color: "#B5475A", clue: "was south of Ambrose." },
+      { id: "C", name: "Clement", color: "#2F7F72", clue: "was on the carpet." },
+      { id: "D", name: "Dorothy", color: "#9A5A16", clue: "was west of the stove." },
+      { id: "E", name: "Edgar", color: "#7A4FA0", clue: "was diagonal to Clement." },
+      { id: "F", name: "Florence", color: "#6B6478", clue: "was alone with the murderer.", victim: true }
+    ],
+    sol: { A: "4-3", B: "5-1", C: "2-2", D: "3-0", E: "0-4", F: "1-5" },
+    murderer: "E",
+    winText: "He was alone with Florence in the Dining room. Nobody else was in there.",
+    steps: [
+      { id: "B", text: "Ambrose is beside the bench and Bianca is south of him, so Bianca is in the bottom row and Ambrose in the row above. Ambrose and Clement's carpet share the same two middle columns, so nobody else can use them. That leaves one open cell in the table's row, far right, and then one in the top row. Bianca gets the only bottom-row cell still free." },
+      { id: "E", text: "Edgar is diagonal to Clement, who is on the carpet. The only open cell that lines up diagonally with the carpet is in the top row of the Dining room." },
+      { id: "C", text: "Edgar lines up with the left half of the carpet, so that's where Clement is." },
+      { id: "A", text: "Clement took the left middle column, so Ambrose sits beside the bench in the right one." },
+      { id: "D", text: "Dorothy is west of the stove. Of the two open cells left, only the one in the Cellar is." },
+      { id: "F", text: "Florence takes the last open cell, on the Dining room chair." }
+    ]
+  },
+  {"id": "c4", "num": "04", "title": "The Midnight Express", "difficulty": "Easy", "size": 5, "rooms": ["EEDDD", "EEDDD", "SSSLL", "SSLLL", "BBBBL"], "roomNames": {"E": "Engine", "D": "Dining car", "S": "Sleeper", "L": "Lounge car", "B": "Luggage van"}, "floors": {"E": "metal", "D": "carpet", "S": "wood", "L": "marble", "B": "metal"}, "objects": [["panel", [[0, 0]]], ["barrel", [[1, 1]]], ["table", [[0, 3]]], ["chair", [[0, 2]]], ["chair", [[0, 4]]], ["table", [[1, 3]]], ["bed", [[2, 0], [2, 1]]], ["piano", [[2, 4]]], ["sofa", [[3, 3], [3, 4]]], ["suitcase", [[4, 0]]], ["crate", [[4, 2]]]], "general": [], "chars": [{"id": "A", "name": "Alma", "color": "#B5475A", "clue": "was diagonal to Declan.", "victim": false}, {"id": "B", "name": "Basil", "color": "#3D6FB0", "clue": "was beside the suitcase.", "victim": false}, {"id": "C", "name": "Cora", "color": "#2F7F72", "clue": "was on a chair.", "victim": false}, {"id": "D", "name": "Declan", "color": "#9A5A16", "clue": "was beside the control panel.", "victim": false}, {"id": "E", "name": "Esme", "color": "#6B6478", "clue": "was alone with the murderer.", "victim": true}], "sol": {"C": "0-4", "D": "1-0", "E": "2-3", "A": "3-2", "B": "4-1"}, "murderer": "A", "winText": "Alma was alone with Esme in the Lounge car. Nobody else was there.", "steps": [{"id": "B", "text": "Basil was beside the suitcase. That leaves one open cell."}, {"id": "D", "text": "Declan was beside the control panel. Rows and columns already taken are out. That leaves one open cell."}, {"id": "A", "text": "Alma was diagonal to Declan. Rows and columns already taken are out. That leaves one open cell."}, {"id": "C", "text": "Cora was on a chair. Rows and columns already taken are out. That leaves one open cell."}, {"id": "E", "text": "Esme was alone with the murderer, so they share a room with exactly one other person. Rows and columns already taken are out. That leaves one open cell."}]},
+  {"id": "c5", "num": "05", "title": "Frostpeak Lodge", "difficulty": "Easy", "size": 6, "rooms": ["DDDKKK", "DBBKKH", "DBBLLH", "SSLLLH", "SSLLTT", "SSSTTT"], "roomNames": {"D": "Deck", "K": "Kitchen", "B": "Bunk room", "H": "Hot tub", "L": "Lounge", "S": "Ski room", "T": "Sauna"}, "floors": {"D": "snow", "K": "tile", "B": "wood", "H": "water", "L": "carpet", "S": "stone", "T": "sand"}, "objects": [["snowman", [[0, 0]]], ["stove", [[0, 4]]], ["chair", [[0, 3]]], ["table", [[1, 4]]], ["bed", [[1, 1], [2, 1]]], ["chair", [[1, 2]]], ["fireplace", [[3, 3]]], ["carpet", [[4, 2], [4, 3]]], ["sofa", [[2, 3], [2, 4]]], ["skirack", [[5, 0]]], ["bench", [[3, 0], [4, 0]]], ["bench", [[5, 4], [5, 5]]], ["plant", [[1, 0]]]], "general": [], "chars": [{"id": "A", "name": "Axel", "color": "#B5475A", "clue": "was east of the stove.", "victim": false}, {"id": "B", "name": "Brigid", "color": "#3D6FB0", "clue": "was beside the snowman.", "victim": false}, {"id": "C", "name": "Caspar", "color": "#2F7F72", "clue": "was beside the bed.", "victim": false}, {"id": "D", "name": "Delphine", "color": "#9A5A16", "clue": "was on the carpet.", "victim": false}, {"id": "E", "name": "Ezra", "color": "#7A4FA0", "clue": "was beside the sofa.", "victim": false}, {"id": "F", "name": "Freya", "color": "#6B6478", "clue": "was alone with the murderer.", "victim": true}], "sol": {"B": "0-1", "C": "1-2", "F": "2-0", "E": "3-4", "D": "4-3", "A": "5-5"}, "murderer": "B", "winText": "Brigid was alone with Freya in the Deck. Nobody else was there.", "steps": [{"id": "B", "text": "Brigid was beside the snowman. That leaves one open cell."}, {"id": "E", "text": "Ezra was beside the sofa. Rows and columns already taken are out. That leaves one open cell."}, {"id": "C", "text": "Caspar was beside the bed. Delphine and Freya lock the 3rd and 5th rows between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."}, {"id": "D", "text": "Delphine was on the carpet. Delphine is the only one who can still fill the 4th column. Rows and columns already taken are out. That leaves one open cell."}, {"id": "F", "text": "Freya was alone with the murderer, so they share a room with exactly one other person. Freya is the only one who can still fill the 1st column. Rows and columns already taken are out. That leaves one open cell."}, {"id": "A", "text": "Axel was east of the stove. Delphine and Freya lock the 3rd and 5th rows between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."}]},
+  {"id": "c6", "num": "06", "title": "The Grand Aurora", "difficulty": "Medium", "size": 7, "rooms": ["BBBCCCC", "BBPPCCC", "DPPPPCS", "DDPPKKS", "DDWWKKS", "LLWWKSS", "LLLWWSS"], "roomNames": {"B": "Bridge", "C": "Casino", "P": "Pool", "S": "Spa", "D": "Dining", "K": "Galley", "W": "Ballroom", "L": "Lifeboat deck"}, "floors": {"B": "metal", "C": "carpet", "P": "water", "S": "marble", "D": "wood", "K": "tile", "W": "wood", "L": "pavement"}, "objects": [["wheel", [[0, 1]]], ["telescope", [[1, 0]]], ["slot", [[0, 4]]], ["slot", [[0, 6]]], ["table", [[1, 5], [1, 6]]], ["chair", [[0, 5]]], ["float", [[2, 3]]], ["table", [[3, 0]]], ["chair", [[4, 0]]], ["stove", [[4, 5]]], ["crate", [[3, 4]]], ["plant", [[2, 6]]], ["bathtub", [[6, 5], [6, 6]]], ["piano", [[4, 3]]], ["anchor", [[5, 0]]], ["lifeboat", [[6, 0], [6, 1]]]], "general": [], "chars": [{"id": "A", "name": "Adele", "color": "#B5475A", "clue": "was beside the plant.", "victim": false}, {"id": "B", "name": "Bernard", "color": "#3D6FB0", "clue": "was on the pool float.", "victim": false}, {"id": "C", "name": "Clio", "color": "#2F7F72", "clue": "was on a chair.", "victim": false}, {"id": "D", "name": "Dorian", "color": "#9A5A16", "clue": "was beside the telescope.", "victim": false}, {"id": "E", "name": "Elsa", "color": "#7A4FA0", "clue": "was south of the ship's wheel.", "victim": false}, {"id": "F", "name": "Fitz", "color": "#1F7A8C", "clue": "was beside the bathtub.", "victim": false}, {"id": "G", "name": "Greer", "color": "#6B6478", "clue": "was alone with the murderer.", "victim": true}], "sol": {"G": "0-2", "D": "1-1", "B": "2-3", "A": "3-6", "C": "4-0", "F": "5-5", "E": "6-4"}, "murderer": "D", "winText": "Dorian was alone with Greer in the Bridge. Nobody else was there.", "steps": [{"id": "A", "text": "Adele was beside the plant. That leaves one open cell."}, {"id": "B", "text": "Bernard was on the pool float. Rows and columns already taken are out. That leaves one open cell."}, {"id": "F", "text": "Fitz was beside the bathtub. Rows and columns already taken are out. That leaves one open cell."}, {"id": "C", "text": "Clio was on a chair. Rows and columns already taken are out. That leaves one open cell."}, {"id": "D", "text": "Dorian was beside the telescope. Rows and columns already taken are out. That leaves one open cell."}, {"id": "E", "text": "Elsa was south of the ship's wheel. Elsa is the only one who can still fill the 5th column. Clio and Dorian lock the 1st and 2nd columns between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."}, {"id": "G", "text": "Greer was alone with the murderer, so they share a room with exactly one other person. Greer is the only one who can still fill the 1st row. Clio and Dorian lock the 1st and 2nd columns between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."}]},
+  {"id": "c7", "num": "07", "title": "Museum After Dark", "difficulty": "Hard", "size": 8, "rooms": ["EEEEGGGG", "EEEEGGGG", "AAHHHHVV", "AAHHHHVV", "AAHHHHMM", "SSSHHMMM", "SSSCCCMM", "SSSCCCCC"], "roomNames": {"E": "Egypt wing", "G": "Gallery", "A": "Armoury", "H": "Great hall", "V": "Vault", "M": "Mineral room", "S": "Sculpture court", "C": "Cafe"}, "floors": {"E": "sand", "G": "wood", "A": "stone", "H": "marble", "V": "metal", "M": "stone", "S": "grass", "C": "tile"}, "objects": [["sarcophagus", [[0, 1], [0, 2]]], ["palm", [[1, 3]]], ["painting", [[0, 5]]], ["painting", [[1, 7]]], ["bench", [[1, 4], [1, 5]]], ["armour", [[2, 0]]], ["armour", [[4, 1]]], ["dinosaur", [[3, 3], [3, 4], [4, 3], [4, 4]]], ["carpet", [[2, 2], [2, 3]]], ["gem", [[2, 7]]], ["geode", [[5, 6]]], ["statue", [[5, 1]]], ["statue", [[7, 0]]], ["tree", [[6, 2]]], ["table", [[7, 5]]], ["chair", [[6, 4]]], ["chair", [[7, 4]]], ["bench", [[3, 6], [3, 7]]]], "general": ["Nobody was in the Gallery.", "Nobody was in the Mineral room.", "Nobody was in the Sculpture court."], "chars": [{"id": "A", "name": "Ada", "color": "#B5475A", "clue": "was beside a bench.", "victim": false}, {"id": "B", "name": "Barnaby", "color": "#3D6FB0", "clue": "was west of Ada.", "victim": false}, {"id": "C", "name": "Cecily", "color": "#2F7F72", "clue": "was on a chair.", "victim": false}, {"id": "D", "name": "Dashiell", "color": "#9A5A16", "clue": "was beside the carpet.", "victim": false}, {"id": "E", "name": "Eloise", "color": "#7A4FA0", "clue": "was north of the geode.", "victim": false}, {"id": "F", "name": "Fergus", "color": "#1F7A8C", "clue": "was in the Egypt wing.", "victim": false}, {"id": "G", "name": "Ginevra", "color": "#A23E83", "clue": "was north of Fergus.", "victim": false}, {"id": "H", "name": "Horace", "color": "#6B6478", "clue": "was alone with the murderer.", "victim": true}], "sol": {"G": "0-0", "F": "1-1", "A": "2-6", "D": "3-2", "E": "4-5", "B": "5-3", "C": "6-4", "H": "7-7"}, "murderer": "C", "winText": "Cecily was alone with Horace in the Cafe. Nobody else was there.", "steps": [{"id": "A", "text": "Ada was beside a bench. Nobody was in the Gallery. That leaves one open cell."}, {"id": "D", "text": "Dashiell was beside the carpet. Rows and columns already taken are out. That leaves one open cell."}, {"id": "C", "text": "Cecily was on a chair. Fergus and Horace lock the 2nd and 8th rows between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."}, {"id": "H", "text": "Horace was alone with the murderer, so they share a room with exactly one other person. Horace is the only one who can still fill the 8th column. Rows and columns already taken are out. That leaves one open cell."}, {"id": "B", "text": "Barnaby was west of Ada. Barnaby is the only one who can still fill the 6th row. Cecily and Horace lock the 5th and 8th columns between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."}, {"id": "E", "text": "Eloise was north of the geode. Eloise is the only one who can still fill the 6th column. Fergus and Ginevra lock the 1st and 2nd rows between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."}, {"id": "F", "text": "Fergus was in the Egypt wing. Fergus is the only one who can still fill the 2nd column. Ginevra was north of Fergus. Rows and columns already taken are out. That leaves one open cell."}, {"id": "G", "text": "Ginevra was north of Fergus. Barnaby and Eloise lock the 4th and 6th columns between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."}]},
+  {"id": "c8", "num": "08", "title": "Carnival of Lanterns", "difficulty": "Hard", "size": 7, "rooms": ["TTTFFFF", "TTTFFFF", "MMCCCWW", "MMCCCWW", "MMCCCWW", "GGGSSSW", "GGGSSSS"], "roomNames": {"T": "Big top", "F": "Ferris wheel", "M": "Mirror maze", "C": "Carousel", "W": "Food stalls", "G": "Games alley", "S": "Duck pond"}, "floors": {"T": "sand", "F": "pavement", "M": "metal", "C": "wood", "W": "grass", "G": "sand", "S": "water"}, "objects": [["tent", [[0, 1]]], ["ferris", [[0, 4], [0, 5], [1, 4], [1, 5]]], ["mirror", [[2, 0]]], ["mirror", [[4, 1]]], ["horse", [[2, 2]]], ["horse", [[2, 4]]], ["horse", [[4, 2]]], ["horse", [[4, 4]]], ["pole", [[3, 3]]], ["candy", [[3, 6]]], ["bench", [[4, 5], [5, 6]]], ["target", [[5, 0]]], ["duck", [[6, 4]]], ["duck", [[5, 4]]], ["bench", [[1, 0], [1, 1]]]], "general": ["Nobody was in the Games alley."], "chars": [{"id": "A", "name": "Anouk", "color": "#B5475A", "clue": "was east of Coco.", "victim": false}, {"id": "B", "name": "Bram", "color": "#3D6FB0", "clue": "was beside the carousel pole.", "victim": false}, {"id": "C", "name": "Coco", "color": "#2F7F72", "clue": "was beside the candy floss stand.", "victim": false}, {"id": "D", "name": "Dex", "color": "#9A5A16", "clue": "was south of the target.", "victim": false}, {"id": "E", "name": "Etta", "color": "#7A4FA0", "clue": "was on a bench.", "victim": false}, {"id": "F", "name": "Flint", "color": "#1F7A8C", "clue": "was diagonal to Bram.", "victim": false}, {"id": "G", "name": "Gus", "color": "#6B6478", "clue": "was alone with the murderer.", "victim": true}], "sol": {"G": "0-2", "E": "1-0", "F": "2-1", "C": "3-5", "B": "4-3", "A": "5-6", "D": "6-4"}, "murderer": "E", "winText": "Etta was alone with Gus in the Big top. Nobody else was there.", "steps": [{"id": "C", "text": "Coco was beside the candy floss stand. Anouk was east of Coco. Nobody was in the Games alley. That leaves one open cell."}, {"id": "D", "text": "Dex was south of the target. Anouk and Bram lock the 4th and 7th columns between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."}, {"id": "A", "text": "Anouk was east of Coco. Anouk is the only one who can still fill the 6th row. Rows and columns already taken are out. That leaves one open cell."}, {"id": "B", "text": "Bram was beside the carousel pole. Anouk and Flint lock the 3rd and 6th rows between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."}, {"id": "E", "text": "Etta was on a bench. Anouk and Flint lock the 2nd and 7th columns between them, so nobody else fits there. Anouk and Bram lock the 4th and 7th columns between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."}, {"id": "F", "text": "Flint was diagonal to Bram. Anouk and Etta lock the 2nd and 6th rows between them, so nobody else fits there. Anouk and Dex lock the 5th and 7th columns between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."}, {"id": "G", "text": "Gus was alone with the murderer, so they share a room with exactly one other person. Bram and Etta lock the 1st and 4th columns between them, so nobody else fits there. Bram and Etta lock the 2nd and 5th rows between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."}]},
+  {"id": "c9", "num": "09", "title": "Hotel Grand Meridian", "difficulty": "Hard", "size": 12, "rooms": ["LLLLBBBBPPPP", "LLLLBBBBPPPP", "LLRRRBBSSPPP", "KKRRRGGSSSTT", "KKRRGGGGSSTT", "KKKCGGGGWWTT", "DDCCCGGWWWTT", "DDCCCHHWWOOO", "DDDHHHHHOOOO", "YYDHHHHEEEOO", "YYYYZZEEEEMM", "YYYYZZZEEMMM"], "roomNames": {"L": "Lobby", "B": "Ballroom", "P": "Penthouse", "R": "Bar", "S": "Suite", "K": "Kitchen", "G": "Atrium", "T": "Terrace", "C": "Cloakroom", "W": "Wine cellar", "D": "Dining room", "H": "Hallway", "O": "Office", "Y": "Pool", "Z": "Laundry", "E": "Library", "M": "Boiler room"}, "floors": {"L": "marble", "B": "wood", "P": "carpet", "R": "wood", "S": "carpet", "K": "tile", "G": "grass", "T": "pavement", "C": "carpet", "W": "stone", "D": "wood", "H": "marble", "O": "wood", "Y": "water", "Z": "tile", "E": "wood", "M": "metal"}, "objects": [["desk", [[0, 1], [0, 2]]], ["plant", [[1, 3]]], ["sofa", [[1, 0], [1, 1]]], ["piano", [[0, 5]]], ["carpet", [[1, 5], [1, 6]]], ["chair", [[2, 6]]], ["bed", [[0, 9], [0, 10]]], ["TV", [[1, 11]]], ["chair", [[2, 10]]], ["table", [[3, 3]]], ["chair", [[2, 2]]], ["chair", [[4, 3]]], ["bed", [[2, 7], [3, 7]]], ["shelf", [[4, 9]]], ["stove", [[3, 0]]], ["table", [[4, 1]]], ["fountain", [[4, 6]]], ["tree", [[5, 5]]], ["bench", [[6, 5], [6, 6]]], ["tree", [[3, 11]]], ["lounger", [[5, 10]]], ["lounger", [[6, 11]]], ["crate", [[6, 2]]], ["barrel", [[6, 9]]], ["barrel", [[7, 8]]], ["table", [[7, 0]]], ["chair", [[6, 0]]], ["chair", [[8, 1]]], ["cart", [[8, 5]]], ["carpet", [[7, 5], [7, 6]]], ["desk", [[8, 10], [8, 11]]], ["chair", [[7, 10]]], ["float", [[10, 1]]], ["lounger", [[9, 0]]], ["washer", [[10, 4]]], ["shelf", [[9, 8]]], ["sofa", [[10, 6], [10, 7]]], ["boiler", [[11, 11]]], ["crate", [[10, 10]]], ["lift", [[11, 4]]]], "general": ["Nobody was in the Ballroom.", "Nobody was in the Dining room.", "Nobody was in the Office.", "Nobody was in the Bar."], "chars": [{"id": "A", "name": "Aurelia", "color": "#B5475A", "clue": "was beside a desk.", "victim": false}, {"id": "B", "name": "Benedict", "color": "#3D6FB0", "clue": "was beside a bed.", "victim": false}, {"id": "C", "name": "Camille", "color": "#2F7F72", "clue": "was beside the bench.", "victim": false}, {"id": "D", "name": "Desmond", "color": "#9A5A16", "clue": "was beside the lift.", "victim": false}, {"id": "E", "name": "Evangeline", "color": "#7A4FA0", "clue": "was on a sun lounger.", "victim": false}, {"id": "F", "name": "Florian", "color": "#1F7A8C", "clue": "was diagonal to Katarina.", "victim": false}, {"id": "G", "name": "Genevieve", "color": "#A23E83", "clue": "was on a bed.", "victim": false}, {"id": "H", "name": "Hector", "color": "#5E7A1F", "clue": "was north of Benedict.", "victim": false}, {"id": "I", "name": "Imogen", "color": "#C0572B", "clue": "was south of Katarina, and east of Hector.", "victim": false}, {"id": "J", "name": "Jasper", "color": "#34568B", "clue": "was on a sun lounger, and north of the luggage cart.", "victim": false}, {"id": "K", "name": "Katarina", "color": "#8C5A3C", "clue": "was beside a crate.", "victim": false}, {"id": "L", "name": "Leopold", "color": "#6B6478", "clue": "was alone with the murderer.", "victim": true}], "sol": {"G": "0-10", "A": "1-1", "H": "2-7", "B": "3-8", "L": "4-4", "C": "5-6", "J": "6-11", "K": "7-2", "F": "8-3", "E": "9-0", "I": "10-9", "D": "11-5"}, "murderer": "C", "winText": "Camille was alone with Leopold in the Atrium. Nobody else was there.", "steps": [{"id": "C", "text": "Camille was beside the bench. Nobody was in the Ballroom. That leaves one open cell."}, {"id": "D", "text": "Desmond was beside the lift. Rows and columns already taken are out. That leaves one open cell."}, {"id": "J", "text": "Jasper was on a sun lounger, and north of the luggage cart. Rows and columns already taken are out. That leaves one open cell."}, {"id": "K", "text": "Katarina was beside a crate. Imogen was south of Katarina. Rows and columns already taken are out. That leaves one open cell."}, {"id": "E", "text": "Evangeline was on a sun lounger. Rows and columns already taken are out. That leaves one open cell."}, {"id": "L", "text": "Leopold was alone with the murderer, so they share a room with exactly one other person. Leopold is the only one who can still fill the 5th column. Leopold is the only one who can still fill the 5th row. Rows and columns already taken are out. That leaves one open cell."}, {"id": "F", "text": "Florian was diagonal to Katarina. Florian is the only one who can still fill the 9th row. Evangeline and Leopold lock the 5th and 10th rows between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."}, {"id": "A", "text": "Aurelia was beside a desk. Rows and columns already taken are out. That leaves one open cell."}, {"id": "B", "text": "Benedict was beside a bed. Hector was north of Benedict. Aurelia and Imogen lock the 2nd and 11th rows between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."}, {"id": "G", "text": "Genevieve was on a bed. Aurelia and Imogen lock the 2nd and 10th columns between them, so nobody else fits there. Aurelia and Hector lock the 2nd and 8th columns between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."}, {"id": "H", "text": "Hector was north of Benedict. Aurelia and Benedict lock the 2nd and 9th columns between them, so nobody else fits there. Aurelia and Imogen lock the 2nd and 11th rows between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."}, {"id": "I", "text": "Imogen was south of Katarina, and east of Hector. Aurelia and Benedict lock the 2nd and 9th columns between them, so nobody else fits there. Imogen was east of Hector. Rows and columns already taken are out. That leaves one open cell."}]}
+];
+
+var WALL = "3px solid #2A2330", THIN = "1px solid rgba(42,35,48,.22)", NONE = "0 solid transparent";
+function px(n) { return Math.round(n) + "px"; }
+function findPuzzle(id) { for (var i = 0; i < PUZZLES.length; i++) if (PUZZLES[i].id === id) return PUZZLES[i]; return null; }
+function charOf(pz, id) { for (var i = 0; i < pz.chars.length; i++) if (pz.chars[i].id === id) return pz.chars[i]; return null; }
+function cellSize(pz) { return Math.floor(350 / pz.size); }
+
+PUZZLES.forEach(function (pz) {
+  var N = pz.size, CELL = cellSize(pz);
+  pz.blocked = {}; pz.objAt = {};
+  pz.shapes = [];
+  pz.objects.forEach(function (o) {
+    var type = o[0], cells = o[1], r0 = 99, c0 = 99, r1 = -1, c1 = -1;
+    cells.forEach(function (rc) {
+      var key = rc[0] + "-" + rc[1];
+      if (BLOCKING[type]) pz.blocked[key] = type; else pz.objAt[key] = type;
+      r0 = Math.min(r0, rc[0]); c0 = Math.min(c0, rc[1]); r1 = Math.max(r1, rc[0]); c1 = Math.max(c1, rc[1]);
+    });
+    var w = c1 - c0 + 1, h = r1 - r0 + 1;
+    if (BLOCKING[type]) {
+      pz.shapes.push({ cls: "blk", left: px(c0 * CELL), top: px(r0 * CELL), w: px(w * CELL), h: px(h * CELL), radius: "0", fill: "transparent", border: "0",
+        align: "center", justify: "center", pad: "0", size: px(CELL * 0.62), opacity: "1", emoji: EMOJI[type] });
+    } else if (cells.length > 1) {
+      var col = SHAPE_COLORS[type] || ["#DDDDDD", "#999999"];
+      pz.shapes.push({ cls: "", left: px(c0 * CELL + 6), top: px(r0 * CELL + 6), w: px(w * CELL - 12), h: px(h * CELL - 12), radius: "12px",
+        fill: col[0], border: "2px solid " + col[1], align: "flex-start", justify: "flex-start", pad: "4px", size: px(CELL * 0.3), opacity: "1", emoji: EMOJI[type] });
+    } else {
+      pz.shapes.push({ cls: "", left: px(c0 * CELL), top: px(r0 * CELL), w: px(CELL), h: px(CELL), radius: "0", fill: "transparent", border: "0",
+        align: "center", justify: "center", pad: "0", size: px(CELL * 0.52), opacity: ".6", emoji: EMOJI[type] });
+    }
+  });
+  pz.floorCells = []; pz.thumb = []; pz.labels = [];
+  var seen = {};
+  for (var r = 0; r < N; r++) for (var c = 0; c < N; c++) {
+    var rm = pz.rooms[r][c], key = r + "-" + c;
+    pz.floorCells.push({ cls: "f-" + pz.floors[rm] });
+    var edges = [];
+    if (r > 0 && pz.rooms[r - 1][c] !== rm) edges.push("inset 0 1.5px 0 #2A2330");
+    if (c > 0 && pz.rooms[r][c - 1] !== rm) edges.push("inset 1.5px 0 0 #2A2330");
+    pz.thumb.push({ bg: pz.blocked[key] ? "#6E6672" : FLOOR_COLORS[pz.floors[rm]], edge: edges.length ? edges.join(",") : "none" });
+    if (!seen[rm]) {
+      seen[rm] = true;
+      var cs = 0, n = 0;
+      for (var cc = 0; cc < N; cc++) if (pz.rooms[r][cc] === rm) { cs += cc; n++; }
+      pz.labels.push({ name: pz.roomNames[rm], x: px(Math.min(N * CELL - 38, Math.max(38, (cs / n + 0.5) * CELL))), y: px(r * CELL) });
+    }
+  }
+});
+
+var STORE_KEY = "casebook-progress-v1";
+function freshGame() {
+  return { placements: {}, notes: {}, xs: {}, history: [], secs: 0, hintsUsed: 0, hintStep: null, hintLevel: 0, solved: false, stamp: null };
+}
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    var games = {};
+    PUZZLES.forEach(function (p) { games[p.id] = freshGame(); });
+    try {
+      var saved = JSON.parse(window.localStorage.getItem(STORE_KEY) || "{}");
+      PUZZLES.forEach(function (p) {
+        var sv = saved[p.id];
+        if (sv) games[p.id] = Object.assign(freshGame(), sv, { history: [], stamp: sv.solved ? "closed" : null });
+      });
+    } catch (e) {}
+    this.state = { screen: "home", current: null, games: games, selected: null, mode: "place", focus: null, toast: null, won: false,
+      help: false, erasing: false, shake: null, diff: "All", status: "All" };
+    this._timer = null; this._eraseTimer = null; this._toastTimer = null; this._stampTimer = null;
+  }
+  componentDidMount() {
+    var self = this;
+    this._iv = setInterval(function () {
+      var s = self.state;
+      if (s.screen !== "game" || s.help) return;
+      var g = s.games[s.current];
+      if (!g || g.solved) return;
+      self.setGame({ secs: g.secs + 1 });
+    }, 1000);
+  }
+  componentWillUnmount() {
+    clearInterval(this._iv); clearTimeout(this._timer); clearTimeout(this._eraseTimer); clearTimeout(this._toastTimer); clearTimeout(this._stampTimer);
+  }
+  pz() { return findPuzzle(this.state.current); }
+  g() { return this.state.games[this.state.current] || freshGame(); }
+  setGame(changes, extra) {
+    var games = Object.assign({}, this.state.games);
+    games[this.state.current] = Object.assign({}, this.g(), changes);
+    this.setState(Object.assign({ games: games }, extra || {}));
+    this.save(games);
+  }
+  save(games) {
+    try {
+      var out = {};
+      for (var id in games) {
+        var g = games[id];
+        out[id] = { placements: g.placements, notes: g.notes, xs: g.xs, secs: g.secs, hintsUsed: g.hintsUsed, solved: g.solved };
+      }
+      window.localStorage.setItem(STORE_KEY, JSON.stringify(out));
+    } catch (e) {}
+  }
+  snap(g) {
+    var notes = {};
+    for (var k in g.notes) notes[k] = g.notes[k].slice();
+    return { placements: Object.assign({}, g.placements), notes: notes, xs: Object.assign({}, g.xs) };
+  }
+  commit(changes, extra) {
+    var g = this.g();
+    this.setGame(Object.assign({ history: g.history.concat([this.snap(g)]).slice(-300) }, changes), extra);
+  }
+  toast(title, text, auto) {
+    var self = this;
+    clearTimeout(this._toastTimer);
+    this.setState({ toast: { title: title, text: text } });
+    if (auto) this._toastTimer = setTimeout(function () { self.setState({ toast: null }); }, 2400);
+  }
+  shake(key) {
+    var self = this;
+    this.setState({ shake: key });
+    try { if (navigator.vibrate) navigator.vibrate(60); } catch (e) {}
+    setTimeout(function () { if (self.state.shake === key) self.setState({ shake: null }); }, 400);
+  }
+  whoAt(key) {
+    var p = this.g().placements;
+    for (var id in p) if (p[id] === key) return id;
+    return null;
+  }
+  placeChanges(key, id) {
+    var g = this.g();
+    var pl = Object.assign({}, g.placements);
+    if (pl[id] === key) delete pl[id];
+    else {
+      for (var o in pl) if (pl[o] === key) delete pl[o];
+      pl[id] = key;
+    }
+    var placing = pl[id] === key;
+    var autoX = this.props.autoX !== undefined ? this.props.autoX : true;
+    var kr = key.split("-")[0], kc = key.split("-")[1];
+    var notes = {};
+    for (var k in g.notes) {
+      var parts = k.split("-");
+      if (placing && autoX && (parts[0] === kr || parts[1] === kc)) continue;
+      var arr = g.notes[k].filter(function (x) { return x !== id; });
+      if (arr.length) notes[k] = arr;
+    }
+    var xs = Object.assign({}, g.xs);
+    delete xs[key];
+    return { placements: pl, notes: notes, xs: xs };
+  }
+  place(key, id) {
+    var g = this.g(), pz = this.pz();
+    if (this.state.won || g.solved) return;
+    if (pz.blocked[key]) { this.shake(key); return; }
+    if (!id) { this.toast("Pick a suspect", "Tap a name below first, then tap a cell to place them.", true); return; }
+    this.commit(this.placeChanges(key, id), { focus: null });
+  }
+  tap(key) {
+    var s = this.state, g = this.g(), pz = this.pz(), mode = s.mode;
+    if (s.won || g.solved) return;
+    if (mode === "erase") {
+      var pl = Object.assign({}, g.placements), notes = Object.assign({}, g.notes), xs = Object.assign({}, g.xs);
+      var who = this.whoAt(key);
+      if (!who && !notes[key] && !xs[key]) return;
+      if (who) delete pl[who];
+      delete notes[key]; delete xs[key];
+      this.commit({ placements: pl, notes: notes, xs: xs });
+      return;
+    }
+    if (pz.blocked[key]) { this.shake(key); return; }
+    if (mode === "place") { this.place(key, s.selected); return; }
+    if (mode === "x") {
+      if (this.whoAt(key)) return;
+      var xs2 = Object.assign({}, g.xs), n3 = Object.assign({}, g.notes);
+      if (xs2[key]) delete xs2[key]; else { xs2[key] = true; delete n3[key]; }
+      this.commit({ xs: xs2, notes: n3 });
+      return;
+    }
+    var placed = this.whoAt(key);
+    if (placed) { this.setState({ selected: placed }); return; }
+    if (!s.selected) { this.toast("Pick a suspect", "Tap a name below first.", true); return; }
+    var n2 = Object.assign({}, g.notes);
+    var cur = (n2[key] || []).slice();
+    var i = cur.indexOf(s.selected);
+    if (i >= 0) cur.splice(i, 1); else cur.push(s.selected);
+    cur.sort();
+    if (cur.length) n2[key] = cur; else delete n2[key];
+    this.commit({ notes: n2 });
+  }
+  hint() {
+    var g = this.g(), pz = this.pz();
+    if (this.state.won || g.solved) return;
+    var pl = g.placements, used = g.hintsUsed + 1;
+    for (var i = 0; i < pz.chars.length; i++) {
+      var ch = pz.chars[i];
+      if (pl[ch.id] && pl[ch.id] !== pz.sol[ch.id]) {
+        this.setGame({ hintsUsed: used }, { selected: ch.id, focus: ch.id });
+        this.toast("Something is off", ch.name + " is in the wrong spot. One of the clues breaks there. Pick them up and look again.");
+        return;
+      }
+    }
+    var step = null;
+    for (var j = 0; j < pz.steps.length; j++) if (pl[pz.steps[j].id] !== pz.sol[pz.steps[j].id]) { step = pz.steps[j]; break; }
+    if (!step) { this.toast("All placed", "Everyone is in the right spot. Close the case.", true); return; }
+    var level = g.hintStep === step.id ? g.hintLevel + 1 : 1;
+    var name = charOf(pz, step.id).name;
+    if (level === 1) {
+      this.setGame({ hintsUsed: used, hintStep: step.id, hintLevel: 1 }, { selected: step.id, focus: step.id });
+      this.toast("Hint 1 of 3", "Look at " + name + " next. Their spot can be settled right now.");
+    } else if (level === 2) {
+      this.setGame({ hintsUsed: used, hintStep: step.id, hintLevel: 2 }, { selected: step.id, focus: step.id });
+      this.toast("Hint 2 of 3", step.text);
+    } else {
+      var ch2 = this.placeChanges(pz.sol[step.id], step.id);
+      this.commit(Object.assign(ch2, { hintsUsed: used, hintStep: null, hintLevel: 0 }), { selected: step.id, focus: null });
+      this.toast("Hint 3 of 3", name + " is placed. Tap Hint again for the next suspect.", true);
+    }
+  }
+  submit() {
+    var g = this.g(), pz = this.pz(), self = this;
+    if (g.solved) { this.setState({ won: true }); return; }
+    var pl = g.placements, n = 0, wrong = 0;
+    pz.chars.forEach(function (c) { if (pl[c.id]) { n++; if (pl[c.id] !== pz.sol[c.id]) wrong++; } });
+    if (n < pz.chars.length) { this.toast("Not yet", "Place all " + pz.chars.length + " people before closing the case.", true); return; }
+    clearTimeout(this._stampTimer);
+    if (wrong === 0) {
+      clearTimeout(this._toastTimer);
+      this.setGame({ solved: true, stamp: "closed" }, { toast: null });
+      this._stampTimer = setTimeout(function () { self.setState({ won: true }); }, 1400);
+    } else {
+      this.setGame({ stamp: "wrong" });
+      var cur = this.state.current;
+      this._stampTimer = setTimeout(function () {
+        var gg = self.state.games[cur];
+        if (gg && gg.stamp === "wrong") {
+          var games = Object.assign({}, self.state.games);
+          games[cur] = Object.assign({}, gg, { stamp: null });
+          self.setState({ games: games });
+        }
+      }, 1800);
+      this.toast("Incorrect", wrong + " of " + pz.chars.length + " are in the wrong place. Check each clue against the board again.");
+    }
+  }
+  openCase(id) {
+    var pz = findPuzzle(id);
+    clearTimeout(this._toastTimer);
+    this.setState({ screen: "game", current: id, selected: pz.chars[0].id, mode: "place", focus: null, toast: null, won: false, shake: null, erasing: false });
+  }
+  statusOf(pz) {
+    var g = this.state.games[pz.id];
+    if (g.solved) return "solved";
+    if (g.secs > 0 || Object.keys(g.placements).length || Object.keys(g.notes).length) return "progress";
+    return "new";
+  }
+  fmt(secs) {
+    var mm = Math.floor(secs / 60), ss = secs % 60;
+    return (mm < 10 ? "0" : "") + mm + ":" + (ss < 10 ? "0" : "") + ss;
+  }
+  homeVals() {
+    var self = this, s = this.state;
+    function chips(list, key) {
+      return list.map(function (label) {
+        var on = s[key] === label;
+        return { label: label, on: on ? "true" : "false", border: on ? "1px solid #D4A55A" : "1px solid #342C3B", bg: on ? "#D4A55A" : "#221D28", fg: on ? "#1E1A22" : "#EDE6DA",
+          pick: function () { var o = {}; o[key] = label; self.setState(o); } };
+      });
+    }
+    var solved = 0;
+    PUZZLES.forEach(function (p) { if (self.state.games[p.id].solved) solved++; });
+    var cards = PUZZLES.filter(function (p) {
+      var st = self.statusOf(p);
+      if (s.diff !== "All" && p.difficulty !== s.diff) return false;
+      if (s.status === "Solved" && st !== "solved") return false;
+      if (s.status === "Unsolved" && st === "solved") return false;
+      return true;
+    }).map(function (p) {
+      var st = self.statusOf(p), g = self.state.games[p.id];
+      var status = st === "solved" ? "Closed in " + self.fmt(g.secs) : st === "progress" ? "In progress · " + self.fmt(g.secs) : "New case";
+      var diffCol = { Easy: ["#2E4A36", "#A9DDB0"], Medium: ["#4A3A1E", "#F0C987"], Hard: ["#4A2424", "#F2A7A0"] }[p.difficulty];
+      return {
+        num: p.num, title: p.title, difficulty: p.difficulty, size: p.size, thumb: p.thumb, solved: st === "solved",
+        meta: p.size + "×" + p.size + " · " + p.chars.length + " suspects",
+        status: status, statusColor: st === "solved" ? "#8FCB84" : st === "progress" ? "#D4A55A" : "#A59CAE",
+        diffBg: diffCol[0], diffFg: diffCol[1],
+        aria: "Case " + p.num + ", " + p.title + ", " + p.difficulty + ", " + status,
+        open: function () { self.openCase(p.id); }
+      };
+    });
+    return {
+      diffChips: chips(["All", "Easy", "Medium", "Hard"], "diff"),
+      statusChips: chips(["All", "Unsolved", "Solved"], "status"),
+      caseCards: cards, noCases: cards.length === 0,
+      solvedCount: solved, totalCount: PUZZLES.length,
+      progressPct: Math.round(solved / PUZZLES.length * 100) + "%",
+      clearFilters: function () { self.setState({ diff: "All", status: "All" }); }
+    };
+  }
+  gameVals() {
+    var self = this, s = this.state, pz = this.pz(), g = this.g(), pl = g.placements, N = pz.size, CELL = cellSize(pz);
+    var autoX = this.props.autoX !== undefined ? this.props.autoX : true;
+    var usedRows = {}, usedCols = {}, count = 0;
+    for (var id in pl) { var rc = pl[id].split("-"); usedRows[rc[0]] = true; usedCols[rc[1]] = true; count++; }
+    var cells = [];
+    for (var r = 0; r < N; r++) for (var c = 0; c < N; c++) {
+      (function (r, c) {
+        var key = r + "-" + c, who = self.whoAt(key), ch = who ? charOf(pz, who) : null, here = pz.rooms[r][c];
+        var bt = r === 0 ? NONE : (pz.rooms[r - 1][c] !== here ? WALL : THIN);
+        var bl = c === 0 ? NONE : (pz.rooms[r][c - 1] !== here ? WALL : THIN);
+        var dim = autoX && !who && !pz.blocked[key] && (usedRows[r] || usedCols[c]);
+        var notes = (g.notes[key] || []).map(function (nid) { return { l: nid, color: charOf(pz, nid).color }; });
+        var label = pz.roomNames[here] + ", row " + (r + 1) + ", column " + (c + 1) +
+          (pz.blocked[key] ? ", " + pz.blocked[key] + ", blocked" : (pz.objAt[key] ? ", " + pz.objAt[key] : "")) + (ch ? ", " + ch.name : "");
+        cells.push({
+          key: key, label: label, bt: bt, bl: bl,
+          bg: dim ? "rgba(23,20,28,.22)" : "transparent",
+          anim: s.shake === key ? "shake" : "",
+          hasToken: !!ch, tokenColor: ch ? ch.color : "transparent", tokenL: ch ? ch.id : "",
+          hasX: !ch && (!!g.xs[key] || !!dim), xOpacity: g.xs[key] ? ".75" : ".4", notes: ch ? [] : notes,
+          down: function (e) {
+            if (e && e.button && e.button !== 0) return;
+            clearTimeout(self._timer);
+            self._held = false;
+            self._timer = setTimeout(function () {
+              self._timer = null; self._held = true;
+              if (self.state.mode === "note" || self.state.mode === "place") self.place(key, self.state.selected); else self.tap(key);
+            }, 450);
+          },
+          click: function () { if (self._held) { self._held = false; return; } self.tap(key); },
+          up: function () { if (self._timer) { clearTimeout(self._timer); self._timer = null; } },
+          leave: function () { if (self._timer) { clearTimeout(self._timer); self._timer = null; } }
+        });
+      })(r, c);
+    }
+    var chars = pz.chars.map(function (ch) {
+      var sel = s.selected === ch.id;
+      return {
+        l: ch.id, name: ch.name, clue: ch.clue, color: ch.color, victim: !!ch.victim, placed: !!pl[ch.id], selected: sel ? "true" : "false",
+        border: sel ? "2px solid #D4A55A" : "1px solid #342C3B", bg: sel ? "#2E2635" : "#1E1A24",
+        cls: s.focus === ch.id ? "pulse" : "",
+        pick: function () { self.setState({ selected: ch.id, focus: null }); }
+      };
+    });
+    function modeBtn(m) { return { border: s.mode === m ? "2px solid #D4A55A" : "1px solid #342C3B", bg: s.mode === m ? "#3A3024" : "#221D28", on: s.mode === m ? "true" : "false" }; }
+    var mp = modeBtn("place"), mn = modeBtn("note"), mx = modeBtn("x"), me = modeBtn("erase");
+    var ready = count === pz.chars.length;
+    var k = charOf(pz, pz.murderer);
+    return {
+      pz: pz, floors: pz.floorCells, shapes: pz.shapes, labels: pz.labels, cells: cells, chars: chars,
+      boardPx: px(N * CELL), cellPx: px(CELL), tokenPx: px(CELL * 0.7), tokenFont: px(CELL * 0.3), xSize: px(CELL * 0.43),
+      noteFont: px(Math.max(8, Math.min(11, CELL * 0.18))), tokenBorder: CELL < 40 ? "2px" : "3px", labelFont: N > 8 ? "7px" : N > 6 ? "8px" : "10px", labelPad: N > 8 ? "1px 3px" : "3px 6px",
+      hasGeneral: pz.general.length > 0, generalList: pz.general.map(function (t) { return { t: t }; }),
+      killer: { l: k.id, name: k.name, color: k.color },
+      timeText: this.fmt(g.secs), hintsUsed: g.hintsUsed,
+      placeBorder: mp.border, placeBg: mp.bg, placeOn: mp.on,
+      noteBorder: mn.border, noteBg: mn.bg, noteOn: mn.on,
+      xBorder: mx.border, xBg: mx.bg, xOn: mx.on,
+      eraseBorder: me.border, eraseBg: me.bg, eraseOn: me.on,
+      eraseBar: s.erasing ? "100%" : "0%", eraseTrans: s.erasing ? "width .8s linear" : "none",
+      undoOpacity: g.history.length ? "1" : ".45",
+      submitLabel: g.solved ? "Case closed" : ready ? "Close the case" : "Place everyone (" + count + "/" + pz.chars.length + ")",
+      submitBg: ready || g.solved ? "#D4A55A" : "#2A2430", submitFg: ready || g.solved ? "#1E1A22" : "#A59CAE", notReady: ready ? "false" : "true",
+      stampClosed: g.stamp === "closed", stampWrong: g.stamp === "wrong"
+    };
+  }
+  renderVals() {
+    var self = this, s = this.state;
+    var base = {
+      onHome: s.screen === "home", onGame: s.screen === "game",
+      toastOn: !!s.toast, toastTitle: s.toast ? s.toast.title : "", toastText: s.toast ? s.toast.text : "",
+      won: s.won, helpOn: s.help,
+      noMenu: function (e) { if (e && e.preventDefault) e.preventDefault(); },
+      openHelp: function () { self.setState({ help: true }); },
+      closeHelp: function () { self.setState({ help: false }); },
+      goHome: function () { clearTimeout(self._toastTimer); self.setState({ screen: "home", won: false, toast: null, help: false }); },
+      setPlace: function () { self.setState({ mode: "place" }); },
+      setNote: function () { self.setState({ mode: "note" }); },
+      setX: function () { self.setState({ mode: s.mode === "x" ? "place" : "x" }); },
+      eraseDown: function () {
+        if (self.g().solved) return;
+        clearTimeout(self._eraseTimer);
+        self.setState({ erasing: true });
+        self._eraseTimer = setTimeout(function () {
+          self._eraseTimer = null;
+          self.commit({ placements: {}, notes: {}, xs: {} }, { erasing: false, mode: "place" });
+          self.toast("Board cleared", "Everything is wiped. Undo brings it back.", true);
+        }, 800);
+      },
+      eraseUp: function () {
+        if (self._eraseTimer) {
+          clearTimeout(self._eraseTimer); self._eraseTimer = null;
+          self.setState({ erasing: false, mode: self.state.mode === "erase" ? "place" : "erase" });
+        }
+      },
+      eraseLeave: function () { if (self._eraseTimer) { clearTimeout(self._eraseTimer); self._eraseTimer = null; self.setState({ erasing: false }); } },
+      undo: function () {
+        var g = self.g();
+        if (!g.history.length || self.state.won || g.solved) return;
+        var last = g.history[g.history.length - 1];
+        self.setGame({ placements: last.placements, notes: last.notes, xs: last.xs, history: g.history.slice(0, -1) });
+      },
+      hint: function () { self.hint(); },
+      submit: function () { self.submit(); },
+      closeToast: function () { clearTimeout(self._toastTimer); self.setState({ toast: null }); },
+      reset: function () {
+        clearTimeout(self._toastTimer); clearTimeout(self._stampTimer);
+        var games = Object.assign({}, self.state.games);
+        games[self.state.current] = freshGame();
+        self.setState({ games: games, won: false, toast: null, mode: "place", focus: null });
+        self.save(games);
+      },
+      closeWin: function () { self.setState({ won: false }); }
+    };
+    var home = this.homeVals();
+    var game = s.current ? this.gameVals() : {
+      pz: { num: "", title: "", difficulty: "", size: 5, winText: "" }, floors: [], shapes: [], labels: [], cells: [], chars: [],
+      boardPx: "350px", cellPx: "70px", tokenPx: "46px", tokenFont: "20px", xSize: "30px", hasGeneral: false, generalList: [], noteFont: "11px", tokenBorder: "3px", labelFont: "10px", labelPad: "3px 6px",
+      killer: { l: "", name: "", color: "#000000" }, timeText: "00:00", hintsUsed: 0
+    };
+    return Object.assign(base, home, game);
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,402 @@
+{
+ "id": "murder-mystery",
+ "characterRoleNames": {
+  "target": "Victim",
+  "answer": "Murderer"
+ },
+ "floors": [
+  {
+   "type": "wood",
+   "color": "#E6C9A0",
+   "pattern": "planks"
+  },
+  {
+   "type": "tile",
+   "color": "#DCE6EE",
+   "pattern": "checker"
+  },
+  {
+   "type": "grass",
+   "color": "#9BD48A",
+   "pattern": "dots"
+  },
+  {
+   "type": "stone",
+   "color": "#A9A29A",
+   "pattern": "blocks"
+  },
+  {
+   "type": "pavement",
+   "color": "#BDBDBD",
+   "pattern": "grid"
+  },
+  {
+   "type": "water",
+   "color": "#7EC8E3",
+   "pattern": "waves"
+  },
+  {
+   "type": "metal",
+   "color": "#A7B0BA",
+   "pattern": "diamond-plate"
+  },
+  {
+   "type": "carpet",
+   "color": "#C98E8E",
+   "pattern": "dots"
+  },
+  {
+   "type": "marble",
+   "color": "#ECE8E1",
+   "pattern": "veins"
+  },
+  {
+   "type": "snow",
+   "color": "#F3F6FA",
+   "pattern": "dots"
+  },
+  {
+   "type": "sand",
+   "color": "#F2DFA7",
+   "pattern": "dots"
+  }
+ ],
+ "objects": [
+  {
+   "type": "shelf",
+   "label": "shelf",
+   "blocking": true,
+   "emoji": "📚"
+  },
+  {
+   "type": "table",
+   "label": "table",
+   "blocking": true,
+   "emoji": "🍽️"
+  },
+  {
+   "type": "plant",
+   "label": "plant",
+   "blocking": true,
+   "emoji": "🪴"
+  },
+  {
+   "type": "TV",
+   "label": "TV",
+   "blocking": true,
+   "emoji": "📺"
+  },
+  {
+   "type": "tree",
+   "label": "tree",
+   "blocking": true,
+   "emoji": "🌳"
+  },
+  {
+   "type": "piano",
+   "label": "piano",
+   "blocking": true,
+   "emoji": "🎹"
+  },
+  {
+   "type": "barrel",
+   "label": "barrel",
+   "blocking": true,
+   "emoji": "🛢️"
+  },
+  {
+   "type": "stove",
+   "label": "stove",
+   "blocking": true,
+   "emoji": "🍳"
+  },
+  {
+   "type": "chair",
+   "label": "chair",
+   "blocking": false,
+   "emoji": "🪑"
+  },
+  {
+   "type": "bed",
+   "label": "bed",
+   "blocking": false,
+   "emoji": "🛏️",
+   "color": "#9FB8E0",
+   "borderColor": "#6F8BB8"
+  },
+  {
+   "type": "sofa",
+   "label": "sofa",
+   "blocking": false,
+   "emoji": "🛋️",
+   "color": "#C9A7D8",
+   "borderColor": "#9C79AE"
+  },
+  {
+   "type": "bench",
+   "label": "bench",
+   "blocking": false,
+   "emoji": "🪵",
+   "color": "#C8A27A",
+   "borderColor": "#9C7852"
+  },
+  {
+   "type": "car",
+   "label": "car",
+   "blocking": false,
+   "emoji": "🚗",
+   "color": "#F2A7A7",
+   "borderColor": "#C47878"
+  },
+  {
+   "type": "boat",
+   "label": "boat",
+   "blocking": false,
+   "emoji": "⛵",
+   "color": "#F5E6C8",
+   "borderColor": "#C9B48A"
+  },
+  {
+   "type": "bathtub",
+   "label": "bathtub",
+   "blocking": false,
+   "emoji": "🛁",
+   "color": "#BFE3F0",
+   "borderColor": "#86B6C9"
+  },
+  {
+   "type": "carpet",
+   "label": "carpet",
+   "blocking": false,
+   "emoji": "🟪",
+   "color": "#C7BDF2",
+   "borderColor": "#968AC8"
+  },
+  {
+   "type": "panel",
+   "label": "control panel",
+   "blocking": true,
+   "emoji": "🎛️"
+  },
+  {
+   "type": "suitcase",
+   "label": "suitcase",
+   "blocking": true,
+   "emoji": "🧳"
+  },
+  {
+   "type": "crate",
+   "label": "crate",
+   "blocking": true,
+   "emoji": "📦"
+  },
+  {
+   "type": "snowman",
+   "label": "snowman",
+   "blocking": true,
+   "emoji": "⛄"
+  },
+  {
+   "type": "skirack",
+   "label": "ski rack",
+   "blocking": true,
+   "emoji": "🎿"
+  },
+  {
+   "type": "fireplace",
+   "label": "fireplace",
+   "blocking": true,
+   "emoji": "🔥"
+  },
+  {
+   "type": "wheel",
+   "label": "ship's wheel",
+   "blocking": true,
+   "emoji": "☸️"
+  },
+  {
+   "type": "telescope",
+   "label": "telescope",
+   "blocking": true,
+   "emoji": "🔭"
+  },
+  {
+   "type": "slot",
+   "label": "slot machine",
+   "blocking": true,
+   "emoji": "🎰"
+  },
+  {
+   "type": "anchor",
+   "label": "anchor",
+   "blocking": true,
+   "emoji": "⚓"
+  },
+  {
+   "type": "sarcophagus",
+   "label": "sarcophagus",
+   "blocking": true,
+   "emoji": "⚱️"
+  },
+  {
+   "type": "palm",
+   "label": "palm",
+   "blocking": true,
+   "emoji": "🌴"
+  },
+  {
+   "type": "painting",
+   "label": "painting",
+   "blocking": true,
+   "emoji": "🖼️"
+  },
+  {
+   "type": "armour",
+   "label": "suit of armour",
+   "blocking": true,
+   "emoji": "🛡️"
+  },
+  {
+   "type": "dinosaur",
+   "label": "dinosaur skeleton",
+   "blocking": true,
+   "emoji": "🦕"
+  },
+  {
+   "type": "gem",
+   "label": "gem case",
+   "blocking": true,
+   "emoji": "💎"
+  },
+  {
+   "type": "geode",
+   "label": "geode",
+   "blocking": true,
+   "emoji": "🪨"
+  },
+  {
+   "type": "statue",
+   "label": "statue",
+   "blocking": true,
+   "emoji": "🗿"
+  },
+  {
+   "type": "tent",
+   "label": "circus drum",
+   "blocking": true,
+   "emoji": "🥁"
+  },
+  {
+   "type": "ferris",
+   "label": "Ferris wheel",
+   "blocking": true,
+   "emoji": "🎡"
+  },
+  {
+   "type": "mirror",
+   "label": "mirror",
+   "blocking": true,
+   "emoji": "🪞"
+  },
+  {
+   "type": "pole",
+   "label": "carousel pole",
+   "blocking": true,
+   "emoji": "🎠"
+  },
+  {
+   "type": "candy",
+   "label": "candy floss stand",
+   "blocking": true,
+   "emoji": "🍭"
+  },
+  {
+   "type": "target",
+   "label": "target",
+   "blocking": true,
+   "emoji": "🎯"
+  },
+  {
+   "type": "fountain",
+   "label": "fountain",
+   "blocking": true,
+   "emoji": "⛲"
+  },
+  {
+   "type": "desk",
+   "label": "desk",
+   "blocking": true,
+   "emoji": "🗄️"
+  },
+  {
+   "type": "cart",
+   "label": "luggage cart",
+   "blocking": true,
+   "emoji": "🛒"
+  },
+  {
+   "type": "washer",
+   "label": "laundry basket",
+   "blocking": true,
+   "emoji": "🧺"
+  },
+  {
+   "type": "boiler",
+   "label": "boiler",
+   "blocking": true,
+   "emoji": "♨️"
+  },
+  {
+   "type": "lift",
+   "label": "lift",
+   "blocking": true,
+   "emoji": "🛗"
+  },
+  {
+   "type": "float",
+   "label": "pool float",
+   "blocking": false,
+   "emoji": "🛟"
+  },
+  {
+   "type": "lifeboat",
+   "label": "lifeboat",
+   "blocking": false,
+   "emoji": "🚣",
+   "color": "#F2C38B",
+   "borderColor": "#C4914F"
+  },
+  {
+   "type": "horse",
+   "label": "carousel horse",
+   "blocking": false,
+   "emoji": "🐎"
+  },
+  {
+   "type": "duck",
+   "label": "duck boat",
+   "blocking": false,
+   "emoji": "🦆"
+  },
+  {
+   "type": "lounger",
+   "label": "sun lounger",
+   "blocking": false,
+   "emoji": "🏖️"
+  }
+ ],
+ "characterNaming": "Names are assigned in alphabetical order starting at A (A, B, C...). The victim is always the last letter.",
+ "clueTemplates": {
+  "onObject": "{name} was on {article} {object}.",
+  "besideObject": "{name} was beside {article} {object}.",
+  "notBesideObject": "{name} was not beside {article} {object}.",
+  "inRoom": "{name} was in the {room}.",
+  "inCorner": "{name} was in a corner of a room.",
+  "besideCharacter": "{name} was beside {other}.",
+  "diagonalOf": "{name} was diagonal to {ref}.",
+  "direction": "{name} was {dir} of {ref}.",
+  "globalEmptyRoom": "Nobody was in the {room}.",
+  "aloneWith": "{name} was alone with the {answerRole}."
+ },
+ "article": "Use \"the\" when the object type appears once on the map, otherwise \"a\"/\"an\"."
+}

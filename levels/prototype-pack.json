@@ -1,0 +1,8797 @@
+{
+ "version": 1,
+ "puzzles": [
+  {
+   "id": "c1",
+   "caseNumber": "01",
+   "title": "The Harrow House",
+   "size": 5,
+   "themeId": "murder-mystery",
+   "cells": [
+    [
+     {
+      "row": 0,
+      "col": 0,
+      "roomId": "L",
+      "floor": "stone",
+      "objectId": "o0"
+     },
+     {
+      "row": 0,
+      "col": 1,
+      "roomId": "L",
+      "floor": "stone",
+      "objectId": null
+     },
+     {
+      "row": 0,
+      "col": 2,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": null
+     },
+     {
+      "row": 0,
+      "col": 3,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": "o1"
+     },
+     {
+      "row": 0,
+      "col": 4,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": "o1"
+     }
+    ],
+    [
+     {
+      "row": 1,
+      "col": 0,
+      "roomId": "L",
+      "floor": "stone",
+      "objectId": null
+     },
+     {
+      "row": 1,
+      "col": 1,
+      "roomId": "L",
+      "floor": "stone",
+      "objectId": "o8"
+     },
+     {
+      "row": 1,
+      "col": 2,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": null
+     },
+     {
+      "row": 1,
+      "col": 3,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": "o9"
+     },
+     {
+      "row": 1,
+      "col": 4,
+      "roomId": "B",
+      "floor": "wood",
+      "objectId": "o2"
+     }
+    ],
+    [
+     {
+      "row": 2,
+      "col": 0,
+      "roomId": "S",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 1,
+      "roomId": "S",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 2,
+      "roomId": "S",
+      "floor": "wood",
+      "objectId": "o3"
+     },
+     {
+      "row": 2,
+      "col": 3,
+      "roomId": "B",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 4,
+      "roomId": "B",
+      "floor": "wood",
+      "objectId": "o5"
+     }
+    ],
+    [
+     {
+      "row": 3,
+      "col": 0,
+      "roomId": "S",
+      "floor": "wood",
+      "objectId": "o6"
+     },
+     {
+      "row": 3,
+      "col": 1,
+      "roomId": "S",
+      "floor": "wood",
+      "objectId": "o6"
+     },
+     {
+      "row": 3,
+      "col": 2,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 3,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 4,
+      "roomId": "B",
+      "floor": "wood",
+      "objectId": "o5"
+     }
+    ],
+    [
+     {
+      "row": 4,
+      "col": 0,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": "o4"
+     },
+     {
+      "row": 4,
+      "col": 1,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 2,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": "o7"
+     },
+     {
+      "row": 4,
+      "col": 3,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": "o7"
+     },
+     {
+      "row": 4,
+      "col": 4,
+      "roomId": "B",
+      "floor": "wood",
+      "objectId": null
+     }
+    ]
+   ],
+   "rooms": [
+    {
+     "id": "L",
+     "name": "Library",
+     "cells": [
+      {
+       "row": 0,
+       "col": 0
+      },
+      {
+       "row": 0,
+       "col": 1
+      },
+      {
+       "row": 1,
+       "col": 0
+      },
+      {
+       "row": 1,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "K",
+     "name": "Kitchen",
+     "cells": [
+      {
+       "row": 0,
+       "col": 2
+      },
+      {
+       "row": 0,
+       "col": 3
+      },
+      {
+       "row": 0,
+       "col": 4
+      },
+      {
+       "row": 1,
+       "col": 2
+      },
+      {
+       "row": 1,
+       "col": 3
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "name": "Bedroom",
+     "cells": [
+      {
+       "row": 1,
+       "col": 4
+      },
+      {
+       "row": 2,
+       "col": 3
+      },
+      {
+       "row": 2,
+       "col": 4
+      },
+      {
+       "row": 3,
+       "col": 4
+      },
+      {
+       "row": 4,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "S",
+     "name": "Parlour",
+     "cells": [
+      {
+       "row": 2,
+       "col": 0
+      },
+      {
+       "row": 2,
+       "col": 1
+      },
+      {
+       "row": 2,
+       "col": 2
+      },
+      {
+       "row": 3,
+       "col": 0
+      },
+      {
+       "row": 3,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "G",
+     "name": "Garden",
+     "cells": [
+      {
+       "row": 3,
+       "col": 2
+      },
+      {
+       "row": 3,
+       "col": 3
+      },
+      {
+       "row": 4,
+       "col": 0
+      },
+      {
+       "row": 4,
+       "col": 1
+      },
+      {
+       "row": 4,
+       "col": 2
+      },
+      {
+       "row": 4,
+       "col": 3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "o0",
+     "type": "shelf",
+     "cells": [
+      {
+       "row": 0,
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "o1",
+     "type": "table",
+     "cells": [
+      {
+       "row": 0,
+       "col": 3
+      },
+      {
+       "row": 0,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "o2",
+     "type": "plant",
+     "cells": [
+      {
+       "row": 1,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "o3",
+     "type": "TV",
+     "cells": [
+      {
+       "row": 2,
+       "col": 2
+      }
+     ]
+    },
+    {
+     "id": "o4",
+     "type": "tree",
+     "cells": [
+      {
+       "row": 4,
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "o5",
+     "type": "bed",
+     "cells": [
+      {
+       "row": 2,
+       "col": 4
+      },
+      {
+       "row": 3,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "o6",
+     "type": "sofa",
+     "cells": [
+      {
+       "row": 3,
+       "col": 0
+      },
+      {
+       "row": 3,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "o7",
+     "type": "bench",
+     "cells": [
+      {
+       "row": 4,
+       "col": 2
+      },
+      {
+       "row": 4,
+       "col": 3
+      }
+     ]
+    },
+    {
+     "id": "o8",
+     "type": "chair",
+     "cells": [
+      {
+       "row": 1,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "o9",
+     "type": "chair",
+     "cells": [
+      {
+       "row": 1,
+       "col": 3
+      }
+     ]
+    }
+   ],
+   "characters": [
+    {
+     "id": "A",
+     "name": "Agatha",
+     "isTarget": false,
+     "color": "#B5475A",
+     "displayClue": "was diagonal to Celeste."
+    },
+    {
+     "id": "B",
+     "name": "Bruno",
+     "isTarget": false,
+     "color": "#3D6FB0",
+     "displayClue": "was beside a bed."
+    },
+    {
+     "id": "C",
+     "name": "Celeste",
+     "isTarget": false,
+     "color": "#2F7F72",
+     "displayClue": "was on a bed."
+    },
+    {
+     "id": "D",
+     "name": "Dimitri",
+     "isTarget": false,
+     "color": "#9A5A16",
+     "displayClue": "was east of the tree."
+    },
+    {
+     "id": "E",
+     "name": "Edmund",
+     "isTarget": true,
+     "color": "#6B6478",
+     "displayClue": "was alone with the murderer."
+    }
+   ],
+   "clues": [
+    {
+     "kind": "diagonalOf",
+     "charId": "A",
+     "ref": {
+      "charId": "C"
+     }
+    },
+    {
+     "kind": "besideObject",
+     "charId": "B",
+     "objectType": "bed"
+    },
+    {
+     "kind": "onObject",
+     "charId": "C",
+     "objectType": "bed"
+    },
+    {
+     "kind": "direction",
+     "charId": "D",
+     "dir": "east",
+     "ref": {
+      "objectType": "tree"
+     }
+    },
+    {
+     "kind": "aloneWith",
+     "charId": "E",
+     "otherId": "A"
+    }
+   ],
+   "generalClueText": [],
+   "solution": {
+    "A": {
+     "row": 0,
+     "col": 1
+    },
+    "B": {
+     "row": 2,
+     "col": 3
+    },
+    "C": {
+     "row": 3,
+     "col": 4
+    },
+    "D": {
+     "row": 4,
+     "col": 2
+    },
+    "E": {
+     "row": 1,
+     "col": 0
+    }
+   },
+   "answerCharId": "A",
+   "winText": "She was alone with Edmund in the Library. Nobody else was in the room.",
+   "hintSteps": [
+    {
+     "id": "B",
+     "text": "Celeste is on the bed, so the bed's column belongs to her. Two cells sit beside the bed, and only one of them is outside that column. That one is Bruno's."
+    },
+    {
+     "id": "C",
+     "text": "Bruno's row runs through the top half of the bed, so Celeste is on the lower half."
+    },
+    {
+     "id": "E",
+     "text": "The far left column has one open cell, in the Library, so someone stands there. Dimitri is east of the tree, so it can't be him. The cell isn't diagonal to Celeste, so it can't be Agatha. That leaves Edmund."
+    },
+    {
+     "id": "A",
+     "text": "Agatha is diagonal to Celeste. With Edmund's row gone, the only diagonal cell still open is in the Library, top row."
+    },
+    {
+     "id": "D",
+     "text": "Dimitri takes the last open cell, on the garden bench. It's east of the tree."
+    }
+   ],
+   "difficulty": {
+    "label": "Easy",
+    "tier": 1
+   },
+   "meta": {
+    "source": "hand-tuned prototype (Cowork), verified by prototype solver",
+    "generatorVersion": "prototype-0"
+   }
+  },
+  {
+   "id": "c2",
+   "caseNumber": "02",
+   "title": "The Seaside Villa",
+   "size": 5,
+   "themeId": "murder-mystery",
+   "cells": [
+    [
+     {
+      "row": 0,
+      "col": 0,
+      "roomId": "T",
+      "floor": "pavement",
+      "objectId": "o0"
+     },
+     {
+      "row": 0,
+      "col": 1,
+      "roomId": "T",
+      "floor": "pavement",
+      "objectId": "o1"
+     },
+     {
+      "row": 0,
+      "col": 2,
+      "roomId": "P",
+      "floor": "water",
+      "objectId": null
+     },
+     {
+      "row": 0,
+      "col": 3,
+      "roomId": "P",
+      "floor": "water",
+      "objectId": "o2"
+     },
+     {
+      "row": 0,
+      "col": 4,
+      "roomId": "P",
+      "floor": "water",
+      "objectId": "o2"
+     }
+    ],
+    [
+     {
+      "row": 1,
+      "col": 0,
+      "roomId": "T",
+      "floor": "pavement",
+      "objectId": "o0"
+     },
+     {
+      "row": 1,
+      "col": 1,
+      "roomId": "L",
+      "floor": "wood",
+      "objectId": "o7"
+     },
+     {
+      "row": 1,
+      "col": 2,
+      "roomId": "P",
+      "floor": "water",
+      "objectId": null
+     },
+     {
+      "row": 1,
+      "col": 3,
+      "roomId": "P",
+      "floor": "water",
+      "objectId": null
+     },
+     {
+      "row": 1,
+      "col": 4,
+      "roomId": "B",
+      "floor": "tile",
+      "objectId": "o3"
+     }
+    ],
+    [
+     {
+      "row": 2,
+      "col": 0,
+      "roomId": "L",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 1,
+      "roomId": "L",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 2,
+      "roomId": "L",
+      "floor": "wood",
+      "objectId": "o5"
+     },
+     {
+      "row": 2,
+      "col": 3,
+      "roomId": "B",
+      "floor": "tile",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 4,
+      "roomId": "B",
+      "floor": "tile",
+      "objectId": "o4"
+     }
+    ],
+    [
+     {
+      "row": 3,
+      "col": 0,
+      "roomId": "L",
+      "floor": "wood",
+      "objectId": "o6"
+     },
+     {
+      "row": 3,
+      "col": 1,
+      "roomId": "L",
+      "floor": "wood",
+      "objectId": "o6"
+     },
+     {
+      "row": 3,
+      "col": 2,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 3,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 4,
+      "roomId": "B",
+      "floor": "tile",
+      "objectId": "o4"
+     }
+    ],
+    [
+     {
+      "row": 4,
+      "col": 0,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 1,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 2,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": "o9"
+     },
+     {
+      "row": 4,
+      "col": 3,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": "o9"
+     },
+     {
+      "row": 4,
+      "col": 4,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": "o8"
+     }
+    ]
+   ],
+   "rooms": [
+    {
+     "id": "T",
+     "name": "Terrace",
+     "cells": [
+      {
+       "row": 0,
+       "col": 0
+      },
+      {
+       "row": 0,
+       "col": 1
+      },
+      {
+       "row": 1,
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "P",
+     "name": "Pool",
+     "cells": [
+      {
+       "row": 0,
+       "col": 2
+      },
+      {
+       "row": 0,
+       "col": 3
+      },
+      {
+       "row": 0,
+       "col": 4
+      },
+      {
+       "row": 1,
+       "col": 2
+      },
+      {
+       "row": 1,
+       "col": 3
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "name": "Bathroom",
+     "cells": [
+      {
+       "row": 1,
+       "col": 4
+      },
+      {
+       "row": 2,
+       "col": 3
+      },
+      {
+       "row": 2,
+       "col": 4
+      },
+      {
+       "row": 3,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "L",
+     "name": "Lounge",
+     "cells": [
+      {
+       "row": 1,
+       "col": 1
+      },
+      {
+       "row": 2,
+       "col": 0
+      },
+      {
+       "row": 2,
+       "col": 1
+      },
+      {
+       "row": 2,
+       "col": 2
+      },
+      {
+       "row": 3,
+       "col": 0
+      },
+      {
+       "row": 3,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "G",
+     "name": "Garden",
+     "cells": [
+      {
+       "row": 3,
+       "col": 2
+      },
+      {
+       "row": 3,
+       "col": 3
+      },
+      {
+       "row": 4,
+       "col": 0
+      },
+      {
+       "row": 4,
+       "col": 1
+      },
+      {
+       "row": 4,
+       "col": 2
+      },
+      {
+       "row": 4,
+       "col": 3
+      },
+      {
+       "row": 4,
+       "col": 4
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "o0",
+     "type": "car",
+     "cells": [
+      {
+       "row": 0,
+       "col": 0
+      },
+      {
+       "row": 1,
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "o1",
+     "type": "plant",
+     "cells": [
+      {
+       "row": 0,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "o2",
+     "type": "boat",
+     "cells": [
+      {
+       "row": 0,
+       "col": 3
+      },
+      {
+       "row": 0,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "o3",
+     "type": "shelf",
+     "cells": [
+      {
+       "row": 1,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "o4",
+     "type": "bathtub",
+     "cells": [
+      {
+       "row": 2,
+       "col": 4
+      },
+      {
+       "row": 3,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "o5",
+     "type": "TV",
+     "cells": [
+      {
+       "row": 2,
+       "col": 2
+      }
+     ]
+    },
+    {
+     "id": "o6",
+     "type": "sofa",
+     "cells": [
+      {
+       "row": 3,
+       "col": 0
+      },
+      {
+       "row": 3,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "o7",
+     "type": "chair",
+     "cells": [
+      {
+       "row": 1,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "o8",
+     "type": "tree",
+     "cells": [
+      {
+       "row": 4,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "o9",
+     "type": "bench",
+     "cells": [
+      {
+       "row": 4,
+       "col": 2
+      },
+      {
+       "row": 4,
+       "col": 3
+      }
+     ]
+    }
+   ],
+   "characters": [
+    {
+     "id": "A",
+     "name": "Arthur",
+     "isTarget": false,
+     "color": "#3D6FB0",
+     "displayClue": "was beside a chair."
+    },
+    {
+     "id": "B",
+     "name": "Beatrice",
+     "isTarget": false,
+     "color": "#B5475A",
+     "displayClue": "was diagonal to Arthur."
+    },
+    {
+     "id": "C",
+     "name": "Cyril",
+     "isTarget": false,
+     "color": "#2F7F72",
+     "displayClue": "was beside a tree."
+    },
+    {
+     "id": "D",
+     "name": "Daphne",
+     "isTarget": false,
+     "color": "#9A5A16",
+     "displayClue": "was on the sofa."
+    },
+    {
+     "id": "E",
+     "name": "Ernest",
+     "isTarget": true,
+     "color": "#6B6478",
+     "displayClue": "was alone with the murderer."
+    }
+   ],
+   "clues": [
+    {
+     "kind": "besideObject",
+     "charId": "A",
+     "objectType": "chair"
+    },
+    {
+     "kind": "diagonalOf",
+     "charId": "B",
+     "ref": {
+      "charId": "A"
+     }
+    },
+    {
+     "kind": "besideObject",
+     "charId": "C",
+     "objectType": "tree"
+    },
+    {
+     "kind": "onObject",
+     "charId": "D",
+     "objectType": "sofa"
+    },
+    {
+     "kind": "globalEmptyRoom",
+     "roomId": "T"
+    },
+    {
+     "kind": "aloneWith",
+     "charId": "E",
+     "otherId": "B"
+    }
+   ],
+   "generalClueText": [
+    "Nobody was on the Terrace."
+   ],
+   "solution": {
+    "A": {
+     "row": 2,
+     "col": 1
+    },
+    "B": {
+     "row": 1,
+     "col": 2
+    },
+    "C": {
+     "row": 4,
+     "col": 3
+    },
+    "D": {
+     "row": 3,
+     "col": 0
+    },
+    "E": {
+     "row": 0,
+     "col": 4
+    }
+   },
+   "answerCharId": "B",
+   "winText": "She was alone with Ernest at the Pool. Nobody else was there.",
+   "hintSteps": [
+    {
+     "id": "A",
+     "text": "The chair is in the Lounge. Only one Lounge cell touches it, the one right below. That's Arthur."
+    },
+    {
+     "id": "C",
+     "text": "The tree sits in the Garden corner. The cell above it is the Bathroom, behind a wall, so only the cell to its left counts. That's Cyril."
+    },
+    {
+     "id": "D",
+     "text": "Daphne is on the sofa, which covers two cells. Arthur already owns one of those columns, so she takes the other."
+    },
+    {
+     "id": "B",
+     "text": "Beatrice is diagonal to Arthur. Nobody was on the Terrace, so the only diagonal cell still open is in the Pool."
+    },
+    {
+     "id": "E",
+     "text": "Ernest takes the last open cell, on the boat."
+    }
+   ],
+   "difficulty": {
+    "label": "Easy",
+    "tier": 1
+   },
+   "meta": {
+    "source": "hand-tuned prototype (Cowork), verified by prototype solver",
+    "generatorVersion": "prototype-0"
+   }
+  },
+  {
+   "id": "c3",
+   "caseNumber": "03",
+   "title": "Blackwood Manor",
+   "size": 6,
+   "themeId": "murder-mystery",
+   "cells": [
+    [
+     {
+      "row": 0,
+      "col": 0,
+      "roomId": "S",
+      "floor": "wood",
+      "objectId": "o0"
+     },
+     {
+      "row": 0,
+      "col": 1,
+      "roomId": "S",
+      "floor": "wood",
+      "objectId": "o1"
+     },
+     {
+      "row": 0,
+      "col": 2,
+      "roomId": "S",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 0,
+      "col": 3,
+      "roomId": "D",
+      "floor": "wood",
+      "objectId": "o3"
+     },
+     {
+      "row": 0,
+      "col": 4,
+      "roomId": "D",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 0,
+      "col": 5,
+      "roomId": "D",
+      "floor": "wood",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 1,
+      "col": 0,
+      "roomId": "S",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 1,
+      "col": 1,
+      "roomId": "S",
+      "floor": "wood",
+      "objectId": "o2"
+     },
+     {
+      "row": 1,
+      "col": 2,
+      "roomId": "C",
+      "floor": "pavement",
+      "objectId": null
+     },
+     {
+      "row": 1,
+      "col": 3,
+      "roomId": "D",
+      "floor": "wood",
+      "objectId": "o5"
+     },
+     {
+      "row": 1,
+      "col": 4,
+      "roomId": "D",
+      "floor": "wood",
+      "objectId": "o5"
+     },
+     {
+      "row": 1,
+      "col": 5,
+      "roomId": "D",
+      "floor": "wood",
+      "objectId": "o4"
+     }
+    ],
+    [
+     {
+      "row": 2,
+      "col": 0,
+      "roomId": "H",
+      "floor": "stone",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 1,
+      "roomId": "C",
+      "floor": "pavement",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 2,
+      "roomId": "C",
+      "floor": "pavement",
+      "objectId": "o7"
+     },
+     {
+      "row": 2,
+      "col": 3,
+      "roomId": "C",
+      "floor": "pavement",
+      "objectId": "o7"
+     },
+     {
+      "row": 2,
+      "col": 4,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 5,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": "o10"
+     }
+    ],
+    [
+     {
+      "row": 3,
+      "col": 0,
+      "roomId": "H",
+      "floor": "stone",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 1,
+      "roomId": "H",
+      "floor": "stone",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 2,
+      "roomId": "C",
+      "floor": "pavement",
+      "objectId": "o6"
+     },
+     {
+      "row": 3,
+      "col": 3,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 4,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": "o9"
+     },
+     {
+      "row": 3,
+      "col": 5,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 4,
+      "col": 0,
+      "roomId": "H",
+      "floor": "stone",
+      "objectId": "o8"
+     },
+     {
+      "row": 4,
+      "col": 1,
+      "roomId": "H",
+      "floor": "stone",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 2,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 3,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 4,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 5,
+      "roomId": "W",
+      "floor": "water",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 5,
+      "col": 0,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": "o11"
+     },
+     {
+      "row": 5,
+      "col": 1,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 2,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": "o12"
+     },
+     {
+      "row": 5,
+      "col": 3,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": "o12"
+     },
+     {
+      "row": 5,
+      "col": 4,
+      "roomId": "W",
+      "floor": "water",
+      "objectId": "o13"
+     },
+     {
+      "row": 5,
+      "col": 5,
+      "roomId": "W",
+      "floor": "water",
+      "objectId": "o13"
+     }
+    ]
+   ],
+   "rooms": [
+    {
+     "id": "S",
+     "name": "Study",
+     "cells": [
+      {
+       "row": 0,
+       "col": 0
+      },
+      {
+       "row": 0,
+       "col": 1
+      },
+      {
+       "row": 0,
+       "col": 2
+      },
+      {
+       "row": 1,
+       "col": 0
+      },
+      {
+       "row": 1,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "name": "Dining",
+     "cells": [
+      {
+       "row": 0,
+       "col": 3
+      },
+      {
+       "row": 0,
+       "col": 4
+      },
+      {
+       "row": 0,
+       "col": 5
+      },
+      {
+       "row": 1,
+       "col": 3
+      },
+      {
+       "row": 1,
+       "col": 4
+      },
+      {
+       "row": 1,
+       "col": 5
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "name": "Hall",
+     "cells": [
+      {
+       "row": 1,
+       "col": 2
+      },
+      {
+       "row": 2,
+       "col": 1
+      },
+      {
+       "row": 2,
+       "col": 2
+      },
+      {
+       "row": 2,
+       "col": 3
+      },
+      {
+       "row": 3,
+       "col": 2
+      }
+     ]
+    },
+    {
+     "id": "H",
+     "name": "Cellar",
+     "cells": [
+      {
+       "row": 2,
+       "col": 0
+      },
+      {
+       "row": 3,
+       "col": 0
+      },
+      {
+       "row": 3,
+       "col": 1
+      },
+      {
+       "row": 4,
+       "col": 0
+      },
+      {
+       "row": 4,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "K",
+     "name": "Kitchen",
+     "cells": [
+      {
+       "row": 2,
+       "col": 4
+      },
+      {
+       "row": 2,
+       "col": 5
+      },
+      {
+       "row": 3,
+       "col": 3
+      },
+      {
+       "row": 3,
+       "col": 4
+      },
+      {
+       "row": 3,
+       "col": 5
+      },
+      {
+       "row": 4,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "G",
+     "name": "Garden",
+     "cells": [
+      {
+       "row": 4,
+       "col": 2
+      },
+      {
+       "row": 4,
+       "col": 3
+      },
+      {
+       "row": 5,
+       "col": 0
+      },
+      {
+       "row": 5,
+       "col": 1
+      },
+      {
+       "row": 5,
+       "col": 2
+      },
+      {
+       "row": 5,
+       "col": 3
+      }
+     ]
+    },
+    {
+     "id": "W",
+     "name": "Pond",
+     "cells": [
+      {
+       "row": 4,
+       "col": 5
+      },
+      {
+       "row": 5,
+       "col": 4
+      },
+      {
+       "row": 5,
+       "col": 5
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "o0",
+     "type": "shelf",
+     "cells": [
+      {
+       "row": 0,
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "o1",
+     "type": "piano",
+     "cells": [
+      {
+       "row": 0,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "o2",
+     "type": "chair",
+     "cells": [
+      {
+       "row": 1,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "o3",
+     "type": "chair",
+     "cells": [
+      {
+       "row": 0,
+       "col": 3
+      }
+     ]
+    },
+    {
+     "id": "o4",
+     "type": "chair",
+     "cells": [
+      {
+       "row": 1,
+       "col": 5
+      }
+     ]
+    },
+    {
+     "id": "o5",
+     "type": "table",
+     "cells": [
+      {
+       "row": 1,
+       "col": 3
+      },
+      {
+       "row": 1,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "o6",
+     "type": "plant",
+     "cells": [
+      {
+       "row": 3,
+       "col": 2
+      }
+     ]
+    },
+    {
+     "id": "o7",
+     "type": "carpet",
+     "cells": [
+      {
+       "row": 2,
+       "col": 2
+      },
+      {
+       "row": 2,
+       "col": 3
+      }
+     ]
+    },
+    {
+     "id": "o8",
+     "type": "barrel",
+     "cells": [
+      {
+       "row": 4,
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "o9",
+     "type": "stove",
+     "cells": [
+      {
+       "row": 3,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "o10",
+     "type": "chair",
+     "cells": [
+      {
+       "row": 2,
+       "col": 5
+      }
+     ]
+    },
+    {
+     "id": "o11",
+     "type": "tree",
+     "cells": [
+      {
+       "row": 5,
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "o12",
+     "type": "bench",
+     "cells": [
+      {
+       "row": 5,
+       "col": 2
+      },
+      {
+       "row": 5,
+       "col": 3
+      }
+     ]
+    },
+    {
+     "id": "o13",
+     "type": "boat",
+     "cells": [
+      {
+       "row": 5,
+       "col": 4
+      },
+      {
+       "row": 5,
+       "col": 5
+      }
+     ]
+    }
+   ],
+   "characters": [
+    {
+     "id": "A",
+     "name": "Ambrose",
+     "isTarget": false,
+     "color": "#3D6FB0",
+     "displayClue": "was beside the bench."
+    },
+    {
+     "id": "B",
+     "name": "Bianca",
+     "isTarget": false,
+     "color": "#B5475A",
+     "displayClue": "was south of Ambrose."
+    },
+    {
+     "id": "C",
+     "name": "Clement",
+     "isTarget": false,
+     "color": "#2F7F72",
+     "displayClue": "was on the carpet."
+    },
+    {
+     "id": "D",
+     "name": "Dorothy",
+     "isTarget": false,
+     "color": "#9A5A16",
+     "displayClue": "was west of the stove."
+    },
+    {
+     "id": "E",
+     "name": "Edgar",
+     "isTarget": false,
+     "color": "#7A4FA0",
+     "displayClue": "was diagonal to Clement."
+    },
+    {
+     "id": "F",
+     "name": "Florence",
+     "isTarget": true,
+     "color": "#6B6478",
+     "displayClue": "was alone with the murderer."
+    }
+   ],
+   "clues": [
+    {
+     "kind": "besideObject",
+     "charId": "A",
+     "objectType": "bench"
+    },
+    {
+     "kind": "direction",
+     "charId": "B",
+     "dir": "south",
+     "ref": {
+      "charId": "A"
+     }
+    },
+    {
+     "kind": "onObject",
+     "charId": "C",
+     "objectType": "carpet"
+    },
+    {
+     "kind": "direction",
+     "charId": "D",
+     "dir": "west",
+     "ref": {
+      "objectType": "stove"
+     }
+    },
+    {
+     "kind": "diagonalOf",
+     "charId": "E",
+     "ref": {
+      "charId": "C"
+     }
+    },
+    {
+     "kind": "globalEmptyRoom",
+     "roomId": "S"
+    },
+    {
+     "kind": "aloneWith",
+     "charId": "F",
+     "otherId": "E"
+    }
+   ],
+   "generalClueText": [
+    "Nobody was in the Study."
+   ],
+   "solution": {
+    "A": {
+     "row": 4,
+     "col": 3
+    },
+    "B": {
+     "row": 5,
+     "col": 1
+    },
+    "C": {
+     "row": 2,
+     "col": 2
+    },
+    "D": {
+     "row": 3,
+     "col": 0
+    },
+    "E": {
+     "row": 0,
+     "col": 4
+    },
+    "F": {
+     "row": 1,
+     "col": 5
+    }
+   },
+   "answerCharId": "E",
+   "winText": "He was alone with Florence in the Dining room. Nobody else was in there.",
+   "hintSteps": [
+    {
+     "id": "B",
+     "text": "Ambrose is beside the bench and Bianca is south of him, so Bianca is in the bottom row and Ambrose in the row above. Ambrose and Clement's carpet share the same two middle columns, so nobody else can use them. That leaves one open cell in the table's row, far right, and then one in the top row. Bianca gets the only bottom-row cell still free."
+    },
+    {
+     "id": "E",
+     "text": "Edgar is diagonal to Clement, who is on the carpet. The only open cell that lines up diagonally with the carpet is in the top row of the Dining room."
+    },
+    {
+     "id": "C",
+     "text": "Edgar lines up with the left half of the carpet, so that's where Clement is."
+    },
+    {
+     "id": "A",
+     "text": "Clement took the left middle column, so Ambrose sits beside the bench in the right one."
+    },
+    {
+     "id": "D",
+     "text": "Dorothy is west of the stove. Of the two open cells left, only the one in the Cellar is."
+    },
+    {
+     "id": "F",
+     "text": "Florence takes the last open cell, on the Dining room chair."
+    }
+   ],
+   "difficulty": {
+    "label": "Medium",
+    "tier": 2
+   },
+   "meta": {
+    "source": "hand-tuned prototype (Cowork), verified by prototype solver",
+    "generatorVersion": "prototype-0"
+   }
+  },
+  {
+   "id": "c4",
+   "caseNumber": "04",
+   "title": "The Midnight Express",
+   "size": 5,
+   "themeId": "murder-mystery",
+   "cells": [
+    [
+     {
+      "row": 0,
+      "col": 0,
+      "roomId": "E",
+      "floor": "metal",
+      "objectId": "o0"
+     },
+     {
+      "row": 0,
+      "col": 1,
+      "roomId": "E",
+      "floor": "metal",
+      "objectId": null
+     },
+     {
+      "row": 0,
+      "col": 2,
+      "roomId": "D",
+      "floor": "carpet",
+      "objectId": "o3"
+     },
+     {
+      "row": 0,
+      "col": 3,
+      "roomId": "D",
+      "floor": "carpet",
+      "objectId": "o2"
+     },
+     {
+      "row": 0,
+      "col": 4,
+      "roomId": "D",
+      "floor": "carpet",
+      "objectId": "o4"
+     }
+    ],
+    [
+     {
+      "row": 1,
+      "col": 0,
+      "roomId": "E",
+      "floor": "metal",
+      "objectId": null
+     },
+     {
+      "row": 1,
+      "col": 1,
+      "roomId": "E",
+      "floor": "metal",
+      "objectId": "o1"
+     },
+     {
+      "row": 1,
+      "col": 2,
+      "roomId": "D",
+      "floor": "carpet",
+      "objectId": null
+     },
+     {
+      "row": 1,
+      "col": 3,
+      "roomId": "D",
+      "floor": "carpet",
+      "objectId": "o5"
+     },
+     {
+      "row": 1,
+      "col": 4,
+      "roomId": "D",
+      "floor": "carpet",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 2,
+      "col": 0,
+      "roomId": "S",
+      "floor": "wood",
+      "objectId": "o6"
+     },
+     {
+      "row": 2,
+      "col": 1,
+      "roomId": "S",
+      "floor": "wood",
+      "objectId": "o6"
+     },
+     {
+      "row": 2,
+      "col": 2,
+      "roomId": "S",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 3,
+      "roomId": "L",
+      "floor": "marble",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 4,
+      "roomId": "L",
+      "floor": "marble",
+      "objectId": "o7"
+     }
+    ],
+    [
+     {
+      "row": 3,
+      "col": 0,
+      "roomId": "S",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 1,
+      "roomId": "S",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 2,
+      "roomId": "L",
+      "floor": "marble",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 3,
+      "roomId": "L",
+      "floor": "marble",
+      "objectId": "o8"
+     },
+     {
+      "row": 3,
+      "col": 4,
+      "roomId": "L",
+      "floor": "marble",
+      "objectId": "o8"
+     }
+    ],
+    [
+     {
+      "row": 4,
+      "col": 0,
+      "roomId": "B",
+      "floor": "metal",
+      "objectId": "o9"
+     },
+     {
+      "row": 4,
+      "col": 1,
+      "roomId": "B",
+      "floor": "metal",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 2,
+      "roomId": "B",
+      "floor": "metal",
+      "objectId": "o10"
+     },
+     {
+      "row": 4,
+      "col": 3,
+      "roomId": "B",
+      "floor": "metal",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 4,
+      "roomId": "L",
+      "floor": "marble",
+      "objectId": null
+     }
+    ]
+   ],
+   "rooms": [
+    {
+     "id": "E",
+     "name": "Engine",
+     "cells": [
+      {
+       "row": 0,
+       "col": 0
+      },
+      {
+       "row": 0,
+       "col": 1
+      },
+      {
+       "row": 1,
+       "col": 0
+      },
+      {
+       "row": 1,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "name": "Dining car",
+     "cells": [
+      {
+       "row": 0,
+       "col": 2
+      },
+      {
+       "row": 0,
+       "col": 3
+      },
+      {
+       "row": 0,
+       "col": 4
+      },
+      {
+       "row": 1,
+       "col": 2
+      },
+      {
+       "row": 1,
+       "col": 3
+      },
+      {
+       "row": 1,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "S",
+     "name": "Sleeper",
+     "cells": [
+      {
+       "row": 2,
+       "col": 0
+      },
+      {
+       "row": 2,
+       "col": 1
+      },
+      {
+       "row": 2,
+       "col": 2
+      },
+      {
+       "row": 3,
+       "col": 0
+      },
+      {
+       "row": 3,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "L",
+     "name": "Lounge car",
+     "cells": [
+      {
+       "row": 2,
+       "col": 3
+      },
+      {
+       "row": 2,
+       "col": 4
+      },
+      {
+       "row": 3,
+       "col": 2
+      },
+      {
+       "row": 3,
+       "col": 3
+      },
+      {
+       "row": 3,
+       "col": 4
+      },
+      {
+       "row": 4,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "name": "Luggage van",
+     "cells": [
+      {
+       "row": 4,
+       "col": 0
+      },
+      {
+       "row": 4,
+       "col": 1
+      },
+      {
+       "row": 4,
+       "col": 2
+      },
+      {
+       "row": 4,
+       "col": 3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "o0",
+     "type": "panel",
+     "cells": [
+      {
+       "row": 0,
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "o1",
+     "type": "barrel",
+     "cells": [
+      {
+       "row": 1,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "o2",
+     "type": "table",
+     "cells": [
+      {
+       "row": 0,
+       "col": 3
+      }
+     ]
+    },
+    {
+     "id": "o3",
+     "type": "chair",
+     "cells": [
+      {
+       "row": 0,
+       "col": 2
+      }
+     ]
+    },
+    {
+     "id": "o4",
+     "type": "chair",
+     "cells": [
+      {
+       "row": 0,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "o5",
+     "type": "table",
+     "cells": [
+      {
+       "row": 1,
+       "col": 3
+      }
+     ]
+    },
+    {
+     "id": "o6",
+     "type": "bed",
+     "cells": [
+      {
+       "row": 2,
+       "col": 0
+      },
+      {
+       "row": 2,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "o7",
+     "type": "piano",
+     "cells": [
+      {
+       "row": 2,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "o8",
+     "type": "sofa",
+     "cells": [
+      {
+       "row": 3,
+       "col": 3
+      },
+      {
+       "row": 3,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "o9",
+     "type": "suitcase",
+     "cells": [
+      {
+       "row": 4,
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "o10",
+     "type": "crate",
+     "cells": [
+      {
+       "row": 4,
+       "col": 2
+      }
+     ]
+    }
+   ],
+   "characters": [
+    {
+     "id": "A",
+     "name": "Alma",
+     "isTarget": false,
+     "color": "#B5475A",
+     "displayClue": "was diagonal to Declan."
+    },
+    {
+     "id": "B",
+     "name": "Basil",
+     "isTarget": false,
+     "color": "#3D6FB0",
+     "displayClue": "was beside the suitcase."
+    },
+    {
+     "id": "C",
+     "name": "Cora",
+     "isTarget": false,
+     "color": "#2F7F72",
+     "displayClue": "was on a chair."
+    },
+    {
+     "id": "D",
+     "name": "Declan",
+     "isTarget": false,
+     "color": "#9A5A16",
+     "displayClue": "was beside the control panel."
+    },
+    {
+     "id": "E",
+     "name": "Esme",
+     "isTarget": true,
+     "color": "#6B6478",
+     "displayClue": "was alone with the murderer."
+    }
+   ],
+   "clues": [
+    {
+     "kind": "diagonalOf",
+     "charId": "A",
+     "ref": {
+      "charId": "D"
+     }
+    },
+    {
+     "kind": "besideObject",
+     "charId": "B",
+     "objectType": "suitcase"
+    },
+    {
+     "kind": "onObject",
+     "charId": "C",
+     "objectType": "chair"
+    },
+    {
+     "kind": "besideObject",
+     "charId": "D",
+     "objectType": "panel"
+    },
+    {
+     "kind": "aloneWith",
+     "charId": "E",
+     "otherId": "A"
+    }
+   ],
+   "generalClueText": [],
+   "solution": {
+    "C": {
+     "row": 0,
+     "col": 4
+    },
+    "D": {
+     "row": 1,
+     "col": 0
+    },
+    "E": {
+     "row": 2,
+     "col": 3
+    },
+    "A": {
+     "row": 3,
+     "col": 2
+    },
+    "B": {
+     "row": 4,
+     "col": 1
+    }
+   },
+   "answerCharId": "A",
+   "winText": "Alma was alone with Esme in the Lounge car. Nobody else was there.",
+   "hintSteps": [
+    {
+     "id": "B",
+     "text": "Basil was beside the suitcase. That leaves one open cell."
+    },
+    {
+     "id": "D",
+     "text": "Declan was beside the control panel. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "A",
+     "text": "Alma was diagonal to Declan. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "C",
+     "text": "Cora was on a chair. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "E",
+     "text": "Esme was alone with the murderer, so they share a room with exactly one other person. Rows and columns already taken are out. That leaves one open cell."
+    }
+   ],
+   "difficulty": {
+    "label": "Easy",
+    "tier": 1
+   },
+   "meta": {
+    "source": "hand-tuned prototype (Cowork), verified by prototype solver",
+    "generatorVersion": "prototype-0"
+   }
+  },
+  {
+   "id": "c5",
+   "caseNumber": "05",
+   "title": "Frostpeak Lodge",
+   "size": 6,
+   "themeId": "murder-mystery",
+   "cells": [
+    [
+     {
+      "row": 0,
+      "col": 0,
+      "roomId": "D",
+      "floor": "snow",
+      "objectId": "o0"
+     },
+     {
+      "row": 0,
+      "col": 1,
+      "roomId": "D",
+      "floor": "snow",
+      "objectId": null
+     },
+     {
+      "row": 0,
+      "col": 2,
+      "roomId": "D",
+      "floor": "snow",
+      "objectId": null
+     },
+     {
+      "row": 0,
+      "col": 3,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": "o2"
+     },
+     {
+      "row": 0,
+      "col": 4,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": "o1"
+     },
+     {
+      "row": 0,
+      "col": 5,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 1,
+      "col": 0,
+      "roomId": "D",
+      "floor": "snow",
+      "objectId": "o12"
+     },
+     {
+      "row": 1,
+      "col": 1,
+      "roomId": "B",
+      "floor": "wood",
+      "objectId": "o4"
+     },
+     {
+      "row": 1,
+      "col": 2,
+      "roomId": "B",
+      "floor": "wood",
+      "objectId": "o5"
+     },
+     {
+      "row": 1,
+      "col": 3,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": null
+     },
+     {
+      "row": 1,
+      "col": 4,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": "o3"
+     },
+     {
+      "row": 1,
+      "col": 5,
+      "roomId": "H",
+      "floor": "water",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 2,
+      "col": 0,
+      "roomId": "D",
+      "floor": "snow",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 1,
+      "roomId": "B",
+      "floor": "wood",
+      "objectId": "o4"
+     },
+     {
+      "row": 2,
+      "col": 2,
+      "roomId": "B",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 3,
+      "roomId": "L",
+      "floor": "carpet",
+      "objectId": "o8"
+     },
+     {
+      "row": 2,
+      "col": 4,
+      "roomId": "L",
+      "floor": "carpet",
+      "objectId": "o8"
+     },
+     {
+      "row": 2,
+      "col": 5,
+      "roomId": "H",
+      "floor": "water",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 3,
+      "col": 0,
+      "roomId": "S",
+      "floor": "stone",
+      "objectId": "o10"
+     },
+     {
+      "row": 3,
+      "col": 1,
+      "roomId": "S",
+      "floor": "stone",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 2,
+      "roomId": "L",
+      "floor": "carpet",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 3,
+      "roomId": "L",
+      "floor": "carpet",
+      "objectId": "o6"
+     },
+     {
+      "row": 3,
+      "col": 4,
+      "roomId": "L",
+      "floor": "carpet",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 5,
+      "roomId": "H",
+      "floor": "water",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 4,
+      "col": 0,
+      "roomId": "S",
+      "floor": "stone",
+      "objectId": "o10"
+     },
+     {
+      "row": 4,
+      "col": 1,
+      "roomId": "S",
+      "floor": "stone",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 2,
+      "roomId": "L",
+      "floor": "carpet",
+      "objectId": "o7"
+     },
+     {
+      "row": 4,
+      "col": 3,
+      "roomId": "L",
+      "floor": "carpet",
+      "objectId": "o7"
+     },
+     {
+      "row": 4,
+      "col": 4,
+      "roomId": "T",
+      "floor": "sand",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 5,
+      "roomId": "T",
+      "floor": "sand",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 5,
+      "col": 0,
+      "roomId": "S",
+      "floor": "stone",
+      "objectId": "o9"
+     },
+     {
+      "row": 5,
+      "col": 1,
+      "roomId": "S",
+      "floor": "stone",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 2,
+      "roomId": "S",
+      "floor": "stone",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 3,
+      "roomId": "T",
+      "floor": "sand",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 4,
+      "roomId": "T",
+      "floor": "sand",
+      "objectId": "o11"
+     },
+     {
+      "row": 5,
+      "col": 5,
+      "roomId": "T",
+      "floor": "sand",
+      "objectId": "o11"
+     }
+    ]
+   ],
+   "rooms": [
+    {
+     "id": "D",
+     "name": "Deck",
+     "cells": [
+      {
+       "row": 0,
+       "col": 0
+      },
+      {
+       "row": 0,
+       "col": 1
+      },
+      {
+       "row": 0,
+       "col": 2
+      },
+      {
+       "row": 1,
+       "col": 0
+      },
+      {
+       "row": 2,
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "K",
+     "name": "Kitchen",
+     "cells": [
+      {
+       "row": 0,
+       "col": 3
+      },
+      {
+       "row": 0,
+       "col": 4
+      },
+      {
+       "row": 0,
+       "col": 5
+      },
+      {
+       "row": 1,
+       "col": 3
+      },
+      {
+       "row": 1,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "name": "Bunk room",
+     "cells": [
+      {
+       "row": 1,
+       "col": 1
+      },
+      {
+       "row": 1,
+       "col": 2
+      },
+      {
+       "row": 2,
+       "col": 1
+      },
+      {
+       "row": 2,
+       "col": 2
+      }
+     ]
+    },
+    {
+     "id": "H",
+     "name": "Hot tub",
+     "cells": [
+      {
+       "row": 1,
+       "col": 5
+      },
+      {
+       "row": 2,
+       "col": 5
+      },
+      {
+       "row": 3,
+       "col": 5
+      }
+     ]
+    },
+    {
+     "id": "L",
+     "name": "Lounge",
+     "cells": [
+      {
+       "row": 2,
+       "col": 3
+      },
+      {
+       "row": 2,
+       "col": 4
+      },
+      {
+       "row": 3,
+       "col": 2
+      },
+      {
+       "row": 3,
+       "col": 3
+      },
+      {
+       "row": 3,
+       "col": 4
+      },
+      {
+       "row": 4,
+       "col": 2
+      },
+      {
+       "row": 4,
+       "col": 3
+      }
+     ]
+    },
+    {
+     "id": "S",
+     "name": "Ski room",
+     "cells": [
+      {
+       "row": 3,
+       "col": 0
+      },
+      {
+       "row": 3,
+       "col": 1
+      },
+      {
+       "row": 4,
+       "col": 0
+      },
+      {
+       "row": 4,
+       "col": 1
+      },
+      {
+       "row": 5,
+       "col": 0
+      },
+      {
+       "row": 5,
+       "col": 1
+      },
+      {
+       "row": 5,
+       "col": 2
+      }
+     ]
+    },
+    {
+     "id": "T",
+     "name": "Sauna",
+     "cells": [
+      {
+       "row": 4,
+       "col": 4
+      },
+      {
+       "row": 4,
+       "col": 5
+      },
+      {
+       "row": 5,
+       "col": 3
+      },
+      {
+       "row": 5,
+       "col": 4
+      },
+      {
+       "row": 5,
+       "col": 5
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "o0",
+     "type": "snowman",
+     "cells": [
+      {
+       "row": 0,
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "o1",
+     "type": "stove",
+     "cells": [
+      {
+       "row": 0,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "o2",
+     "type": "chair",
+     "cells": [
+      {
+       "row": 0,
+       "col": 3
+      }
+     ]
+    },
+    {
+     "id": "o3",
+     "type": "table",
+     "cells": [
+      {
+       "row": 1,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "o4",
+     "type": "bed",
+     "cells": [
+      {
+       "row": 1,
+       "col": 1
+      },
+      {
+       "row": 2,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "o5",
+     "type": "chair",
+     "cells": [
+      {
+       "row": 1,
+       "col": 2
+      }
+     ]
+    },
+    {
+     "id": "o6",
+     "type": "fireplace",
+     "cells": [
+      {
+       "row": 3,
+       "col": 3
+      }
+     ]
+    },
+    {
+     "id": "o7",
+     "type": "carpet",
+     "cells": [
+      {
+       "row": 4,
+       "col": 2
+      },
+      {
+       "row": 4,
+       "col": 3
+      }
+     ]
+    },
+    {
+     "id": "o8",
+     "type": "sofa",
+     "cells": [
+      {
+       "row": 2,
+       "col": 3
+      },
+      {
+       "row": 2,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "o9",
+     "type": "skirack",
+     "cells": [
+      {
+       "row": 5,
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "o10",
+     "type": "bench",
+     "cells": [
+      {
+       "row": 3,
+       "col": 0
+      },
+      {
+       "row": 4,
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "o11",
+     "type": "bench",
+     "cells": [
+      {
+       "row": 5,
+       "col": 4
+      },
+      {
+       "row": 5,
+       "col": 5
+      }
+     ]
+    },
+    {
+     "id": "o12",
+     "type": "plant",
+     "cells": [
+      {
+       "row": 1,
+       "col": 0
+      }
+     ]
+    }
+   ],
+   "characters": [
+    {
+     "id": "A",
+     "name": "Axel",
+     "isTarget": false,
+     "color": "#B5475A",
+     "displayClue": "was east of the stove."
+    },
+    {
+     "id": "B",
+     "name": "Brigid",
+     "isTarget": false,
+     "color": "#3D6FB0",
+     "displayClue": "was beside the snowman."
+    },
+    {
+     "id": "C",
+     "name": "Caspar",
+     "isTarget": false,
+     "color": "#2F7F72",
+     "displayClue": "was beside the bed."
+    },
+    {
+     "id": "D",
+     "name": "Delphine",
+     "isTarget": false,
+     "color": "#9A5A16",
+     "displayClue": "was on the carpet."
+    },
+    {
+     "id": "E",
+     "name": "Ezra",
+     "isTarget": false,
+     "color": "#7A4FA0",
+     "displayClue": "was beside the sofa."
+    },
+    {
+     "id": "F",
+     "name": "Freya",
+     "isTarget": true,
+     "color": "#6B6478",
+     "displayClue": "was alone with the murderer."
+    }
+   ],
+   "clues": [
+    {
+     "kind": "direction",
+     "charId": "A",
+     "dir": "east",
+     "ref": {
+      "objectType": "stove"
+     }
+    },
+    {
+     "kind": "besideObject",
+     "charId": "B",
+     "objectType": "snowman"
+    },
+    {
+     "kind": "besideObject",
+     "charId": "C",
+     "objectType": "bed"
+    },
+    {
+     "kind": "onObject",
+     "charId": "D",
+     "objectType": "carpet"
+    },
+    {
+     "kind": "besideObject",
+     "charId": "E",
+     "objectType": "sofa"
+    },
+    {
+     "kind": "aloneWith",
+     "charId": "F",
+     "otherId": "B"
+    }
+   ],
+   "generalClueText": [],
+   "solution": {
+    "B": {
+     "row": 0,
+     "col": 1
+    },
+    "C": {
+     "row": 1,
+     "col": 2
+    },
+    "F": {
+     "row": 2,
+     "col": 0
+    },
+    "E": {
+     "row": 3,
+     "col": 4
+    },
+    "D": {
+     "row": 4,
+     "col": 3
+    },
+    "A": {
+     "row": 5,
+     "col": 5
+    }
+   },
+   "answerCharId": "B",
+   "winText": "Brigid was alone with Freya in the Deck. Nobody else was there.",
+   "hintSteps": [
+    {
+     "id": "B",
+     "text": "Brigid was beside the snowman. That leaves one open cell."
+    },
+    {
+     "id": "E",
+     "text": "Ezra was beside the sofa. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "C",
+     "text": "Caspar was beside the bed. Delphine and Freya lock the 3rd and 5th rows between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "D",
+     "text": "Delphine was on the carpet. Delphine is the only one who can still fill the 4th column. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "F",
+     "text": "Freya was alone with the murderer, so they share a room with exactly one other person. Freya is the only one who can still fill the 1st column. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "A",
+     "text": "Axel was east of the stove. Delphine and Freya lock the 3rd and 5th rows between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."
+    }
+   ],
+   "difficulty": {
+    "label": "Easy",
+    "tier": 1
+   },
+   "meta": {
+    "source": "hand-tuned prototype (Cowork), verified by prototype solver",
+    "generatorVersion": "prototype-0"
+   }
+  },
+  {
+   "id": "c6",
+   "caseNumber": "06",
+   "title": "The Grand Aurora",
+   "size": 7,
+   "themeId": "murder-mystery",
+   "cells": [
+    [
+     {
+      "row": 0,
+      "col": 0,
+      "roomId": "B",
+      "floor": "metal",
+      "objectId": null
+     },
+     {
+      "row": 0,
+      "col": 1,
+      "roomId": "B",
+      "floor": "metal",
+      "objectId": "o0"
+     },
+     {
+      "row": 0,
+      "col": 2,
+      "roomId": "B",
+      "floor": "metal",
+      "objectId": null
+     },
+     {
+      "row": 0,
+      "col": 3,
+      "roomId": "C",
+      "floor": "carpet",
+      "objectId": null
+     },
+     {
+      "row": 0,
+      "col": 4,
+      "roomId": "C",
+      "floor": "carpet",
+      "objectId": "o2"
+     },
+     {
+      "row": 0,
+      "col": 5,
+      "roomId": "C",
+      "floor": "carpet",
+      "objectId": "o5"
+     },
+     {
+      "row": 0,
+      "col": 6,
+      "roomId": "C",
+      "floor": "carpet",
+      "objectId": "o3"
+     }
+    ],
+    [
+     {
+      "row": 1,
+      "col": 0,
+      "roomId": "B",
+      "floor": "metal",
+      "objectId": "o1"
+     },
+     {
+      "row": 1,
+      "col": 1,
+      "roomId": "B",
+      "floor": "metal",
+      "objectId": null
+     },
+     {
+      "row": 1,
+      "col": 2,
+      "roomId": "P",
+      "floor": "water",
+      "objectId": null
+     },
+     {
+      "row": 1,
+      "col": 3,
+      "roomId": "P",
+      "floor": "water",
+      "objectId": null
+     },
+     {
+      "row": 1,
+      "col": 4,
+      "roomId": "C",
+      "floor": "carpet",
+      "objectId": null
+     },
+     {
+      "row": 1,
+      "col": 5,
+      "roomId": "C",
+      "floor": "carpet",
+      "objectId": "o4"
+     },
+     {
+      "row": 1,
+      "col": 6,
+      "roomId": "C",
+      "floor": "carpet",
+      "objectId": "o4"
+     }
+    ],
+    [
+     {
+      "row": 2,
+      "col": 0,
+      "roomId": "D",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 1,
+      "roomId": "P",
+      "floor": "water",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 2,
+      "roomId": "P",
+      "floor": "water",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 3,
+      "roomId": "P",
+      "floor": "water",
+      "objectId": "o6"
+     },
+     {
+      "row": 2,
+      "col": 4,
+      "roomId": "P",
+      "floor": "water",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 5,
+      "roomId": "C",
+      "floor": "carpet",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 6,
+      "roomId": "S",
+      "floor": "marble",
+      "objectId": "o11"
+     }
+    ],
+    [
+     {
+      "row": 3,
+      "col": 0,
+      "roomId": "D",
+      "floor": "wood",
+      "objectId": "o7"
+     },
+     {
+      "row": 3,
+      "col": 1,
+      "roomId": "D",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 2,
+      "roomId": "P",
+      "floor": "water",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 3,
+      "roomId": "P",
+      "floor": "water",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 4,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": "o10"
+     },
+     {
+      "row": 3,
+      "col": 5,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 6,
+      "roomId": "S",
+      "floor": "marble",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 4,
+      "col": 0,
+      "roomId": "D",
+      "floor": "wood",
+      "objectId": "o8"
+     },
+     {
+      "row": 4,
+      "col": 1,
+      "roomId": "D",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 2,
+      "roomId": "W",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 3,
+      "roomId": "W",
+      "floor": "wood",
+      "objectId": "o13"
+     },
+     {
+      "row": 4,
+      "col": 4,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 5,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": "o9"
+     },
+     {
+      "row": 4,
+      "col": 6,
+      "roomId": "S",
+      "floor": "marble",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 5,
+      "col": 0,
+      "roomId": "L",
+      "floor": "pavement",
+      "objectId": "o14"
+     },
+     {
+      "row": 5,
+      "col": 1,
+      "roomId": "L",
+      "floor": "pavement",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 2,
+      "roomId": "W",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 3,
+      "roomId": "W",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 4,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 5,
+      "roomId": "S",
+      "floor": "marble",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 6,
+      "roomId": "S",
+      "floor": "marble",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 6,
+      "col": 0,
+      "roomId": "L",
+      "floor": "pavement",
+      "objectId": "o15"
+     },
+     {
+      "row": 6,
+      "col": 1,
+      "roomId": "L",
+      "floor": "pavement",
+      "objectId": "o15"
+     },
+     {
+      "row": 6,
+      "col": 2,
+      "roomId": "L",
+      "floor": "pavement",
+      "objectId": null
+     },
+     {
+      "row": 6,
+      "col": 3,
+      "roomId": "W",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 6,
+      "col": 4,
+      "roomId": "W",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 6,
+      "col": 5,
+      "roomId": "S",
+      "floor": "marble",
+      "objectId": "o12"
+     },
+     {
+      "row": 6,
+      "col": 6,
+      "roomId": "S",
+      "floor": "marble",
+      "objectId": "o12"
+     }
+    ]
+   ],
+   "rooms": [
+    {
+     "id": "B",
+     "name": "Bridge",
+     "cells": [
+      {
+       "row": 0,
+       "col": 0
+      },
+      {
+       "row": 0,
+       "col": 1
+      },
+      {
+       "row": 0,
+       "col": 2
+      },
+      {
+       "row": 1,
+       "col": 0
+      },
+      {
+       "row": 1,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "name": "Casino",
+     "cells": [
+      {
+       "row": 0,
+       "col": 3
+      },
+      {
+       "row": 0,
+       "col": 4
+      },
+      {
+       "row": 0,
+       "col": 5
+      },
+      {
+       "row": 0,
+       "col": 6
+      },
+      {
+       "row": 1,
+       "col": 4
+      },
+      {
+       "row": 1,
+       "col": 5
+      },
+      {
+       "row": 1,
+       "col": 6
+      },
+      {
+       "row": 2,
+       "col": 5
+      }
+     ]
+    },
+    {
+     "id": "P",
+     "name": "Pool",
+     "cells": [
+      {
+       "row": 1,
+       "col": 2
+      },
+      {
+       "row": 1,
+       "col": 3
+      },
+      {
+       "row": 2,
+       "col": 1
+      },
+      {
+       "row": 2,
+       "col": 2
+      },
+      {
+       "row": 2,
+       "col": 3
+      },
+      {
+       "row": 2,
+       "col": 4
+      },
+      {
+       "row": 3,
+       "col": 2
+      },
+      {
+       "row": 3,
+       "col": 3
+      }
+     ]
+    },
+    {
+     "id": "S",
+     "name": "Spa",
+     "cells": [
+      {
+       "row": 2,
+       "col": 6
+      },
+      {
+       "row": 3,
+       "col": 6
+      },
+      {
+       "row": 4,
+       "col": 6
+      },
+      {
+       "row": 5,
+       "col": 5
+      },
+      {
+       "row": 5,
+       "col": 6
+      },
+      {
+       "row": 6,
+       "col": 5
+      },
+      {
+       "row": 6,
+       "col": 6
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "name": "Dining",
+     "cells": [
+      {
+       "row": 2,
+       "col": 0
+      },
+      {
+       "row": 3,
+       "col": 0
+      },
+      {
+       "row": 3,
+       "col": 1
+      },
+      {
+       "row": 4,
+       "col": 0
+      },
+      {
+       "row": 4,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "K",
+     "name": "Galley",
+     "cells": [
+      {
+       "row": 3,
+       "col": 4
+      },
+      {
+       "row": 3,
+       "col": 5
+      },
+      {
+       "row": 4,
+       "col": 4
+      },
+      {
+       "row": 4,
+       "col": 5
+      },
+      {
+       "row": 5,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "W",
+     "name": "Ballroom",
+     "cells": [
+      {
+       "row": 4,
+       "col": 2
+      },
+      {
+       "row": 4,
+       "col": 3
+      },
+      {
+       "row": 5,
+       "col": 2
+      },
+      {
+       "row": 5,
+       "col": 3
+      },
+      {
+       "row": 6,
+       "col": 3
+      },
+      {
+       "row": 6,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "L",
+     "name": "Lifeboat deck",
+     "cells": [
+      {
+       "row": 5,
+       "col": 0
+      },
+      {
+       "row": 5,
+       "col": 1
+      },
+      {
+       "row": 6,
+       "col": 0
+      },
+      {
+       "row": 6,
+       "col": 1
+      },
+      {
+       "row": 6,
+       "col": 2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "o0",
+     "type": "wheel",
+     "cells": [
+      {
+       "row": 0,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "o1",
+     "type": "telescope",
+     "cells": [
+      {
+       "row": 1,
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "o2",
+     "type": "slot",
+     "cells": [
+      {
+       "row": 0,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "o3",
+     "type": "slot",
+     "cells": [
+      {
+       "row": 0,
+       "col": 6
+      }
+     ]
+    },
+    {
+     "id": "o4",
+     "type": "table",
+     "cells": [
+      {
+       "row": 1,
+       "col": 5
+      },
+      {
+       "row": 1,
+       "col": 6
+      }
+     ]
+    },
+    {
+     "id": "o5",
+     "type": "chair",
+     "cells": [
+      {
+       "row": 0,
+       "col": 5
+      }
+     ]
+    },
+    {
+     "id": "o6",
+     "type": "float",
+     "cells": [
+      {
+       "row": 2,
+       "col": 3
+      }
+     ]
+    },
+    {
+     "id": "o7",
+     "type": "table",
+     "cells": [
+      {
+       "row": 3,
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "o8",
+     "type": "chair",
+     "cells": [
+      {
+       "row": 4,
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "o9",
+     "type": "stove",
+     "cells": [
+      {
+       "row": 4,
+       "col": 5
+      }
+     ]
+    },
+    {
+     "id": "o10",
+     "type": "crate",
+     "cells": [
+      {
+       "row": 3,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "o11",
+     "type": "plant",
+     "cells": [
+      {
+       "row": 2,
+       "col": 6
+      }
+     ]
+    },
+    {
+     "id": "o12",
+     "type": "bathtub",
+     "cells": [
+      {
+       "row": 6,
+       "col": 5
+      },
+      {
+       "row": 6,
+       "col": 6
+      }
+     ]
+    },
+    {
+     "id": "o13",
+     "type": "piano",
+     "cells": [
+      {
+       "row": 4,
+       "col": 3
+      }
+     ]
+    },
+    {
+     "id": "o14",
+     "type": "anchor",
+     "cells": [
+      {
+       "row": 5,
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "o15",
+     "type": "lifeboat",
+     "cells": [
+      {
+       "row": 6,
+       "col": 0
+      },
+      {
+       "row": 6,
+       "col": 1
+      }
+     ]
+    }
+   ],
+   "characters": [
+    {
+     "id": "A",
+     "name": "Adele",
+     "isTarget": false,
+     "color": "#B5475A",
+     "displayClue": "was beside the plant."
+    },
+    {
+     "id": "B",
+     "name": "Bernard",
+     "isTarget": false,
+     "color": "#3D6FB0",
+     "displayClue": "was on the pool float."
+    },
+    {
+     "id": "C",
+     "name": "Clio",
+     "isTarget": false,
+     "color": "#2F7F72",
+     "displayClue": "was on a chair."
+    },
+    {
+     "id": "D",
+     "name": "Dorian",
+     "isTarget": false,
+     "color": "#9A5A16",
+     "displayClue": "was beside the telescope."
+    },
+    {
+     "id": "E",
+     "name": "Elsa",
+     "isTarget": false,
+     "color": "#7A4FA0",
+     "displayClue": "was south of the ship's wheel."
+    },
+    {
+     "id": "F",
+     "name": "Fitz",
+     "isTarget": false,
+     "color": "#1F7A8C",
+     "displayClue": "was beside the bathtub."
+    },
+    {
+     "id": "G",
+     "name": "Greer",
+     "isTarget": true,
+     "color": "#6B6478",
+     "displayClue": "was alone with the murderer."
+    }
+   ],
+   "clues": [
+    {
+     "kind": "besideObject",
+     "charId": "A",
+     "objectType": "plant"
+    },
+    {
+     "kind": "onObject",
+     "charId": "B",
+     "objectType": "float"
+    },
+    {
+     "kind": "onObject",
+     "charId": "C",
+     "objectType": "chair"
+    },
+    {
+     "kind": "besideObject",
+     "charId": "D",
+     "objectType": "telescope"
+    },
+    {
+     "kind": "direction",
+     "charId": "E",
+     "dir": "south",
+     "ref": {
+      "objectType": "wheel"
+     }
+    },
+    {
+     "kind": "besideObject",
+     "charId": "F",
+     "objectType": "bathtub"
+    },
+    {
+     "kind": "aloneWith",
+     "charId": "G",
+     "otherId": "D"
+    }
+   ],
+   "generalClueText": [],
+   "solution": {
+    "G": {
+     "row": 0,
+     "col": 2
+    },
+    "D": {
+     "row": 1,
+     "col": 1
+    },
+    "B": {
+     "row": 2,
+     "col": 3
+    },
+    "A": {
+     "row": 3,
+     "col": 6
+    },
+    "C": {
+     "row": 4,
+     "col": 0
+    },
+    "F": {
+     "row": 5,
+     "col": 5
+    },
+    "E": {
+     "row": 6,
+     "col": 4
+    }
+   },
+   "answerCharId": "D",
+   "winText": "Dorian was alone with Greer in the Bridge. Nobody else was there.",
+   "hintSteps": [
+    {
+     "id": "A",
+     "text": "Adele was beside the plant. That leaves one open cell."
+    },
+    {
+     "id": "B",
+     "text": "Bernard was on the pool float. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "F",
+     "text": "Fitz was beside the bathtub. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "C",
+     "text": "Clio was on a chair. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "D",
+     "text": "Dorian was beside the telescope. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "E",
+     "text": "Elsa was south of the ship's wheel. Elsa is the only one who can still fill the 5th column. Clio and Dorian lock the 1st and 2nd columns between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "G",
+     "text": "Greer was alone with the murderer, so they share a room with exactly one other person. Greer is the only one who can still fill the 1st row. Clio and Dorian lock the 1st and 2nd columns between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."
+    }
+   ],
+   "difficulty": {
+    "label": "Medium",
+    "tier": 2
+   },
+   "meta": {
+    "source": "hand-tuned prototype (Cowork), verified by prototype solver",
+    "generatorVersion": "prototype-0"
+   }
+  },
+  {
+   "id": "c7",
+   "caseNumber": "07",
+   "title": "Museum After Dark",
+   "size": 8,
+   "themeId": "murder-mystery",
+   "cells": [
+    [
+     {
+      "row": 0,
+      "col": 0,
+      "roomId": "E",
+      "floor": "sand",
+      "objectId": null
+     },
+     {
+      "row": 0,
+      "col": 1,
+      "roomId": "E",
+      "floor": "sand",
+      "objectId": "o0"
+     },
+     {
+      "row": 0,
+      "col": 2,
+      "roomId": "E",
+      "floor": "sand",
+      "objectId": "o0"
+     },
+     {
+      "row": 0,
+      "col": 3,
+      "roomId": "E",
+      "floor": "sand",
+      "objectId": null
+     },
+     {
+      "row": 0,
+      "col": 4,
+      "roomId": "G",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 0,
+      "col": 5,
+      "roomId": "G",
+      "floor": "wood",
+      "objectId": "o2"
+     },
+     {
+      "row": 0,
+      "col": 6,
+      "roomId": "G",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 0,
+      "col": 7,
+      "roomId": "G",
+      "floor": "wood",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 1,
+      "col": 0,
+      "roomId": "E",
+      "floor": "sand",
+      "objectId": null
+     },
+     {
+      "row": 1,
+      "col": 1,
+      "roomId": "E",
+      "floor": "sand",
+      "objectId": null
+     },
+     {
+      "row": 1,
+      "col": 2,
+      "roomId": "E",
+      "floor": "sand",
+      "objectId": null
+     },
+     {
+      "row": 1,
+      "col": 3,
+      "roomId": "E",
+      "floor": "sand",
+      "objectId": "o1"
+     },
+     {
+      "row": 1,
+      "col": 4,
+      "roomId": "G",
+      "floor": "wood",
+      "objectId": "o4"
+     },
+     {
+      "row": 1,
+      "col": 5,
+      "roomId": "G",
+      "floor": "wood",
+      "objectId": "o4"
+     },
+     {
+      "row": 1,
+      "col": 6,
+      "roomId": "G",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 1,
+      "col": 7,
+      "roomId": "G",
+      "floor": "wood",
+      "objectId": "o3"
+     }
+    ],
+    [
+     {
+      "row": 2,
+      "col": 0,
+      "roomId": "A",
+      "floor": "stone",
+      "objectId": "o5"
+     },
+     {
+      "row": 2,
+      "col": 1,
+      "roomId": "A",
+      "floor": "stone",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 2,
+      "roomId": "H",
+      "floor": "marble",
+      "objectId": "o8"
+     },
+     {
+      "row": 2,
+      "col": 3,
+      "roomId": "H",
+      "floor": "marble",
+      "objectId": "o8"
+     },
+     {
+      "row": 2,
+      "col": 4,
+      "roomId": "H",
+      "floor": "marble",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 5,
+      "roomId": "H",
+      "floor": "marble",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 6,
+      "roomId": "V",
+      "floor": "metal",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 7,
+      "roomId": "V",
+      "floor": "metal",
+      "objectId": "o9"
+     }
+    ],
+    [
+     {
+      "row": 3,
+      "col": 0,
+      "roomId": "A",
+      "floor": "stone",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 1,
+      "roomId": "A",
+      "floor": "stone",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 2,
+      "roomId": "H",
+      "floor": "marble",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 3,
+      "roomId": "H",
+      "floor": "marble",
+      "objectId": "o7"
+     },
+     {
+      "row": 3,
+      "col": 4,
+      "roomId": "H",
+      "floor": "marble",
+      "objectId": "o7"
+     },
+     {
+      "row": 3,
+      "col": 5,
+      "roomId": "H",
+      "floor": "marble",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 6,
+      "roomId": "V",
+      "floor": "metal",
+      "objectId": "o17"
+     },
+     {
+      "row": 3,
+      "col": 7,
+      "roomId": "V",
+      "floor": "metal",
+      "objectId": "o17"
+     }
+    ],
+    [
+     {
+      "row": 4,
+      "col": 0,
+      "roomId": "A",
+      "floor": "stone",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 1,
+      "roomId": "A",
+      "floor": "stone",
+      "objectId": "o6"
+     },
+     {
+      "row": 4,
+      "col": 2,
+      "roomId": "H",
+      "floor": "marble",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 3,
+      "roomId": "H",
+      "floor": "marble",
+      "objectId": "o7"
+     },
+     {
+      "row": 4,
+      "col": 4,
+      "roomId": "H",
+      "floor": "marble",
+      "objectId": "o7"
+     },
+     {
+      "row": 4,
+      "col": 5,
+      "roomId": "H",
+      "floor": "marble",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 6,
+      "roomId": "M",
+      "floor": "stone",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 7,
+      "roomId": "M",
+      "floor": "stone",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 5,
+      "col": 0,
+      "roomId": "S",
+      "floor": "grass",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 1,
+      "roomId": "S",
+      "floor": "grass",
+      "objectId": "o11"
+     },
+     {
+      "row": 5,
+      "col": 2,
+      "roomId": "S",
+      "floor": "grass",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 3,
+      "roomId": "H",
+      "floor": "marble",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 4,
+      "roomId": "H",
+      "floor": "marble",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 5,
+      "roomId": "M",
+      "floor": "stone",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 6,
+      "roomId": "M",
+      "floor": "stone",
+      "objectId": "o10"
+     },
+     {
+      "row": 5,
+      "col": 7,
+      "roomId": "M",
+      "floor": "stone",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 6,
+      "col": 0,
+      "roomId": "S",
+      "floor": "grass",
+      "objectId": null
+     },
+     {
+      "row": 6,
+      "col": 1,
+      "roomId": "S",
+      "floor": "grass",
+      "objectId": null
+     },
+     {
+      "row": 6,
+      "col": 2,
+      "roomId": "S",
+      "floor": "grass",
+      "objectId": "o13"
+     },
+     {
+      "row": 6,
+      "col": 3,
+      "roomId": "C",
+      "floor": "tile",
+      "objectId": null
+     },
+     {
+      "row": 6,
+      "col": 4,
+      "roomId": "C",
+      "floor": "tile",
+      "objectId": "o15"
+     },
+     {
+      "row": 6,
+      "col": 5,
+      "roomId": "C",
+      "floor": "tile",
+      "objectId": null
+     },
+     {
+      "row": 6,
+      "col": 6,
+      "roomId": "M",
+      "floor": "stone",
+      "objectId": null
+     },
+     {
+      "row": 6,
+      "col": 7,
+      "roomId": "M",
+      "floor": "stone",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 7,
+      "col": 0,
+      "roomId": "S",
+      "floor": "grass",
+      "objectId": "o12"
+     },
+     {
+      "row": 7,
+      "col": 1,
+      "roomId": "S",
+      "floor": "grass",
+      "objectId": null
+     },
+     {
+      "row": 7,
+      "col": 2,
+      "roomId": "S",
+      "floor": "grass",
+      "objectId": null
+     },
+     {
+      "row": 7,
+      "col": 3,
+      "roomId": "C",
+      "floor": "tile",
+      "objectId": null
+     },
+     {
+      "row": 7,
+      "col": 4,
+      "roomId": "C",
+      "floor": "tile",
+      "objectId": "o16"
+     },
+     {
+      "row": 7,
+      "col": 5,
+      "roomId": "C",
+      "floor": "tile",
+      "objectId": "o14"
+     },
+     {
+      "row": 7,
+      "col": 6,
+      "roomId": "C",
+      "floor": "tile",
+      "objectId": null
+     },
+     {
+      "row": 7,
+      "col": 7,
+      "roomId": "C",
+      "floor": "tile",
+      "objectId": null
+     }
+    ]
+   ],
+   "rooms": [
+    {
+     "id": "E",
+     "name": "Egypt wing",
+     "cells": [
+      {
+       "row": 0,
+       "col": 0
+      },
+      {
+       "row": 0,
+       "col": 1
+      },
+      {
+       "row": 0,
+       "col": 2
+      },
+      {
+       "row": 0,
+       "col": 3
+      },
+      {
+       "row": 1,
+       "col": 0
+      },
+      {
+       "row": 1,
+       "col": 1
+      },
+      {
+       "row": 1,
+       "col": 2
+      },
+      {
+       "row": 1,
+       "col": 3
+      }
+     ]
+    },
+    {
+     "id": "G",
+     "name": "Gallery",
+     "cells": [
+      {
+       "row": 0,
+       "col": 4
+      },
+      {
+       "row": 0,
+       "col": 5
+      },
+      {
+       "row": 0,
+       "col": 6
+      },
+      {
+       "row": 0,
+       "col": 7
+      },
+      {
+       "row": 1,
+       "col": 4
+      },
+      {
+       "row": 1,
+       "col": 5
+      },
+      {
+       "row": 1,
+       "col": 6
+      },
+      {
+       "row": 1,
+       "col": 7
+      }
+     ]
+    },
+    {
+     "id": "A",
+     "name": "Armoury",
+     "cells": [
+      {
+       "row": 2,
+       "col": 0
+      },
+      {
+       "row": 2,
+       "col": 1
+      },
+      {
+       "row": 3,
+       "col": 0
+      },
+      {
+       "row": 3,
+       "col": 1
+      },
+      {
+       "row": 4,
+       "col": 0
+      },
+      {
+       "row": 4,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "H",
+     "name": "Great hall",
+     "cells": [
+      {
+       "row": 2,
+       "col": 2
+      },
+      {
+       "row": 2,
+       "col": 3
+      },
+      {
+       "row": 2,
+       "col": 4
+      },
+      {
+       "row": 2,
+       "col": 5
+      },
+      {
+       "row": 3,
+       "col": 2
+      },
+      {
+       "row": 3,
+       "col": 3
+      },
+      {
+       "row": 3,
+       "col": 4
+      },
+      {
+       "row": 3,
+       "col": 5
+      },
+      {
+       "row": 4,
+       "col": 2
+      },
+      {
+       "row": 4,
+       "col": 3
+      },
+      {
+       "row": 4,
+       "col": 4
+      },
+      {
+       "row": 4,
+       "col": 5
+      },
+      {
+       "row": 5,
+       "col": 3
+      },
+      {
+       "row": 5,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "V",
+     "name": "Vault",
+     "cells": [
+      {
+       "row": 2,
+       "col": 6
+      },
+      {
+       "row": 2,
+       "col": 7
+      },
+      {
+       "row": 3,
+       "col": 6
+      },
+      {
+       "row": 3,
+       "col": 7
+      }
+     ]
+    },
+    {
+     "id": "M",
+     "name": "Mineral room",
+     "cells": [
+      {
+       "row": 4,
+       "col": 6
+      },
+      {
+       "row": 4,
+       "col": 7
+      },
+      {
+       "row": 5,
+       "col": 5
+      },
+      {
+       "row": 5,
+       "col": 6
+      },
+      {
+       "row": 5,
+       "col": 7
+      },
+      {
+       "row": 6,
+       "col": 6
+      },
+      {
+       "row": 6,
+       "col": 7
+      }
+     ]
+    },
+    {
+     "id": "S",
+     "name": "Sculpture court",
+     "cells": [
+      {
+       "row": 5,
+       "col": 0
+      },
+      {
+       "row": 5,
+       "col": 1
+      },
+      {
+       "row": 5,
+       "col": 2
+      },
+      {
+       "row": 6,
+       "col": 0
+      },
+      {
+       "row": 6,
+       "col": 1
+      },
+      {
+       "row": 6,
+       "col": 2
+      },
+      {
+       "row": 7,
+       "col": 0
+      },
+      {
+       "row": 7,
+       "col": 1
+      },
+      {
+       "row": 7,
+       "col": 2
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "name": "Cafe",
+     "cells": [
+      {
+       "row": 6,
+       "col": 3
+      },
+      {
+       "row": 6,
+       "col": 4
+      },
+      {
+       "row": 6,
+       "col": 5
+      },
+      {
+       "row": 7,
+       "col": 3
+      },
+      {
+       "row": 7,
+       "col": 4
+      },
+      {
+       "row": 7,
+       "col": 5
+      },
+      {
+       "row": 7,
+       "col": 6
+      },
+      {
+       "row": 7,
+       "col": 7
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "o0",
+     "type": "sarcophagus",
+     "cells": [
+      {
+       "row": 0,
+       "col": 1
+      },
+      {
+       "row": 0,
+       "col": 2
+      }
+     ]
+    },
+    {
+     "id": "o1",
+     "type": "palm",
+     "cells": [
+      {
+       "row": 1,
+       "col": 3
+      }
+     ]
+    },
+    {
+     "id": "o2",
+     "type": "painting",
+     "cells": [
+      {
+       "row": 0,
+       "col": 5
+      }
+     ]
+    },
+    {
+     "id": "o3",
+     "type": "painting",
+     "cells": [
+      {
+       "row": 1,
+       "col": 7
+      }
+     ]
+    },
+    {
+     "id": "o4",
+     "type": "bench",
+     "cells": [
+      {
+       "row": 1,
+       "col": 4
+      },
+      {
+       "row": 1,
+       "col": 5
+      }
+     ]
+    },
+    {
+     "id": "o5",
+     "type": "armour",
+     "cells": [
+      {
+       "row": 2,
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "o6",
+     "type": "armour",
+     "cells": [
+      {
+       "row": 4,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "o7",
+     "type": "dinosaur",
+     "cells": [
+      {
+       "row": 3,
+       "col": 3
+      },
+      {
+       "row": 3,
+       "col": 4
+      },
+      {
+       "row": 4,
+       "col": 3
+      },
+      {
+       "row": 4,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "o8",
+     "type": "carpet",
+     "cells": [
+      {
+       "row": 2,
+       "col": 2
+      },
+      {
+       "row": 2,
+       "col": 3
+      }
+     ]
+    },
+    {
+     "id": "o9",
+     "type": "gem",
+     "cells": [
+      {
+       "row": 2,
+       "col": 7
+      }
+     ]
+    },
+    {
+     "id": "o10",
+     "type": "geode",
+     "cells": [
+      {
+       "row": 5,
+       "col": 6
+      }
+     ]
+    },
+    {
+     "id": "o11",
+     "type": "statue",
+     "cells": [
+      {
+       "row": 5,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "o12",
+     "type": "statue",
+     "cells": [
+      {
+       "row": 7,
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "o13",
+     "type": "tree",
+     "cells": [
+      {
+       "row": 6,
+       "col": 2
+      }
+     ]
+    },
+    {
+     "id": "o14",
+     "type": "table",
+     "cells": [
+      {
+       "row": 7,
+       "col": 5
+      }
+     ]
+    },
+    {
+     "id": "o15",
+     "type": "chair",
+     "cells": [
+      {
+       "row": 6,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "o16",
+     "type": "chair",
+     "cells": [
+      {
+       "row": 7,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "o17",
+     "type": "bench",
+     "cells": [
+      {
+       "row": 3,
+       "col": 6
+      },
+      {
+       "row": 3,
+       "col": 7
+      }
+     ]
+    }
+   ],
+   "characters": [
+    {
+     "id": "A",
+     "name": "Ada",
+     "isTarget": false,
+     "color": "#B5475A",
+     "displayClue": "was beside a bench."
+    },
+    {
+     "id": "B",
+     "name": "Barnaby",
+     "isTarget": false,
+     "color": "#3D6FB0",
+     "displayClue": "was west of Ada."
+    },
+    {
+     "id": "C",
+     "name": "Cecily",
+     "isTarget": false,
+     "color": "#2F7F72",
+     "displayClue": "was on a chair."
+    },
+    {
+     "id": "D",
+     "name": "Dashiell",
+     "isTarget": false,
+     "color": "#9A5A16",
+     "displayClue": "was beside the carpet."
+    },
+    {
+     "id": "E",
+     "name": "Eloise",
+     "isTarget": false,
+     "color": "#7A4FA0",
+     "displayClue": "was north of the geode."
+    },
+    {
+     "id": "F",
+     "name": "Fergus",
+     "isTarget": false,
+     "color": "#1F7A8C",
+     "displayClue": "was in the Egypt wing."
+    },
+    {
+     "id": "G",
+     "name": "Ginevra",
+     "isTarget": false,
+     "color": "#A23E83",
+     "displayClue": "was north of Fergus."
+    },
+    {
+     "id": "H",
+     "name": "Horace",
+     "isTarget": true,
+     "color": "#6B6478",
+     "displayClue": "was alone with the murderer."
+    }
+   ],
+   "clues": [
+    {
+     "kind": "besideObject",
+     "charId": "A",
+     "objectType": "bench"
+    },
+    {
+     "kind": "direction",
+     "charId": "B",
+     "dir": "west",
+     "ref": {
+      "charId": "A"
+     }
+    },
+    {
+     "kind": "onObject",
+     "charId": "C",
+     "objectType": "chair"
+    },
+    {
+     "kind": "besideObject",
+     "charId": "D",
+     "objectType": "carpet"
+    },
+    {
+     "kind": "direction",
+     "charId": "E",
+     "dir": "north",
+     "ref": {
+      "objectType": "geode"
+     }
+    },
+    {
+     "kind": "inRoom",
+     "charId": "F",
+     "roomId": "E"
+    },
+    {
+     "kind": "direction",
+     "charId": "G",
+     "dir": "north",
+     "ref": {
+      "charId": "F"
+     }
+    },
+    {
+     "kind": "globalEmptyRoom",
+     "roomId": "G"
+    },
+    {
+     "kind": "globalEmptyRoom",
+     "roomId": "M"
+    },
+    {
+     "kind": "globalEmptyRoom",
+     "roomId": "S"
+    },
+    {
+     "kind": "aloneWith",
+     "charId": "H",
+     "otherId": "C"
+    }
+   ],
+   "generalClueText": [
+    "Nobody was in the Gallery.",
+    "Nobody was in the Mineral room.",
+    "Nobody was in the Sculpture court."
+   ],
+   "solution": {
+    "G": {
+     "row": 0,
+     "col": 0
+    },
+    "F": {
+     "row": 1,
+     "col": 1
+    },
+    "A": {
+     "row": 2,
+     "col": 6
+    },
+    "D": {
+     "row": 3,
+     "col": 2
+    },
+    "E": {
+     "row": 4,
+     "col": 5
+    },
+    "B": {
+     "row": 5,
+     "col": 3
+    },
+    "C": {
+     "row": 6,
+     "col": 4
+    },
+    "H": {
+     "row": 7,
+     "col": 7
+    }
+   },
+   "answerCharId": "C",
+   "winText": "Cecily was alone with Horace in the Cafe. Nobody else was there.",
+   "hintSteps": [
+    {
+     "id": "A",
+     "text": "Ada was beside a bench. Nobody was in the Gallery. That leaves one open cell."
+    },
+    {
+     "id": "D",
+     "text": "Dashiell was beside the carpet. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "C",
+     "text": "Cecily was on a chair. Fergus and Horace lock the 2nd and 8th rows between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "H",
+     "text": "Horace was alone with the murderer, so they share a room with exactly one other person. Horace is the only one who can still fill the 8th column. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "B",
+     "text": "Barnaby was west of Ada. Barnaby is the only one who can still fill the 6th row. Cecily and Horace lock the 5th and 8th columns between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "E",
+     "text": "Eloise was north of the geode. Eloise is the only one who can still fill the 6th column. Fergus and Ginevra lock the 1st and 2nd rows between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "F",
+     "text": "Fergus was in the Egypt wing. Fergus is the only one who can still fill the 2nd column. Ginevra was north of Fergus. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "G",
+     "text": "Ginevra was north of Fergus. Barnaby and Eloise lock the 4th and 6th columns between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."
+    }
+   ],
+   "difficulty": {
+    "label": "Hard",
+    "tier": 4
+   },
+   "meta": {
+    "source": "hand-tuned prototype (Cowork), verified by prototype solver",
+    "generatorVersion": "prototype-0"
+   }
+  },
+  {
+   "id": "c8",
+   "caseNumber": "08",
+   "title": "Carnival of Lanterns",
+   "size": 7,
+   "themeId": "murder-mystery",
+   "cells": [
+    [
+     {
+      "row": 0,
+      "col": 0,
+      "roomId": "T",
+      "floor": "sand",
+      "objectId": null
+     },
+     {
+      "row": 0,
+      "col": 1,
+      "roomId": "T",
+      "floor": "sand",
+      "objectId": "o0"
+     },
+     {
+      "row": 0,
+      "col": 2,
+      "roomId": "T",
+      "floor": "sand",
+      "objectId": null
+     },
+     {
+      "row": 0,
+      "col": 3,
+      "roomId": "F",
+      "floor": "pavement",
+      "objectId": null
+     },
+     {
+      "row": 0,
+      "col": 4,
+      "roomId": "F",
+      "floor": "pavement",
+      "objectId": "o1"
+     },
+     {
+      "row": 0,
+      "col": 5,
+      "roomId": "F",
+      "floor": "pavement",
+      "objectId": "o1"
+     },
+     {
+      "row": 0,
+      "col": 6,
+      "roomId": "F",
+      "floor": "pavement",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 1,
+      "col": 0,
+      "roomId": "T",
+      "floor": "sand",
+      "objectId": "o14"
+     },
+     {
+      "row": 1,
+      "col": 1,
+      "roomId": "T",
+      "floor": "sand",
+      "objectId": "o14"
+     },
+     {
+      "row": 1,
+      "col": 2,
+      "roomId": "T",
+      "floor": "sand",
+      "objectId": null
+     },
+     {
+      "row": 1,
+      "col": 3,
+      "roomId": "F",
+      "floor": "pavement",
+      "objectId": null
+     },
+     {
+      "row": 1,
+      "col": 4,
+      "roomId": "F",
+      "floor": "pavement",
+      "objectId": "o1"
+     },
+     {
+      "row": 1,
+      "col": 5,
+      "roomId": "F",
+      "floor": "pavement",
+      "objectId": "o1"
+     },
+     {
+      "row": 1,
+      "col": 6,
+      "roomId": "F",
+      "floor": "pavement",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 2,
+      "col": 0,
+      "roomId": "M",
+      "floor": "metal",
+      "objectId": "o2"
+     },
+     {
+      "row": 2,
+      "col": 1,
+      "roomId": "M",
+      "floor": "metal",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 2,
+      "roomId": "C",
+      "floor": "wood",
+      "objectId": "o4"
+     },
+     {
+      "row": 2,
+      "col": 3,
+      "roomId": "C",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 4,
+      "roomId": "C",
+      "floor": "wood",
+      "objectId": "o5"
+     },
+     {
+      "row": 2,
+      "col": 5,
+      "roomId": "W",
+      "floor": "grass",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 6,
+      "roomId": "W",
+      "floor": "grass",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 3,
+      "col": 0,
+      "roomId": "M",
+      "floor": "metal",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 1,
+      "roomId": "M",
+      "floor": "metal",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 2,
+      "roomId": "C",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 3,
+      "roomId": "C",
+      "floor": "wood",
+      "objectId": "o8"
+     },
+     {
+      "row": 3,
+      "col": 4,
+      "roomId": "C",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 5,
+      "roomId": "W",
+      "floor": "grass",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 6,
+      "roomId": "W",
+      "floor": "grass",
+      "objectId": "o9"
+     }
+    ],
+    [
+     {
+      "row": 4,
+      "col": 0,
+      "roomId": "M",
+      "floor": "metal",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 1,
+      "roomId": "M",
+      "floor": "metal",
+      "objectId": "o3"
+     },
+     {
+      "row": 4,
+      "col": 2,
+      "roomId": "C",
+      "floor": "wood",
+      "objectId": "o6"
+     },
+     {
+      "row": 4,
+      "col": 3,
+      "roomId": "C",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 4,
+      "roomId": "C",
+      "floor": "wood",
+      "objectId": "o7"
+     },
+     {
+      "row": 4,
+      "col": 5,
+      "roomId": "W",
+      "floor": "grass",
+      "objectId": "o10"
+     },
+     {
+      "row": 4,
+      "col": 6,
+      "roomId": "W",
+      "floor": "grass",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 5,
+      "col": 0,
+      "roomId": "G",
+      "floor": "sand",
+      "objectId": "o11"
+     },
+     {
+      "row": 5,
+      "col": 1,
+      "roomId": "G",
+      "floor": "sand",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 2,
+      "roomId": "G",
+      "floor": "sand",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 3,
+      "roomId": "S",
+      "floor": "water",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 4,
+      "roomId": "S",
+      "floor": "water",
+      "objectId": "o13"
+     },
+     {
+      "row": 5,
+      "col": 5,
+      "roomId": "S",
+      "floor": "water",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 6,
+      "roomId": "W",
+      "floor": "grass",
+      "objectId": "o10"
+     }
+    ],
+    [
+     {
+      "row": 6,
+      "col": 0,
+      "roomId": "G",
+      "floor": "sand",
+      "objectId": null
+     },
+     {
+      "row": 6,
+      "col": 1,
+      "roomId": "G",
+      "floor": "sand",
+      "objectId": null
+     },
+     {
+      "row": 6,
+      "col": 2,
+      "roomId": "G",
+      "floor": "sand",
+      "objectId": null
+     },
+     {
+      "row": 6,
+      "col": 3,
+      "roomId": "S",
+      "floor": "water",
+      "objectId": null
+     },
+     {
+      "row": 6,
+      "col": 4,
+      "roomId": "S",
+      "floor": "water",
+      "objectId": "o12"
+     },
+     {
+      "row": 6,
+      "col": 5,
+      "roomId": "S",
+      "floor": "water",
+      "objectId": null
+     },
+     {
+      "row": 6,
+      "col": 6,
+      "roomId": "S",
+      "floor": "water",
+      "objectId": null
+     }
+    ]
+   ],
+   "rooms": [
+    {
+     "id": "T",
+     "name": "Big top",
+     "cells": [
+      {
+       "row": 0,
+       "col": 0
+      },
+      {
+       "row": 0,
+       "col": 1
+      },
+      {
+       "row": 0,
+       "col": 2
+      },
+      {
+       "row": 1,
+       "col": 0
+      },
+      {
+       "row": 1,
+       "col": 1
+      },
+      {
+       "row": 1,
+       "col": 2
+      }
+     ]
+    },
+    {
+     "id": "F",
+     "name": "Ferris wheel",
+     "cells": [
+      {
+       "row": 0,
+       "col": 3
+      },
+      {
+       "row": 0,
+       "col": 4
+      },
+      {
+       "row": 0,
+       "col": 5
+      },
+      {
+       "row": 0,
+       "col": 6
+      },
+      {
+       "row": 1,
+       "col": 3
+      },
+      {
+       "row": 1,
+       "col": 4
+      },
+      {
+       "row": 1,
+       "col": 5
+      },
+      {
+       "row": 1,
+       "col": 6
+      }
+     ]
+    },
+    {
+     "id": "M",
+     "name": "Mirror maze",
+     "cells": [
+      {
+       "row": 2,
+       "col": 0
+      },
+      {
+       "row": 2,
+       "col": 1
+      },
+      {
+       "row": 3,
+       "col": 0
+      },
+      {
+       "row": 3,
+       "col": 1
+      },
+      {
+       "row": 4,
+       "col": 0
+      },
+      {
+       "row": 4,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "name": "Carousel",
+     "cells": [
+      {
+       "row": 2,
+       "col": 2
+      },
+      {
+       "row": 2,
+       "col": 3
+      },
+      {
+       "row": 2,
+       "col": 4
+      },
+      {
+       "row": 3,
+       "col": 2
+      },
+      {
+       "row": 3,
+       "col": 3
+      },
+      {
+       "row": 3,
+       "col": 4
+      },
+      {
+       "row": 4,
+       "col": 2
+      },
+      {
+       "row": 4,
+       "col": 3
+      },
+      {
+       "row": 4,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "W",
+     "name": "Food stalls",
+     "cells": [
+      {
+       "row": 2,
+       "col": 5
+      },
+      {
+       "row": 2,
+       "col": 6
+      },
+      {
+       "row": 3,
+       "col": 5
+      },
+      {
+       "row": 3,
+       "col": 6
+      },
+      {
+       "row": 4,
+       "col": 5
+      },
+      {
+       "row": 4,
+       "col": 6
+      },
+      {
+       "row": 5,
+       "col": 6
+      }
+     ]
+    },
+    {
+     "id": "G",
+     "name": "Games alley",
+     "cells": [
+      {
+       "row": 5,
+       "col": 0
+      },
+      {
+       "row": 5,
+       "col": 1
+      },
+      {
+       "row": 5,
+       "col": 2
+      },
+      {
+       "row": 6,
+       "col": 0
+      },
+      {
+       "row": 6,
+       "col": 1
+      },
+      {
+       "row": 6,
+       "col": 2
+      }
+     ]
+    },
+    {
+     "id": "S",
+     "name": "Duck pond",
+     "cells": [
+      {
+       "row": 5,
+       "col": 3
+      },
+      {
+       "row": 5,
+       "col": 4
+      },
+      {
+       "row": 5,
+       "col": 5
+      },
+      {
+       "row": 6,
+       "col": 3
+      },
+      {
+       "row": 6,
+       "col": 4
+      },
+      {
+       "row": 6,
+       "col": 5
+      },
+      {
+       "row": 6,
+       "col": 6
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "o0",
+     "type": "tent",
+     "cells": [
+      {
+       "row": 0,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "o1",
+     "type": "ferris",
+     "cells": [
+      {
+       "row": 0,
+       "col": 4
+      },
+      {
+       "row": 0,
+       "col": 5
+      },
+      {
+       "row": 1,
+       "col": 4
+      },
+      {
+       "row": 1,
+       "col": 5
+      }
+     ]
+    },
+    {
+     "id": "o2",
+     "type": "mirror",
+     "cells": [
+      {
+       "row": 2,
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "o3",
+     "type": "mirror",
+     "cells": [
+      {
+       "row": 4,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "o4",
+     "type": "horse",
+     "cells": [
+      {
+       "row": 2,
+       "col": 2
+      }
+     ]
+    },
+    {
+     "id": "o5",
+     "type": "horse",
+     "cells": [
+      {
+       "row": 2,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "o6",
+     "type": "horse",
+     "cells": [
+      {
+       "row": 4,
+       "col": 2
+      }
+     ]
+    },
+    {
+     "id": "o7",
+     "type": "horse",
+     "cells": [
+      {
+       "row": 4,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "o8",
+     "type": "pole",
+     "cells": [
+      {
+       "row": 3,
+       "col": 3
+      }
+     ]
+    },
+    {
+     "id": "o9",
+     "type": "candy",
+     "cells": [
+      {
+       "row": 3,
+       "col": 6
+      }
+     ]
+    },
+    {
+     "id": "o10",
+     "type": "bench",
+     "cells": [
+      {
+       "row": 4,
+       "col": 5
+      },
+      {
+       "row": 5,
+       "col": 6
+      }
+     ]
+    },
+    {
+     "id": "o11",
+     "type": "target",
+     "cells": [
+      {
+       "row": 5,
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "o12",
+     "type": "duck",
+     "cells": [
+      {
+       "row": 6,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "o13",
+     "type": "duck",
+     "cells": [
+      {
+       "row": 5,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "o14",
+     "type": "bench",
+     "cells": [
+      {
+       "row": 1,
+       "col": 0
+      },
+      {
+       "row": 1,
+       "col": 1
+      }
+     ]
+    }
+   ],
+   "characters": [
+    {
+     "id": "A",
+     "name": "Anouk",
+     "isTarget": false,
+     "color": "#B5475A",
+     "displayClue": "was east of Coco."
+    },
+    {
+     "id": "B",
+     "name": "Bram",
+     "isTarget": false,
+     "color": "#3D6FB0",
+     "displayClue": "was beside the carousel pole."
+    },
+    {
+     "id": "C",
+     "name": "Coco",
+     "isTarget": false,
+     "color": "#2F7F72",
+     "displayClue": "was beside the candy floss stand."
+    },
+    {
+     "id": "D",
+     "name": "Dex",
+     "isTarget": false,
+     "color": "#9A5A16",
+     "displayClue": "was south of the target."
+    },
+    {
+     "id": "E",
+     "name": "Etta",
+     "isTarget": false,
+     "color": "#7A4FA0",
+     "displayClue": "was on a bench."
+    },
+    {
+     "id": "F",
+     "name": "Flint",
+     "isTarget": false,
+     "color": "#1F7A8C",
+     "displayClue": "was diagonal to Bram."
+    },
+    {
+     "id": "G",
+     "name": "Gus",
+     "isTarget": true,
+     "color": "#6B6478",
+     "displayClue": "was alone with the murderer."
+    }
+   ],
+   "clues": [
+    {
+     "kind": "direction",
+     "charId": "A",
+     "dir": "east",
+     "ref": {
+      "charId": "C"
+     }
+    },
+    {
+     "kind": "besideObject",
+     "charId": "B",
+     "objectType": "pole"
+    },
+    {
+     "kind": "besideObject",
+     "charId": "C",
+     "objectType": "candy"
+    },
+    {
+     "kind": "direction",
+     "charId": "D",
+     "dir": "south",
+     "ref": {
+      "objectType": "target"
+     }
+    },
+    {
+     "kind": "onObject",
+     "charId": "E",
+     "objectType": "bench"
+    },
+    {
+     "kind": "diagonalOf",
+     "charId": "F",
+     "ref": {
+      "charId": "B"
+     }
+    },
+    {
+     "kind": "globalEmptyRoom",
+     "roomId": "G"
+    },
+    {
+     "kind": "aloneWith",
+     "charId": "G",
+     "otherId": "E"
+    }
+   ],
+   "generalClueText": [
+    "Nobody was in the Games alley."
+   ],
+   "solution": {
+    "G": {
+     "row": 0,
+     "col": 2
+    },
+    "E": {
+     "row": 1,
+     "col": 0
+    },
+    "F": {
+     "row": 2,
+     "col": 1
+    },
+    "C": {
+     "row": 3,
+     "col": 5
+    },
+    "B": {
+     "row": 4,
+     "col": 3
+    },
+    "A": {
+     "row": 5,
+     "col": 6
+    },
+    "D": {
+     "row": 6,
+     "col": 4
+    }
+   },
+   "answerCharId": "E",
+   "winText": "Etta was alone with Gus in the Big top. Nobody else was there.",
+   "hintSteps": [
+    {
+     "id": "C",
+     "text": "Coco was beside the candy floss stand. Anouk was east of Coco. Nobody was in the Games alley. That leaves one open cell."
+    },
+    {
+     "id": "D",
+     "text": "Dex was south of the target. Anouk and Bram lock the 4th and 7th columns between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "A",
+     "text": "Anouk was east of Coco. Anouk is the only one who can still fill the 6th row. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "B",
+     "text": "Bram was beside the carousel pole. Anouk and Flint lock the 3rd and 6th rows between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "E",
+     "text": "Etta was on a bench. Anouk and Flint lock the 2nd and 7th columns between them, so nobody else fits there. Anouk and Bram lock the 4th and 7th columns between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "F",
+     "text": "Flint was diagonal to Bram. Anouk and Etta lock the 2nd and 6th rows between them, so nobody else fits there. Anouk and Dex lock the 5th and 7th columns between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "G",
+     "text": "Gus was alone with the murderer, so they share a room with exactly one other person. Bram and Etta lock the 1st and 4th columns between them, so nobody else fits there. Bram and Etta lock the 2nd and 5th rows between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."
+    }
+   ],
+   "difficulty": {
+    "label": "Hard",
+    "tier": 4
+   },
+   "meta": {
+    "source": "hand-tuned prototype (Cowork), verified by prototype solver",
+    "generatorVersion": "prototype-0"
+   }
+  },
+  {
+   "id": "c9",
+   "caseNumber": "09",
+   "title": "Hotel Grand Meridian",
+   "size": 12,
+   "themeId": "murder-mystery",
+   "cells": [
+    [
+     {
+      "row": 0,
+      "col": 0,
+      "roomId": "L",
+      "floor": "marble",
+      "objectId": null
+     },
+     {
+      "row": 0,
+      "col": 1,
+      "roomId": "L",
+      "floor": "marble",
+      "objectId": "o0"
+     },
+     {
+      "row": 0,
+      "col": 2,
+      "roomId": "L",
+      "floor": "marble",
+      "objectId": "o0"
+     },
+     {
+      "row": 0,
+      "col": 3,
+      "roomId": "L",
+      "floor": "marble",
+      "objectId": null
+     },
+     {
+      "row": 0,
+      "col": 4,
+      "roomId": "B",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 0,
+      "col": 5,
+      "roomId": "B",
+      "floor": "wood",
+      "objectId": "o3"
+     },
+     {
+      "row": 0,
+      "col": 6,
+      "roomId": "B",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 0,
+      "col": 7,
+      "roomId": "B",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 0,
+      "col": 8,
+      "roomId": "P",
+      "floor": "carpet",
+      "objectId": null
+     },
+     {
+      "row": 0,
+      "col": 9,
+      "roomId": "P",
+      "floor": "carpet",
+      "objectId": "o6"
+     },
+     {
+      "row": 0,
+      "col": 10,
+      "roomId": "P",
+      "floor": "carpet",
+      "objectId": "o6"
+     },
+     {
+      "row": 0,
+      "col": 11,
+      "roomId": "P",
+      "floor": "carpet",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 1,
+      "col": 0,
+      "roomId": "L",
+      "floor": "marble",
+      "objectId": "o2"
+     },
+     {
+      "row": 1,
+      "col": 1,
+      "roomId": "L",
+      "floor": "marble",
+      "objectId": "o2"
+     },
+     {
+      "row": 1,
+      "col": 2,
+      "roomId": "L",
+      "floor": "marble",
+      "objectId": null
+     },
+     {
+      "row": 1,
+      "col": 3,
+      "roomId": "L",
+      "floor": "marble",
+      "objectId": "o1"
+     },
+     {
+      "row": 1,
+      "col": 4,
+      "roomId": "B",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 1,
+      "col": 5,
+      "roomId": "B",
+      "floor": "wood",
+      "objectId": "o4"
+     },
+     {
+      "row": 1,
+      "col": 6,
+      "roomId": "B",
+      "floor": "wood",
+      "objectId": "o4"
+     },
+     {
+      "row": 1,
+      "col": 7,
+      "roomId": "B",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 1,
+      "col": 8,
+      "roomId": "P",
+      "floor": "carpet",
+      "objectId": null
+     },
+     {
+      "row": 1,
+      "col": 9,
+      "roomId": "P",
+      "floor": "carpet",
+      "objectId": null
+     },
+     {
+      "row": 1,
+      "col": 10,
+      "roomId": "P",
+      "floor": "carpet",
+      "objectId": null
+     },
+     {
+      "row": 1,
+      "col": 11,
+      "roomId": "P",
+      "floor": "carpet",
+      "objectId": "o7"
+     }
+    ],
+    [
+     {
+      "row": 2,
+      "col": 0,
+      "roomId": "L",
+      "floor": "marble",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 1,
+      "roomId": "L",
+      "floor": "marble",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 2,
+      "roomId": "R",
+      "floor": "wood",
+      "objectId": "o10"
+     },
+     {
+      "row": 2,
+      "col": 3,
+      "roomId": "R",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 4,
+      "roomId": "R",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 5,
+      "roomId": "B",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 6,
+      "roomId": "B",
+      "floor": "wood",
+      "objectId": "o5"
+     },
+     {
+      "row": 2,
+      "col": 7,
+      "roomId": "S",
+      "floor": "carpet",
+      "objectId": "o12"
+     },
+     {
+      "row": 2,
+      "col": 8,
+      "roomId": "S",
+      "floor": "carpet",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 9,
+      "roomId": "P",
+      "floor": "carpet",
+      "objectId": null
+     },
+     {
+      "row": 2,
+      "col": 10,
+      "roomId": "P",
+      "floor": "carpet",
+      "objectId": "o8"
+     },
+     {
+      "row": 2,
+      "col": 11,
+      "roomId": "P",
+      "floor": "carpet",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 3,
+      "col": 0,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": "o14"
+     },
+     {
+      "row": 3,
+      "col": 1,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 2,
+      "roomId": "R",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 3,
+      "roomId": "R",
+      "floor": "wood",
+      "objectId": "o9"
+     },
+     {
+      "row": 3,
+      "col": 4,
+      "roomId": "R",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 5,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 6,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 7,
+      "roomId": "S",
+      "floor": "carpet",
+      "objectId": "o12"
+     },
+     {
+      "row": 3,
+      "col": 8,
+      "roomId": "S",
+      "floor": "carpet",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 9,
+      "roomId": "S",
+      "floor": "carpet",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 10,
+      "roomId": "T",
+      "floor": "pavement",
+      "objectId": null
+     },
+     {
+      "row": 3,
+      "col": 11,
+      "roomId": "T",
+      "floor": "pavement",
+      "objectId": "o19"
+     }
+    ],
+    [
+     {
+      "row": 4,
+      "col": 0,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 1,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": "o15"
+     },
+     {
+      "row": 4,
+      "col": 2,
+      "roomId": "R",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 3,
+      "roomId": "R",
+      "floor": "wood",
+      "objectId": "o11"
+     },
+     {
+      "row": 4,
+      "col": 4,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 5,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 6,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": "o16"
+     },
+     {
+      "row": 4,
+      "col": 7,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 8,
+      "roomId": "S",
+      "floor": "carpet",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 9,
+      "roomId": "S",
+      "floor": "carpet",
+      "objectId": "o13"
+     },
+     {
+      "row": 4,
+      "col": 10,
+      "roomId": "T",
+      "floor": "pavement",
+      "objectId": null
+     },
+     {
+      "row": 4,
+      "col": 11,
+      "roomId": "T",
+      "floor": "pavement",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 5,
+      "col": 0,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 1,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 2,
+      "roomId": "K",
+      "floor": "tile",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 3,
+      "roomId": "C",
+      "floor": "carpet",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 4,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 5,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": "o17"
+     },
+     {
+      "row": 5,
+      "col": 6,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 7,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 8,
+      "roomId": "W",
+      "floor": "stone",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 9,
+      "roomId": "W",
+      "floor": "stone",
+      "objectId": null
+     },
+     {
+      "row": 5,
+      "col": 10,
+      "roomId": "T",
+      "floor": "pavement",
+      "objectId": "o20"
+     },
+     {
+      "row": 5,
+      "col": 11,
+      "roomId": "T",
+      "floor": "pavement",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 6,
+      "col": 0,
+      "roomId": "D",
+      "floor": "wood",
+      "objectId": "o26"
+     },
+     {
+      "row": 6,
+      "col": 1,
+      "roomId": "D",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 6,
+      "col": 2,
+      "roomId": "C",
+      "floor": "carpet",
+      "objectId": "o22"
+     },
+     {
+      "row": 6,
+      "col": 3,
+      "roomId": "C",
+      "floor": "carpet",
+      "objectId": null
+     },
+     {
+      "row": 6,
+      "col": 4,
+      "roomId": "C",
+      "floor": "carpet",
+      "objectId": null
+     },
+     {
+      "row": 6,
+      "col": 5,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": "o18"
+     },
+     {
+      "row": 6,
+      "col": 6,
+      "roomId": "G",
+      "floor": "grass",
+      "objectId": "o18"
+     },
+     {
+      "row": 6,
+      "col": 7,
+      "roomId": "W",
+      "floor": "stone",
+      "objectId": null
+     },
+     {
+      "row": 6,
+      "col": 8,
+      "roomId": "W",
+      "floor": "stone",
+      "objectId": null
+     },
+     {
+      "row": 6,
+      "col": 9,
+      "roomId": "W",
+      "floor": "stone",
+      "objectId": "o23"
+     },
+     {
+      "row": 6,
+      "col": 10,
+      "roomId": "T",
+      "floor": "pavement",
+      "objectId": null
+     },
+     {
+      "row": 6,
+      "col": 11,
+      "roomId": "T",
+      "floor": "pavement",
+      "objectId": "o21"
+     }
+    ],
+    [
+     {
+      "row": 7,
+      "col": 0,
+      "roomId": "D",
+      "floor": "wood",
+      "objectId": "o25"
+     },
+     {
+      "row": 7,
+      "col": 1,
+      "roomId": "D",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 7,
+      "col": 2,
+      "roomId": "C",
+      "floor": "carpet",
+      "objectId": null
+     },
+     {
+      "row": 7,
+      "col": 3,
+      "roomId": "C",
+      "floor": "carpet",
+      "objectId": null
+     },
+     {
+      "row": 7,
+      "col": 4,
+      "roomId": "C",
+      "floor": "carpet",
+      "objectId": null
+     },
+     {
+      "row": 7,
+      "col": 5,
+      "roomId": "H",
+      "floor": "marble",
+      "objectId": "o29"
+     },
+     {
+      "row": 7,
+      "col": 6,
+      "roomId": "H",
+      "floor": "marble",
+      "objectId": "o29"
+     },
+     {
+      "row": 7,
+      "col": 7,
+      "roomId": "W",
+      "floor": "stone",
+      "objectId": null
+     },
+     {
+      "row": 7,
+      "col": 8,
+      "roomId": "W",
+      "floor": "stone",
+      "objectId": "o24"
+     },
+     {
+      "row": 7,
+      "col": 9,
+      "roomId": "O",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 7,
+      "col": 10,
+      "roomId": "O",
+      "floor": "wood",
+      "objectId": "o31"
+     },
+     {
+      "row": 7,
+      "col": 11,
+      "roomId": "O",
+      "floor": "wood",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 8,
+      "col": 0,
+      "roomId": "D",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 8,
+      "col": 1,
+      "roomId": "D",
+      "floor": "wood",
+      "objectId": "o27"
+     },
+     {
+      "row": 8,
+      "col": 2,
+      "roomId": "D",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 8,
+      "col": 3,
+      "roomId": "H",
+      "floor": "marble",
+      "objectId": null
+     },
+     {
+      "row": 8,
+      "col": 4,
+      "roomId": "H",
+      "floor": "marble",
+      "objectId": null
+     },
+     {
+      "row": 8,
+      "col": 5,
+      "roomId": "H",
+      "floor": "marble",
+      "objectId": "o28"
+     },
+     {
+      "row": 8,
+      "col": 6,
+      "roomId": "H",
+      "floor": "marble",
+      "objectId": null
+     },
+     {
+      "row": 8,
+      "col": 7,
+      "roomId": "H",
+      "floor": "marble",
+      "objectId": null
+     },
+     {
+      "row": 8,
+      "col": 8,
+      "roomId": "O",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 8,
+      "col": 9,
+      "roomId": "O",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 8,
+      "col": 10,
+      "roomId": "O",
+      "floor": "wood",
+      "objectId": "o30"
+     },
+     {
+      "row": 8,
+      "col": 11,
+      "roomId": "O",
+      "floor": "wood",
+      "objectId": "o30"
+     }
+    ],
+    [
+     {
+      "row": 9,
+      "col": 0,
+      "roomId": "Y",
+      "floor": "water",
+      "objectId": "o33"
+     },
+     {
+      "row": 9,
+      "col": 1,
+      "roomId": "Y",
+      "floor": "water",
+      "objectId": null
+     },
+     {
+      "row": 9,
+      "col": 2,
+      "roomId": "D",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 9,
+      "col": 3,
+      "roomId": "H",
+      "floor": "marble",
+      "objectId": null
+     },
+     {
+      "row": 9,
+      "col": 4,
+      "roomId": "H",
+      "floor": "marble",
+      "objectId": null
+     },
+     {
+      "row": 9,
+      "col": 5,
+      "roomId": "H",
+      "floor": "marble",
+      "objectId": null
+     },
+     {
+      "row": 9,
+      "col": 6,
+      "roomId": "H",
+      "floor": "marble",
+      "objectId": null
+     },
+     {
+      "row": 9,
+      "col": 7,
+      "roomId": "E",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 9,
+      "col": 8,
+      "roomId": "E",
+      "floor": "wood",
+      "objectId": "o35"
+     },
+     {
+      "row": 9,
+      "col": 9,
+      "roomId": "E",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 9,
+      "col": 10,
+      "roomId": "O",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 9,
+      "col": 11,
+      "roomId": "O",
+      "floor": "wood",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 10,
+      "col": 0,
+      "roomId": "Y",
+      "floor": "water",
+      "objectId": null
+     },
+     {
+      "row": 10,
+      "col": 1,
+      "roomId": "Y",
+      "floor": "water",
+      "objectId": "o32"
+     },
+     {
+      "row": 10,
+      "col": 2,
+      "roomId": "Y",
+      "floor": "water",
+      "objectId": null
+     },
+     {
+      "row": 10,
+      "col": 3,
+      "roomId": "Y",
+      "floor": "water",
+      "objectId": null
+     },
+     {
+      "row": 10,
+      "col": 4,
+      "roomId": "Z",
+      "floor": "tile",
+      "objectId": "o34"
+     },
+     {
+      "row": 10,
+      "col": 5,
+      "roomId": "Z",
+      "floor": "tile",
+      "objectId": null
+     },
+     {
+      "row": 10,
+      "col": 6,
+      "roomId": "E",
+      "floor": "wood",
+      "objectId": "o36"
+     },
+     {
+      "row": 10,
+      "col": 7,
+      "roomId": "E",
+      "floor": "wood",
+      "objectId": "o36"
+     },
+     {
+      "row": 10,
+      "col": 8,
+      "roomId": "E",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 10,
+      "col": 9,
+      "roomId": "E",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 10,
+      "col": 10,
+      "roomId": "M",
+      "floor": "metal",
+      "objectId": "o38"
+     },
+     {
+      "row": 10,
+      "col": 11,
+      "roomId": "M",
+      "floor": "metal",
+      "objectId": null
+     }
+    ],
+    [
+     {
+      "row": 11,
+      "col": 0,
+      "roomId": "Y",
+      "floor": "water",
+      "objectId": null
+     },
+     {
+      "row": 11,
+      "col": 1,
+      "roomId": "Y",
+      "floor": "water",
+      "objectId": null
+     },
+     {
+      "row": 11,
+      "col": 2,
+      "roomId": "Y",
+      "floor": "water",
+      "objectId": null
+     },
+     {
+      "row": 11,
+      "col": 3,
+      "roomId": "Y",
+      "floor": "water",
+      "objectId": null
+     },
+     {
+      "row": 11,
+      "col": 4,
+      "roomId": "Z",
+      "floor": "tile",
+      "objectId": "o39"
+     },
+     {
+      "row": 11,
+      "col": 5,
+      "roomId": "Z",
+      "floor": "tile",
+      "objectId": null
+     },
+     {
+      "row": 11,
+      "col": 6,
+      "roomId": "Z",
+      "floor": "tile",
+      "objectId": null
+     },
+     {
+      "row": 11,
+      "col": 7,
+      "roomId": "E",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 11,
+      "col": 8,
+      "roomId": "E",
+      "floor": "wood",
+      "objectId": null
+     },
+     {
+      "row": 11,
+      "col": 9,
+      "roomId": "M",
+      "floor": "metal",
+      "objectId": null
+     },
+     {
+      "row": 11,
+      "col": 10,
+      "roomId": "M",
+      "floor": "metal",
+      "objectId": null
+     },
+     {
+      "row": 11,
+      "col": 11,
+      "roomId": "M",
+      "floor": "metal",
+      "objectId": "o37"
+     }
+    ]
+   ],
+   "rooms": [
+    {
+     "id": "L",
+     "name": "Lobby",
+     "cells": [
+      {
+       "row": 0,
+       "col": 0
+      },
+      {
+       "row": 0,
+       "col": 1
+      },
+      {
+       "row": 0,
+       "col": 2
+      },
+      {
+       "row": 0,
+       "col": 3
+      },
+      {
+       "row": 1,
+       "col": 0
+      },
+      {
+       "row": 1,
+       "col": 1
+      },
+      {
+       "row": 1,
+       "col": 2
+      },
+      {
+       "row": 1,
+       "col": 3
+      },
+      {
+       "row": 2,
+       "col": 0
+      },
+      {
+       "row": 2,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "name": "Ballroom",
+     "cells": [
+      {
+       "row": 0,
+       "col": 4
+      },
+      {
+       "row": 0,
+       "col": 5
+      },
+      {
+       "row": 0,
+       "col": 6
+      },
+      {
+       "row": 0,
+       "col": 7
+      },
+      {
+       "row": 1,
+       "col": 4
+      },
+      {
+       "row": 1,
+       "col": 5
+      },
+      {
+       "row": 1,
+       "col": 6
+      },
+      {
+       "row": 1,
+       "col": 7
+      },
+      {
+       "row": 2,
+       "col": 5
+      },
+      {
+       "row": 2,
+       "col": 6
+      }
+     ]
+    },
+    {
+     "id": "P",
+     "name": "Penthouse",
+     "cells": [
+      {
+       "row": 0,
+       "col": 8
+      },
+      {
+       "row": 0,
+       "col": 9
+      },
+      {
+       "row": 0,
+       "col": 10
+      },
+      {
+       "row": 0,
+       "col": 11
+      },
+      {
+       "row": 1,
+       "col": 8
+      },
+      {
+       "row": 1,
+       "col": 9
+      },
+      {
+       "row": 1,
+       "col": 10
+      },
+      {
+       "row": 1,
+       "col": 11
+      },
+      {
+       "row": 2,
+       "col": 9
+      },
+      {
+       "row": 2,
+       "col": 10
+      },
+      {
+       "row": 2,
+       "col": 11
+      }
+     ]
+    },
+    {
+     "id": "R",
+     "name": "Bar",
+     "cells": [
+      {
+       "row": 2,
+       "col": 2
+      },
+      {
+       "row": 2,
+       "col": 3
+      },
+      {
+       "row": 2,
+       "col": 4
+      },
+      {
+       "row": 3,
+       "col": 2
+      },
+      {
+       "row": 3,
+       "col": 3
+      },
+      {
+       "row": 3,
+       "col": 4
+      },
+      {
+       "row": 4,
+       "col": 2
+      },
+      {
+       "row": 4,
+       "col": 3
+      }
+     ]
+    },
+    {
+     "id": "S",
+     "name": "Suite",
+     "cells": [
+      {
+       "row": 2,
+       "col": 7
+      },
+      {
+       "row": 2,
+       "col": 8
+      },
+      {
+       "row": 3,
+       "col": 7
+      },
+      {
+       "row": 3,
+       "col": 8
+      },
+      {
+       "row": 3,
+       "col": 9
+      },
+      {
+       "row": 4,
+       "col": 8
+      },
+      {
+       "row": 4,
+       "col": 9
+      }
+     ]
+    },
+    {
+     "id": "K",
+     "name": "Kitchen",
+     "cells": [
+      {
+       "row": 3,
+       "col": 0
+      },
+      {
+       "row": 3,
+       "col": 1
+      },
+      {
+       "row": 4,
+       "col": 0
+      },
+      {
+       "row": 4,
+       "col": 1
+      },
+      {
+       "row": 5,
+       "col": 0
+      },
+      {
+       "row": 5,
+       "col": 1
+      },
+      {
+       "row": 5,
+       "col": 2
+      }
+     ]
+    },
+    {
+     "id": "G",
+     "name": "Atrium",
+     "cells": [
+      {
+       "row": 3,
+       "col": 5
+      },
+      {
+       "row": 3,
+       "col": 6
+      },
+      {
+       "row": 4,
+       "col": 4
+      },
+      {
+       "row": 4,
+       "col": 5
+      },
+      {
+       "row": 4,
+       "col": 6
+      },
+      {
+       "row": 4,
+       "col": 7
+      },
+      {
+       "row": 5,
+       "col": 4
+      },
+      {
+       "row": 5,
+       "col": 5
+      },
+      {
+       "row": 5,
+       "col": 6
+      },
+      {
+       "row": 5,
+       "col": 7
+      },
+      {
+       "row": 6,
+       "col": 5
+      },
+      {
+       "row": 6,
+       "col": 6
+      }
+     ]
+    },
+    {
+     "id": "T",
+     "name": "Terrace",
+     "cells": [
+      {
+       "row": 3,
+       "col": 10
+      },
+      {
+       "row": 3,
+       "col": 11
+      },
+      {
+       "row": 4,
+       "col": 10
+      },
+      {
+       "row": 4,
+       "col": 11
+      },
+      {
+       "row": 5,
+       "col": 10
+      },
+      {
+       "row": 5,
+       "col": 11
+      },
+      {
+       "row": 6,
+       "col": 10
+      },
+      {
+       "row": 6,
+       "col": 11
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "name": "Cloakroom",
+     "cells": [
+      {
+       "row": 5,
+       "col": 3
+      },
+      {
+       "row": 6,
+       "col": 2
+      },
+      {
+       "row": 6,
+       "col": 3
+      },
+      {
+       "row": 6,
+       "col": 4
+      },
+      {
+       "row": 7,
+       "col": 2
+      },
+      {
+       "row": 7,
+       "col": 3
+      },
+      {
+       "row": 7,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "W",
+     "name": "Wine cellar",
+     "cells": [
+      {
+       "row": 5,
+       "col": 8
+      },
+      {
+       "row": 5,
+       "col": 9
+      },
+      {
+       "row": 6,
+       "col": 7
+      },
+      {
+       "row": 6,
+       "col": 8
+      },
+      {
+       "row": 6,
+       "col": 9
+      },
+      {
+       "row": 7,
+       "col": 7
+      },
+      {
+       "row": 7,
+       "col": 8
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "name": "Dining room",
+     "cells": [
+      {
+       "row": 6,
+       "col": 0
+      },
+      {
+       "row": 6,
+       "col": 1
+      },
+      {
+       "row": 7,
+       "col": 0
+      },
+      {
+       "row": 7,
+       "col": 1
+      },
+      {
+       "row": 8,
+       "col": 0
+      },
+      {
+       "row": 8,
+       "col": 1
+      },
+      {
+       "row": 8,
+       "col": 2
+      },
+      {
+       "row": 9,
+       "col": 2
+      }
+     ]
+    },
+    {
+     "id": "H",
+     "name": "Hallway",
+     "cells": [
+      {
+       "row": 7,
+       "col": 5
+      },
+      {
+       "row": 7,
+       "col": 6
+      },
+      {
+       "row": 8,
+       "col": 3
+      },
+      {
+       "row": 8,
+       "col": 4
+      },
+      {
+       "row": 8,
+       "col": 5
+      },
+      {
+       "row": 8,
+       "col": 6
+      },
+      {
+       "row": 8,
+       "col": 7
+      },
+      {
+       "row": 9,
+       "col": 3
+      },
+      {
+       "row": 9,
+       "col": 4
+      },
+      {
+       "row": 9,
+       "col": 5
+      },
+      {
+       "row": 9,
+       "col": 6
+      }
+     ]
+    },
+    {
+     "id": "O",
+     "name": "Office",
+     "cells": [
+      {
+       "row": 7,
+       "col": 9
+      },
+      {
+       "row": 7,
+       "col": 10
+      },
+      {
+       "row": 7,
+       "col": 11
+      },
+      {
+       "row": 8,
+       "col": 8
+      },
+      {
+       "row": 8,
+       "col": 9
+      },
+      {
+       "row": 8,
+       "col": 10
+      },
+      {
+       "row": 8,
+       "col": 11
+      },
+      {
+       "row": 9,
+       "col": 10
+      },
+      {
+       "row": 9,
+       "col": 11
+      }
+     ]
+    },
+    {
+     "id": "Y",
+     "name": "Pool",
+     "cells": [
+      {
+       "row": 9,
+       "col": 0
+      },
+      {
+       "row": 9,
+       "col": 1
+      },
+      {
+       "row": 10,
+       "col": 0
+      },
+      {
+       "row": 10,
+       "col": 1
+      },
+      {
+       "row": 10,
+       "col": 2
+      },
+      {
+       "row": 10,
+       "col": 3
+      },
+      {
+       "row": 11,
+       "col": 0
+      },
+      {
+       "row": 11,
+       "col": 1
+      },
+      {
+       "row": 11,
+       "col": 2
+      },
+      {
+       "row": 11,
+       "col": 3
+      }
+     ]
+    },
+    {
+     "id": "Z",
+     "name": "Laundry",
+     "cells": [
+      {
+       "row": 10,
+       "col": 4
+      },
+      {
+       "row": 10,
+       "col": 5
+      },
+      {
+       "row": 11,
+       "col": 4
+      },
+      {
+       "row": 11,
+       "col": 5
+      },
+      {
+       "row": 11,
+       "col": 6
+      }
+     ]
+    },
+    {
+     "id": "E",
+     "name": "Library",
+     "cells": [
+      {
+       "row": 9,
+       "col": 7
+      },
+      {
+       "row": 9,
+       "col": 8
+      },
+      {
+       "row": 9,
+       "col": 9
+      },
+      {
+       "row": 10,
+       "col": 6
+      },
+      {
+       "row": 10,
+       "col": 7
+      },
+      {
+       "row": 10,
+       "col": 8
+      },
+      {
+       "row": 10,
+       "col": 9
+      },
+      {
+       "row": 11,
+       "col": 7
+      },
+      {
+       "row": 11,
+       "col": 8
+      }
+     ]
+    },
+    {
+     "id": "M",
+     "name": "Boiler room",
+     "cells": [
+      {
+       "row": 10,
+       "col": 10
+      },
+      {
+       "row": 10,
+       "col": 11
+      },
+      {
+       "row": 11,
+       "col": 9
+      },
+      {
+       "row": 11,
+       "col": 10
+      },
+      {
+       "row": 11,
+       "col": 11
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "o0",
+     "type": "desk",
+     "cells": [
+      {
+       "row": 0,
+       "col": 1
+      },
+      {
+       "row": 0,
+       "col": 2
+      }
+     ]
+    },
+    {
+     "id": "o1",
+     "type": "plant",
+     "cells": [
+      {
+       "row": 1,
+       "col": 3
+      }
+     ]
+    },
+    {
+     "id": "o2",
+     "type": "sofa",
+     "cells": [
+      {
+       "row": 1,
+       "col": 0
+      },
+      {
+       "row": 1,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "o3",
+     "type": "piano",
+     "cells": [
+      {
+       "row": 0,
+       "col": 5
+      }
+     ]
+    },
+    {
+     "id": "o4",
+     "type": "carpet",
+     "cells": [
+      {
+       "row": 1,
+       "col": 5
+      },
+      {
+       "row": 1,
+       "col": 6
+      }
+     ]
+    },
+    {
+     "id": "o5",
+     "type": "chair",
+     "cells": [
+      {
+       "row": 2,
+       "col": 6
+      }
+     ]
+    },
+    {
+     "id": "o6",
+     "type": "bed",
+     "cells": [
+      {
+       "row": 0,
+       "col": 9
+      },
+      {
+       "row": 0,
+       "col": 10
+      }
+     ]
+    },
+    {
+     "id": "o7",
+     "type": "TV",
+     "cells": [
+      {
+       "row": 1,
+       "col": 11
+      }
+     ]
+    },
+    {
+     "id": "o8",
+     "type": "chair",
+     "cells": [
+      {
+       "row": 2,
+       "col": 10
+      }
+     ]
+    },
+    {
+     "id": "o9",
+     "type": "table",
+     "cells": [
+      {
+       "row": 3,
+       "col": 3
+      }
+     ]
+    },
+    {
+     "id": "o10",
+     "type": "chair",
+     "cells": [
+      {
+       "row": 2,
+       "col": 2
+      }
+     ]
+    },
+    {
+     "id": "o11",
+     "type": "chair",
+     "cells": [
+      {
+       "row": 4,
+       "col": 3
+      }
+     ]
+    },
+    {
+     "id": "o12",
+     "type": "bed",
+     "cells": [
+      {
+       "row": 2,
+       "col": 7
+      },
+      {
+       "row": 3,
+       "col": 7
+      }
+     ]
+    },
+    {
+     "id": "o13",
+     "type": "shelf",
+     "cells": [
+      {
+       "row": 4,
+       "col": 9
+      }
+     ]
+    },
+    {
+     "id": "o14",
+     "type": "stove",
+     "cells": [
+      {
+       "row": 3,
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "o15",
+     "type": "table",
+     "cells": [
+      {
+       "row": 4,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "o16",
+     "type": "fountain",
+     "cells": [
+      {
+       "row": 4,
+       "col": 6
+      }
+     ]
+    },
+    {
+     "id": "o17",
+     "type": "tree",
+     "cells": [
+      {
+       "row": 5,
+       "col": 5
+      }
+     ]
+    },
+    {
+     "id": "o18",
+     "type": "bench",
+     "cells": [
+      {
+       "row": 6,
+       "col": 5
+      },
+      {
+       "row": 6,
+       "col": 6
+      }
+     ]
+    },
+    {
+     "id": "o19",
+     "type": "tree",
+     "cells": [
+      {
+       "row": 3,
+       "col": 11
+      }
+     ]
+    },
+    {
+     "id": "o20",
+     "type": "lounger",
+     "cells": [
+      {
+       "row": 5,
+       "col": 10
+      }
+     ]
+    },
+    {
+     "id": "o21",
+     "type": "lounger",
+     "cells": [
+      {
+       "row": 6,
+       "col": 11
+      }
+     ]
+    },
+    {
+     "id": "o22",
+     "type": "crate",
+     "cells": [
+      {
+       "row": 6,
+       "col": 2
+      }
+     ]
+    },
+    {
+     "id": "o23",
+     "type": "barrel",
+     "cells": [
+      {
+       "row": 6,
+       "col": 9
+      }
+     ]
+    },
+    {
+     "id": "o24",
+     "type": "barrel",
+     "cells": [
+      {
+       "row": 7,
+       "col": 8
+      }
+     ]
+    },
+    {
+     "id": "o25",
+     "type": "table",
+     "cells": [
+      {
+       "row": 7,
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "o26",
+     "type": "chair",
+     "cells": [
+      {
+       "row": 6,
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "o27",
+     "type": "chair",
+     "cells": [
+      {
+       "row": 8,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "o28",
+     "type": "cart",
+     "cells": [
+      {
+       "row": 8,
+       "col": 5
+      }
+     ]
+    },
+    {
+     "id": "o29",
+     "type": "carpet",
+     "cells": [
+      {
+       "row": 7,
+       "col": 5
+      },
+      {
+       "row": 7,
+       "col": 6
+      }
+     ]
+    },
+    {
+     "id": "o30",
+     "type": "desk",
+     "cells": [
+      {
+       "row": 8,
+       "col": 10
+      },
+      {
+       "row": 8,
+       "col": 11
+      }
+     ]
+    },
+    {
+     "id": "o31",
+     "type": "chair",
+     "cells": [
+      {
+       "row": 7,
+       "col": 10
+      }
+     ]
+    },
+    {
+     "id": "o32",
+     "type": "float",
+     "cells": [
+      {
+       "row": 10,
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "o33",
+     "type": "lounger",
+     "cells": [
+      {
+       "row": 9,
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "o34",
+     "type": "washer",
+     "cells": [
+      {
+       "row": 10,
+       "col": 4
+      }
+     ]
+    },
+    {
+     "id": "o35",
+     "type": "shelf",
+     "cells": [
+      {
+       "row": 9,
+       "col": 8
+      }
+     ]
+    },
+    {
+     "id": "o36",
+     "type": "sofa",
+     "cells": [
+      {
+       "row": 10,
+       "col": 6
+      },
+      {
+       "row": 10,
+       "col": 7
+      }
+     ]
+    },
+    {
+     "id": "o37",
+     "type": "boiler",
+     "cells": [
+      {
+       "row": 11,
+       "col": 11
+      }
+     ]
+    },
+    {
+     "id": "o38",
+     "type": "crate",
+     "cells": [
+      {
+       "row": 10,
+       "col": 10
+      }
+     ]
+    },
+    {
+     "id": "o39",
+     "type": "lift",
+     "cells": [
+      {
+       "row": 11,
+       "col": 4
+      }
+     ]
+    }
+   ],
+   "characters": [
+    {
+     "id": "A",
+     "name": "Aurelia",
+     "isTarget": false,
+     "color": "#B5475A",
+     "displayClue": "was beside a desk."
+    },
+    {
+     "id": "B",
+     "name": "Benedict",
+     "isTarget": false,
+     "color": "#3D6FB0",
+     "displayClue": "was beside a bed."
+    },
+    {
+     "id": "C",
+     "name": "Camille",
+     "isTarget": false,
+     "color": "#2F7F72",
+     "displayClue": "was beside the bench."
+    },
+    {
+     "id": "D",
+     "name": "Desmond",
+     "isTarget": false,
+     "color": "#9A5A16",
+     "displayClue": "was beside the lift."
+    },
+    {
+     "id": "E",
+     "name": "Evangeline",
+     "isTarget": false,
+     "color": "#7A4FA0",
+     "displayClue": "was on a sun lounger."
+    },
+    {
+     "id": "F",
+     "name": "Florian",
+     "isTarget": false,
+     "color": "#1F7A8C",
+     "displayClue": "was diagonal to Katarina."
+    },
+    {
+     "id": "G",
+     "name": "Genevieve",
+     "isTarget": false,
+     "color": "#A23E83",
+     "displayClue": "was on a bed."
+    },
+    {
+     "id": "H",
+     "name": "Hector",
+     "isTarget": false,
+     "color": "#5E7A1F",
+     "displayClue": "was north of Benedict."
+    },
+    {
+     "id": "I",
+     "name": "Imogen",
+     "isTarget": false,
+     "color": "#C0572B",
+     "displayClue": "was south of Katarina, and east of Hector."
+    },
+    {
+     "id": "J",
+     "name": "Jasper",
+     "isTarget": false,
+     "color": "#34568B",
+     "displayClue": "was on a sun lounger, and north of the luggage cart."
+    },
+    {
+     "id": "K",
+     "name": "Katarina",
+     "isTarget": false,
+     "color": "#8C5A3C",
+     "displayClue": "was beside a crate."
+    },
+    {
+     "id": "L",
+     "name": "Leopold",
+     "isTarget": true,
+     "color": "#6B6478",
+     "displayClue": "was alone with the murderer."
+    }
+   ],
+   "clues": [
+    {
+     "kind": "besideObject",
+     "charId": "A",
+     "objectType": "desk"
+    },
+    {
+     "kind": "besideObject",
+     "charId": "B",
+     "objectType": "bed"
+    },
+    {
+     "kind": "besideObject",
+     "charId": "C",
+     "objectType": "bench"
+    },
+    {
+     "kind": "besideObject",
+     "charId": "D",
+     "objectType": "lift"
+    },
+    {
+     "kind": "onObject",
+     "charId": "E",
+     "objectType": "lounger"
+    },
+    {
+     "kind": "diagonalOf",
+     "charId": "F",
+     "ref": {
+      "charId": "K"
+     }
+    },
+    {
+     "kind": "onObject",
+     "charId": "G",
+     "objectType": "bed"
+    },
+    {
+     "kind": "direction",
+     "charId": "H",
+     "dir": "north",
+     "ref": {
+      "charId": "B"
+     }
+    },
+    {
+     "kind": "direction",
+     "charId": "I",
+     "dir": "south",
+     "ref": {
+      "charId": "K"
+     }
+    },
+    {
+     "kind": "direction",
+     "charId": "I",
+     "dir": "east",
+     "ref": {
+      "charId": "H"
+     }
+    },
+    {
+     "kind": "direction",
+     "charId": "J",
+     "dir": "north",
+     "ref": {
+      "objectType": "cart"
+     }
+    },
+    {
+     "kind": "onObject",
+     "charId": "J",
+     "objectType": "lounger"
+    },
+    {
+     "kind": "besideObject",
+     "charId": "K",
+     "objectType": "crate"
+    },
+    {
+     "kind": "globalEmptyRoom",
+     "roomId": "B"
+    },
+    {
+     "kind": "globalEmptyRoom",
+     "roomId": "D"
+    },
+    {
+     "kind": "globalEmptyRoom",
+     "roomId": "O"
+    },
+    {
+     "kind": "globalEmptyRoom",
+     "roomId": "R"
+    },
+    {
+     "kind": "aloneWith",
+     "charId": "L",
+     "otherId": "C"
+    }
+   ],
+   "generalClueText": [
+    "Nobody was in the Ballroom.",
+    "Nobody was in the Dining room.",
+    "Nobody was in the Office.",
+    "Nobody was in the Bar."
+   ],
+   "solution": {
+    "G": {
+     "row": 0,
+     "col": 10
+    },
+    "A": {
+     "row": 1,
+     "col": 1
+    },
+    "H": {
+     "row": 2,
+     "col": 7
+    },
+    "B": {
+     "row": 3,
+     "col": 8
+    },
+    "L": {
+     "row": 4,
+     "col": 4
+    },
+    "C": {
+     "row": 5,
+     "col": 6
+    },
+    "J": {
+     "row": 6,
+     "col": 11
+    },
+    "K": {
+     "row": 7,
+     "col": 2
+    },
+    "F": {
+     "row": 8,
+     "col": 3
+    },
+    "E": {
+     "row": 9,
+     "col": 0
+    },
+    "I": {
+     "row": 10,
+     "col": 9
+    },
+    "D": {
+     "row": 11,
+     "col": 5
+    }
+   },
+   "answerCharId": "C",
+   "winText": "Camille was alone with Leopold in the Atrium. Nobody else was there.",
+   "hintSteps": [
+    {
+     "id": "C",
+     "text": "Camille was beside the bench. Nobody was in the Ballroom. That leaves one open cell."
+    },
+    {
+     "id": "D",
+     "text": "Desmond was beside the lift. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "J",
+     "text": "Jasper was on a sun lounger, and north of the luggage cart. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "K",
+     "text": "Katarina was beside a crate. Imogen was south of Katarina. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "E",
+     "text": "Evangeline was on a sun lounger. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "L",
+     "text": "Leopold was alone with the murderer, so they share a room with exactly one other person. Leopold is the only one who can still fill the 5th column. Leopold is the only one who can still fill the 5th row. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "F",
+     "text": "Florian was diagonal to Katarina. Florian is the only one who can still fill the 9th row. Evangeline and Leopold lock the 5th and 10th rows between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "A",
+     "text": "Aurelia was beside a desk. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "B",
+     "text": "Benedict was beside a bed. Hector was north of Benedict. Aurelia and Imogen lock the 2nd and 11th rows between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "G",
+     "text": "Genevieve was on a bed. Aurelia and Imogen lock the 2nd and 10th columns between them, so nobody else fits there. Aurelia and Hector lock the 2nd and 8th columns between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "H",
+     "text": "Hector was north of Benedict. Aurelia and Benedict lock the 2nd and 9th columns between them, so nobody else fits there. Aurelia and Imogen lock the 2nd and 11th rows between them, so nobody else fits there. Rows and columns already taken are out. That leaves one open cell."
+    },
+    {
+     "id": "I",
+     "text": "Imogen was south of Katarina, and east of Hector. Aurelia and Benedict lock the 2nd and 9th columns between them, so nobody else fits there. Imogen was east of Hector. Rows and columns already taken are out. That leaves one open cell."
+    }
+   ],
+   "difficulty": {
+    "label": "Hard",
+    "tier": 4
+   },
+   "meta": {
+    "source": "hand-tuned prototype (Cowork), verified by prototype solver",
+    "generatorVersion": "prototype-0"
+   }
+  }
+ ]
+}
