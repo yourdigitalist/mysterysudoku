@@ -37,6 +37,7 @@ export function selectClues(
   global: ClueCandidate[],
   targetCharId: string,
   answerCharId: string,
+  deadline: number = Date.now() + 4000,
 ): ClueSelection | null {
   const victimClue: Clue = { kind: "aloneWith", charId: targetCharId, otherId: answerCharId };
   const others = [...byChar.keys()].filter((id) => id !== targetCharId);
@@ -73,14 +74,17 @@ export function selectClues(
   // order might well succeed in another. Retry a few orders before conceding — never ship a
   // character stuck at its full candidate pool (see docs/decisions.md: 1 clue, 2 on Hard, never
   // more).
-  const MAX_ORDER_ATTEMPTS = 4;
+  const MAX_ORDER_ATTEMPTS = 2;
 
   for (let orderAttempt = 0; orderAttempt < MAX_ORDER_ATTEMPTS; orderAttempt++) {
+    if (Date.now() > deadline) return null;
+
     const chosenByChar = new Map<string, Clue[]>(others.map((id) => [id, pools.get(id)!]));
     const twoClueCharIds: string[] = [];
     let allReduced = true;
 
     for (const charId of rng.shuffle(others)) {
+      if (Date.now() > deadline) return null;
       const pool = rng.shuffle(pools.get(charId)!);
       let reduced = false;
 
@@ -96,6 +100,7 @@ export function selectClues(
       if (reduced) continue;
 
       for (let attempt = 0; attempt < MAX_PAIR_TRIES && pool.length >= 2; attempt++) {
+        if (attempt % 4 === 0 && Date.now() > deadline) return null;
         const i = rng.int(pool.length);
         let j = rng.int(pool.length - 1);
         if (j >= i) j++;

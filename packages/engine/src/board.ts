@@ -27,6 +27,12 @@ export class BoardIndex {
   private readonly objectsByType = new Map<ObjectType, PlacedObject[]>();
   private readonly blockingCellKeys = new Set<string>();
   private readonly cornerCellKeys = new Set<string>();
+  // diagonalCellsThrough/cellsInDirection are O(size^2) scans of a board that never changes
+  // after construction, and clue evaluation calls them for the same reference cell over and
+  // over (once per candidate cell, per character, per solver pass) — memoizing turns each
+  // distinct reference into a single scan.
+  private readonly diagonalCache = new Map<string, CellCoord[]>();
+  private readonly directionCache = new Map<string, CellCoord[]>();
 
   constructor(puzzle: Puzzle, blocking: ObjectBlockingMap = {}) {
     this.puzzle = puzzle;
@@ -166,6 +172,10 @@ export class BoardIndex {
 
   /** All cells on either diagonal line through `c`, across the whole grid, walls ignored. */
   diagonalCellsThrough(c: CellCoord): CellCoord[] {
+    const key = cellKey(c);
+    const cached = this.diagonalCache.get(key);
+    if (cached) return cached;
+
     const out: CellCoord[] = [];
     for (const row of this.puzzle.cells) {
       for (const cell of row) {
@@ -175,11 +185,16 @@ export class BoardIndex {
         if (Math.abs(dr) === Math.abs(dc)) out.push({ row: cell.row, col: cell.col });
       }
     }
+    this.diagonalCache.set(key, out);
     return out;
   }
 
   /** Cells strictly in the given compass direction from `c`, any row/column past it. */
   cellsInDirection(dir: "north" | "south" | "east" | "west", c: CellCoord): CellCoord[] {
+    const key = `${dir}:${cellKey(c)}`;
+    const cached = this.directionCache.get(key);
+    if (cached) return cached;
+
     const out: CellCoord[] = [];
     for (const row of this.puzzle.cells) {
       for (const cell of row) {
@@ -199,6 +214,7 @@ export class BoardIndex {
         }
       }
     }
+    this.directionCache.set(key, out);
     return out;
   }
 

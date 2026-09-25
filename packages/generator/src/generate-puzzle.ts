@@ -34,6 +34,12 @@ export interface GenerateOptions {
   seed: string;
   /** How many fresh maps to try before giving up on this seed entirely. */
   maxMapAttempts?: number;
+  /** Wall-clock budget for the whole call, across every map attempt. A handful of seeds turn out
+   * to need combinatorially many solver checks to find any working 1-2-clue combination (or to
+   * prove none exists); rather than let one seed run for tens of seconds, this bails out (like
+   * any other failed seed) once the budget is spent, so the caller can just move on to the next
+   * seed. Default matches spec section 2's ~2s/puzzle target with slack for slower machines. */
+  budgetMs?: number;
 }
 
 /**
@@ -44,12 +50,19 @@ export interface GenerateOptions {
  * Reproducible: the same seed always walks the same sequence of attempts.
  */
 export function generatePuzzle(options: GenerateOptions): GeneratedPuzzle | null {
-  const { size, theme, seed, maxMapAttempts = 12 } = options;
+  const { size, theme, seed, maxMapAttempts = 60, budgetMs = 3000 } = options;
   const blocking: ObjectBlockingMap = objectBlockingMap(theme);
   const rng = new Rng(seed);
   const characterIds = characterIdsFor(size);
+  // One shared deadline for the whole call: a typical map's clue selection finishes in well
+  // under a second, so most calls never come close to this and get to try several maps if the
+  // first ones fail outright (e.g. no valid solution placement). A genuinely hard map can still
+  // only consume what's left of the budget, not run unbounded — spec section 2's ~2s/puzzle
+  // target with slack for slower machines and harder grid sizes.
+  const overallDeadline = Date.now() + budgetMs;
 
   for (let mapAttempt = 0; mapAttempt < maxMapAttempts; mapAttempt++) {
+    if (Date.now() > overallDeadline) return null;
     const map = buildMap(rng, theme, size);
 
     const shellForSolving: Puzzle = {
@@ -87,7 +100,16 @@ export function generatePuzzle(options: GenerateOptions): GeneratedPuzzle | null
       meta: { generatorVersion: "0.1.0", seed },
     };
 
-    const selection = selectClues(rng, puzzleShell, blocking, byChar, global, placed.targetCharId, placed.answerCharId);
+    const selection = selectClues(
+      rng,
+      puzzleShell,
+      blocking,
+      byChar,
+      global,
+      placed.targetCharId,
+      placed.answerCharId,
+      overallDeadline,
+    );
     if (!selection) continue;
 
     const names = pickCharacterNames(rng, theme, characterIds);
