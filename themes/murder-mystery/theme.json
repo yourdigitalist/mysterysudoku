@@ -66,55 +66,117 @@
    "type": "shelf",
    "label": "shelf",
    "blocking": true,
-   "emoji": "📚"
+   "emoji": "📚",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ]
   },
   {
    "type": "table",
    "label": "table",
    "blocking": true,
-   "emoji": "🍽️"
+   "emoji": "🍽️",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    },
+    {
+     "w": 2,
+     "h": 1
+    },
+    {
+     "w": 2,
+     "h": 2
+    }
+   ]
   },
   {
    "type": "plant",
    "label": "plant",
    "blocking": true,
-   "emoji": "🪴"
+   "emoji": "🪴",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ]
   },
   {
    "type": "TV",
    "label": "TV",
    "blocking": true,
-   "emoji": "📺"
+   "emoji": "📺",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ]
   },
   {
    "type": "tree",
    "label": "tree",
    "blocking": true,
-   "emoji": "🌳"
+   "emoji": "🌳",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ]
   },
   {
    "type": "piano",
    "label": "piano",
    "blocking": true,
-   "emoji": "🎹"
+   "emoji": "🎹",
+   "footprints": [
+    {
+     "w": 2,
+     "h": 1
+    }
+   ]
   },
   {
    "type": "barrel",
    "label": "barrel",
    "blocking": true,
-   "emoji": "🛢️"
+   "emoji": "🛢️",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ]
   },
   {
    "type": "stove",
    "label": "stove",
    "blocking": true,
-   "emoji": "🍳"
+   "emoji": "🍳",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ]
   },
   {
    "type": "chair",
    "label": "chair",
    "blocking": false,
-   "emoji": "🪑"
+   "emoji": "🪑",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ]
   },
   {
    "type": "bed",
@@ -122,7 +184,17 @@
    "blocking": false,
    "emoji": "🛏️",
    "color": "#9FB8E0",
-   "borderColor": "#6F8BB8"
+   "borderColor": "#6F8BB8",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 2
+    },
+    {
+     "w": 2,
+     "h": 1
+    }
+   ]
   },
   {
    "type": "sofa",
@@ -130,7 +202,17 @@
    "blocking": false,
    "emoji": "🛋️",
    "color": "#C9A7D8",
-   "borderColor": "#9C79AE"
+   "borderColor": "#9C79AE",
+   "footprints": [
+    {
+     "w": 2,
+     "h": 1
+    },
+    {
+     "w": 1,
+     "h": 2
+    }
+   ]
   },
   {
    "type": "bench",
@@ -138,7 +220,17 @@
    "blocking": false,
    "emoji": "🪵",
    "color": "#C8A27A",
-   "borderColor": "#9C7852"
+   "borderColor": "#9C7852",
+   "footprints": [
+    {
+     "w": 2,
+     "h": 1
+    },
+    {
+     "w": 1,
+     "h": 2
+    }
+   ]
   },
   {
    "type": "car",
@@ -146,7 +238,20 @@
    "blocking": false,
    "emoji": "🚗",
    "color": "#F2A7A7",
-   "borderColor": "#C47878"
+   "borderColor": "#C47878",
+   "footprints": [
+    {
+     "w": 2,
+     "h": 1
+    },
+    {
+     "w": 1,
+     "h": 2
+    }
+   ],
+   "allowedFloors": [
+    "pavement"
+   ]
   },
   {
    "type": "boat",
@@ -154,7 +259,20 @@
    "blocking": false,
    "emoji": "⛵",
    "color": "#F5E6C8",
-   "borderColor": "#C9B48A"
+   "borderColor": "#C9B48A",
+   "footprints": [
+    {
+     "w": 2,
+     "h": 1
+    },
+    {
+     "w": 1,
+     "h": 2
+    }
+   ],
+   "allowedFloors": [
+    "water"
+   ]
   },
   {
    "type": "bathtub",
@@ -162,7 +280,17 @@
    "blocking": false,
    "emoji": "🛁",
    "color": "#BFE3F0",
-   "borderColor": "#86B6C9"
+   "borderColor": "#86B6C9",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 2
+    },
+    {
+     "w": 2,
+     "h": 1
+    }
+   ]
   },
   {
    "type": "carpet",
@@ -170,193 +298,495 @@
    "blocking": false,
    "emoji": "🟪",
    "color": "#C7BDF2",
-   "borderColor": "#968AC8"
+   "borderColor": "#968AC8",
+   "footprints": [
+    {
+     "w": 2,
+     "h": 2
+    },
+    {
+     "w": 3,
+     "h": 2
+    },
+    {
+     "w": 2,
+     "h": 1
+    },
+    {
+     "w": 1,
+     "h": 2
+    }
+   ]
   },
   {
    "type": "panel",
    "label": "control panel",
    "blocking": true,
-   "emoji": "🎛️"
+   "emoji": "🎛️",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ]
   },
   {
    "type": "suitcase",
    "label": "suitcase",
    "blocking": true,
-   "emoji": "🧳"
+   "emoji": "🧳",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ]
   },
   {
    "type": "crate",
    "label": "crate",
    "blocking": true,
-   "emoji": "📦"
+   "emoji": "📦",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ]
   },
   {
    "type": "snowman",
    "label": "snowman",
    "blocking": true,
-   "emoji": "⛄"
+   "emoji": "⛄",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ],
+   "allowedFloors": [
+    "snow"
+   ]
   },
   {
    "type": "skirack",
    "label": "ski rack",
    "blocking": true,
-   "emoji": "🎿"
+   "emoji": "🎿",
+   "footprints": [
+    {
+     "w": 2,
+     "h": 1
+    }
+   ],
+   "allowedFloors": [
+    "snow"
+   ]
   },
   {
    "type": "fireplace",
    "label": "fireplace",
    "blocking": true,
-   "emoji": "🔥"
+   "emoji": "🔥",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ],
+   "allowedFloors": [
+    "snow",
+    "stone",
+    "wood"
+   ]
   },
   {
    "type": "wheel",
    "label": "ship's wheel",
    "blocking": true,
-   "emoji": "☸️"
+   "emoji": "☸️",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ],
+   "allowedFloors": [
+    "metal"
+   ]
   },
   {
    "type": "telescope",
    "label": "telescope",
    "blocking": true,
-   "emoji": "🔭"
+   "emoji": "🔭",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ]
   },
   {
    "type": "slot",
    "label": "slot machine",
    "blocking": true,
-   "emoji": "🎰"
+   "emoji": "🎰",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ],
+   "allowedFloors": [
+    "carpet"
+   ]
   },
   {
    "type": "anchor",
    "label": "anchor",
    "blocking": true,
-   "emoji": "⚓"
+   "emoji": "⚓",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ],
+   "allowedFloors": [
+    "metal",
+    "pavement"
+   ]
   },
   {
    "type": "sarcophagus",
    "label": "sarcophagus",
    "blocking": true,
-   "emoji": "⚱️"
+   "emoji": "⚱️",
+   "footprints": [
+    {
+     "w": 2,
+     "h": 1
+    }
+   ],
+   "allowedFloors": [
+    "sand",
+    "stone"
+   ]
   },
   {
    "type": "palm",
    "label": "palm",
    "blocking": true,
-   "emoji": "🌴"
+   "emoji": "🌴",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ],
+   "allowedFloors": [
+    "sand",
+    "grass"
+   ]
   },
   {
    "type": "painting",
    "label": "painting",
    "blocking": true,
-   "emoji": "🖼️"
+   "emoji": "🖼️",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ]
   },
   {
    "type": "armour",
    "label": "suit of armour",
    "blocking": true,
-   "emoji": "🛡️"
+   "emoji": "🛡️",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ],
+   "allowedFloors": [
+    "stone",
+    "marble"
+   ]
   },
   {
    "type": "dinosaur",
    "label": "dinosaur skeleton",
    "blocking": true,
-   "emoji": "🦕"
+   "emoji": "🦕",
+   "footprints": [
+    {
+     "w": 2,
+     "h": 1
+    }
+   ],
+   "allowedFloors": [
+    "stone"
+   ]
   },
   {
    "type": "gem",
    "label": "gem case",
    "blocking": true,
-   "emoji": "💎"
+   "emoji": "💎",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ],
+   "allowedFloors": [
+    "stone",
+    "marble",
+    "carpet"
+   ]
   },
   {
    "type": "geode",
    "label": "geode",
    "blocking": true,
-   "emoji": "🪨"
+   "emoji": "🪨",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ],
+   "allowedFloors": [
+    "stone"
+   ]
   },
   {
    "type": "statue",
    "label": "statue",
    "blocking": true,
-   "emoji": "🗿"
+   "emoji": "🗿",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ],
+   "allowedFloors": [
+    "marble",
+    "stone",
+    "grass"
+   ]
   },
   {
    "type": "tent",
    "label": "circus drum",
    "blocking": true,
-   "emoji": "🥁"
+   "emoji": "🥁",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ],
+   "allowedFloors": [
+    "sand",
+    "grass"
+   ]
   },
   {
    "type": "ferris",
    "label": "Ferris wheel",
    "blocking": true,
-   "emoji": "🎡"
+   "emoji": "🎡",
+   "footprints": [
+    {
+     "w": 2,
+     "h": 2
+    }
+   ],
+   "allowedFloors": [
+    "pavement"
+   ]
   },
   {
    "type": "mirror",
    "label": "mirror",
    "blocking": true,
-   "emoji": "🪞"
+   "emoji": "🪞",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ],
+   "allowedFloors": [
+    "metal",
+    "marble"
+   ]
   },
   {
    "type": "pole",
    "label": "carousel pole",
    "blocking": true,
-   "emoji": "🎠"
+   "emoji": "🎠",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ],
+   "allowedFloors": [
+    "wood",
+    "pavement"
+   ]
   },
   {
    "type": "candy",
    "label": "candy floss stand",
    "blocking": true,
-   "emoji": "🍭"
+   "emoji": "🍭",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ],
+   "allowedFloors": [
+    "sand",
+    "grass"
+   ]
   },
   {
    "type": "target",
    "label": "target",
    "blocking": true,
-   "emoji": "🎯"
+   "emoji": "🎯",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ],
+   "allowedFloors": [
+    "sand",
+    "grass"
+   ]
   },
   {
    "type": "fountain",
    "label": "fountain",
    "blocking": true,
-   "emoji": "⛲"
+   "emoji": "⛲",
+   "footprints": [
+    {
+     "w": 2,
+     "h": 2
+    }
+   ],
+   "allowedFloors": [
+    "marble",
+    "grass",
+    "pavement"
+   ]
   },
   {
    "type": "desk",
    "label": "desk",
    "blocking": true,
-   "emoji": "🗄️"
+   "emoji": "🗄️",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ],
+   "allowedFloors": [
+    "wood",
+    "carpet"
+   ]
   },
   {
    "type": "cart",
    "label": "luggage cart",
    "blocking": true,
-   "emoji": "🛒"
+   "emoji": "🛒",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ],
+   "allowedFloors": [
+    "pavement",
+    "metal"
+   ]
   },
   {
    "type": "washer",
    "label": "laundry basket",
    "blocking": true,
-   "emoji": "🧺"
+   "emoji": "🧺",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ],
+   "allowedFloors": [
+    "tile"
+   ]
   },
   {
    "type": "boiler",
    "label": "boiler",
    "blocking": true,
-   "emoji": "♨️"
+   "emoji": "♨️",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ],
+   "allowedFloors": [
+    "metal"
+   ]
   },
   {
    "type": "lift",
    "label": "lift",
    "blocking": true,
-   "emoji": "🛗"
+   "emoji": "🛗",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ],
+   "allowedFloors": [
+    "metal",
+    "marble"
+   ]
   },
   {
    "type": "float",
    "label": "pool float",
    "blocking": false,
-   "emoji": "🛟"
+   "emoji": "🛟",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ],
+   "allowedFloors": [
+    "water"
+   ]
   },
   {
    "type": "lifeboat",
@@ -364,25 +794,78 @@
    "blocking": false,
    "emoji": "🚣",
    "color": "#F2C38B",
-   "borderColor": "#C4914F"
+   "borderColor": "#C4914F",
+   "footprints": [
+    {
+     "w": 2,
+     "h": 1
+    },
+    {
+     "w": 1,
+     "h": 2
+    }
+   ],
+   "allowedFloors": [
+    "water",
+    "metal"
+   ]
   },
   {
    "type": "horse",
    "label": "carousel horse",
    "blocking": false,
-   "emoji": "🐎"
+   "emoji": "🐎",
+   "footprints": [
+    {
+     "w": 2,
+     "h": 1
+    },
+    {
+     "w": 1,
+     "h": 2
+    }
+   ],
+   "allowedFloors": [
+    "grass",
+    "pavement",
+    "wood"
+   ]
   },
   {
    "type": "duck",
    "label": "duck boat",
    "blocking": false,
-   "emoji": "🦆"
+   "emoji": "🦆",
+   "footprints": [
+    {
+     "w": 2,
+     "h": 1
+    },
+    {
+     "w": 1,
+     "h": 2
+    }
+   ],
+   "allowedFloors": [
+    "water"
+   ]
   },
   {
    "type": "lounger",
    "label": "sun lounger",
    "blocking": false,
-   "emoji": "🏖️"
+   "emoji": "🏖️",
+   "footprints": [
+    {
+     "w": 1,
+     "h": 1
+    }
+   ],
+   "allowedFloors": [
+    "sand",
+    "grass",
+    "pavement"
+   ]
   }
  ],
  "characterNaming": "Names are assigned in alphabetical order starting at A (A, B, C...). The victim is always the last letter.",
@@ -398,5 +881,352 @@
   "globalEmptyRoom": "Nobody was in the {room}.",
   "aloneWith": "{name} was alone with the {answerRole}."
  },
- "article": "Use \"the\" when the object type appears once on the map, otherwise \"a\"/\"an\"."
+ "article": "Use \"the\" when the object type appears once on the map, otherwise \"a\"/\"an\".",
+ "roomTypes": [
+  {
+   "id": "bedroom",
+   "floor": "wood",
+   "names": [
+    "Bedroom",
+    "Guest Bedroom",
+    "Bunk Room",
+    "Sleeper"
+   ],
+   "objects": [
+    "bed",
+    "chair",
+    "shelf",
+    "plant"
+   ]
+  },
+  {
+   "id": "livingroom",
+   "floor": "wood",
+   "names": [
+    "Parlour",
+    "Lounge",
+    "Study",
+    "Office"
+   ],
+   "objects": [
+    "sofa",
+    "chair",
+    "shelf",
+    "desk",
+    "plant",
+    "TV"
+   ]
+  },
+  {
+   "id": "diningroom",
+   "floor": "wood",
+   "names": [
+    "Dining Room",
+    "Ballroom",
+    "Bar",
+    "Gallery"
+   ],
+   "objects": [
+    "table",
+    "chair",
+    "piano",
+    "painting"
+   ]
+  },
+  {
+   "id": "kitchen",
+   "floor": "tile",
+   "names": [
+    "Kitchen",
+    "Galley",
+    "Cafe"
+   ],
+   "objects": [
+    "table",
+    "chair",
+    "stove",
+    "shelf"
+   ]
+  },
+  {
+   "id": "bathroom",
+   "floor": "tile",
+   "names": [
+    "Bathroom",
+    "Laundry"
+   ],
+   "objects": [
+    "bathtub",
+    "shelf",
+    "washer"
+   ]
+  },
+  {
+   "id": "garden",
+   "floor": "grass",
+   "names": [
+    "Garden",
+    "Atrium",
+    "Sculpture Court",
+    "Food Stalls"
+   ],
+   "objects": [
+    "tree",
+    "plant",
+    "bench",
+    "statue",
+    "fountain",
+    "lounger"
+   ]
+  },
+  {
+   "id": "stonehall",
+   "floor": "stone",
+   "names": [
+    "Library",
+    "Cellar",
+    "Wine Cellar",
+    "Mineral Room",
+    "Armoury",
+    "Ski Room"
+   ],
+   "objects": [
+    "shelf",
+    "barrel",
+    "crate",
+    "geode",
+    "statue",
+    "armour",
+    "skirack",
+    "dinosaur"
+   ]
+  },
+  {
+   "id": "waterroom",
+   "floor": "water",
+   "names": [
+    "Pool",
+    "Pond",
+    "Duck Pond",
+    "Hot Tub"
+   ],
+   "objects": [
+    "boat",
+    "duck",
+    "float",
+    "lifeboat"
+   ]
+  },
+  {
+   "id": "metalroom",
+   "floor": "metal",
+   "names": [
+    "Engine Room",
+    "Boiler Room",
+    "Vault",
+    "Bridge",
+    "Luggage Van",
+    "Mirror Maze"
+   ],
+   "objects": [
+    "panel",
+    "wheel",
+    "crate",
+    "mirror",
+    "boiler",
+    "lift",
+    "anchor",
+    "suitcase"
+   ]
+  },
+  {
+   "id": "marblehall",
+   "floor": "marble",
+   "names": [
+    "Great Hall",
+    "Hallway",
+    "Lobby",
+    "Spa",
+    "Lounge Car"
+   ],
+   "objects": [
+    "statue",
+    "painting",
+    "mirror",
+    "fountain",
+    "armour",
+    "gem",
+    "telescope"
+   ]
+  },
+  {
+   "id": "carpetroom",
+   "floor": "carpet",
+   "names": [
+    "Casino",
+    "Cloakroom",
+    "Penthouse",
+    "Dining Car",
+    "Suite"
+   ],
+   "objects": [
+    "slot",
+    "sofa",
+    "carpet",
+    "chair",
+    "desk",
+    "gem"
+   ]
+  },
+  {
+   "id": "pavementroom",
+   "floor": "pavement",
+   "names": [
+    "Terrace",
+    "Hall",
+    "Ferris Wheel",
+    "Lifeboat Deck"
+   ],
+   "objects": [
+    "bench",
+    "cart",
+    "ferris",
+    "anchor",
+    "car",
+    "pole",
+    "horse"
+   ]
+  },
+  {
+   "id": "sandroom",
+   "floor": "sand",
+   "names": [
+    "Big Top",
+    "Egypt Wing",
+    "Games Alley",
+    "Sauna"
+   ],
+   "objects": [
+    "sarcophagus",
+    "palm",
+    "tent",
+    "candy",
+    "target",
+    "lounger"
+   ]
+  },
+  {
+   "id": "snowroom",
+   "floor": "snow",
+   "names": [
+    "Deck",
+    "Ski Lodge"
+   ],
+   "objects": [
+    "snowman",
+    "skirack",
+    "fireplace"
+   ]
+  }
+ ],
+ "characterNames": {
+  "A": [
+   "Agatha",
+   "Adrian",
+   "Astrid",
+   "Arlo",
+   "Amara"
+  ],
+  "B": [
+   "Bruno",
+   "Beatrice",
+   "Barnaby",
+   "Bianca",
+   "Bertram"
+  ],
+  "C": [
+   "Celeste",
+   "Cassius",
+   "Cora",
+   "Cedric",
+   "Camille"
+  ],
+  "D": [
+   "Dimitri",
+   "Delphine",
+   "Desmond",
+   "Dahlia",
+   "Duncan"
+  ],
+  "E": [
+   "Edmund",
+   "Eloise",
+   "Ezra",
+   "Evangeline",
+   "Emeric"
+  ],
+  "F": [
+   "Fiona",
+   "Felix",
+   "Flora",
+   "Frederick",
+   "Faye"
+  ],
+  "G": [
+   "Gideon",
+   "Genevieve",
+   "Gaspard",
+   "Greta",
+   "Gerald"
+  ],
+  "H": [
+   "Hazel",
+   "Horace",
+   "Helena",
+   "Hugo",
+   "Henrietta"
+  ],
+  "I": [
+   "Imogen",
+   "Ignatius",
+   "Isolde",
+   "Ivor",
+   "Ines"
+  ],
+  "J": [
+   "Josephine",
+   "Julian",
+   "Jocasta",
+   "Jasper",
+   "Juniper"
+  ],
+  "K": [
+   "Kingsley",
+   "Katarina",
+   "Kasimir",
+   "Kerensa",
+   "Kendrick"
+  ],
+  "L": [
+   "Lucinda",
+   "Leopold",
+   "Lavinia",
+   "Lysander",
+   "Lorelei"
+  ],
+  "M": [
+   "Marguerite",
+   "Montgomery",
+   "Marisol",
+   "Maximilian",
+   "Mireille"
+  ],
+  "N": [
+   "Nathaniel",
+   "Nerissa",
+   "Noel",
+   "Narcissa",
+   "Nikolai"
+  ]
+ }
 }

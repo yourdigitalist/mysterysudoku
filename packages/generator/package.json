@@ -1,0 +1,25 @@
+{
+  "name": "@mysterysudoku/generator",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "mysterysudoku-gen": "src/cli.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "gen": "tsx src/cli.ts gen",
+    "gen:stats": "tsx src/cli.ts stats",
+    "gen:render": "tsx src/cli.ts render",
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@mysterysudoku/engine": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  }
+}

@@ -3,8 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "test": "pnpm --filter @mysterysudoku/engine test",
-    "build": "pnpm --filter @mysterysudoku/engine build"
+    "test": "pnpm -r test",
+    "build": "pnpm -r build",
+    "gen": "pnpm --filter @mysterysudoku/generator gen",
+    "gen:stats": "pnpm --filter @mysterysudoku/generator gen:stats",
+    "gen:render": "pnpm --filter @mysterysudoku/generator gen:render"
   },
   "devDependencies": {
     "typescript": "^5.6.3"
